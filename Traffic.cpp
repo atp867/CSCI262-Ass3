@@ -69,6 +69,7 @@ int main(int argc, char * argv[])
 
     simulation.printVehicles();
     simulation.genEvents();
+    simulation.simDay();
     simulation.printInstances();
 
     return 0;

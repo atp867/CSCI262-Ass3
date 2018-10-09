@@ -14,6 +14,10 @@
 #include <ctime>
 
 const static int MINUTESINDAY = 1440;
+/***********Probability***********/
+const static int ISPARKED = 200;
+const static int CHANGESPEED = 100;
+const static int STREETEXIT = 13;
 
 struct Vehicle{
     std::string name;
@@ -38,7 +42,7 @@ struct Road{
 };
 
 struct Instances{
-        std::string type;
+        int type;
         int startTime;
         float speed;
         bool parked;
@@ -47,7 +51,7 @@ struct Instances{
         int totalTime;
         int endTime;
         Instances(){
-            type = "";
+            type = -1;
             speed = 0;
             parked = 0;
             curLocation = 0;
@@ -67,6 +71,7 @@ class activityEngine{
         void pushStats(Stats);
         void pushRoad(Road);
         void genEvents();
+        void simDay();
         void printVehicles();
         void printInstances();
 };
