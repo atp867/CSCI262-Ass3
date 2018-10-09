@@ -68,9 +68,7 @@ int main(int argc, char * argv[])
 	fin.close();
 
     simulation.printVehicles();
-    simulation.genEvents();
-    simulation.simDay();
-    simulation.printInstances();
+    simulation.startEngine(atoi(argv[3]));
 
     return 0;
 }

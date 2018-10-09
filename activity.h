@@ -71,6 +71,8 @@ class activityEngine{
         void pushStats(Stats);
         void pushRoad(Road);
         void genEvents();
+        void startEngine(int);
+        void clearInstances();
         void simDay();
         void printVehicles();
         void printInstances();

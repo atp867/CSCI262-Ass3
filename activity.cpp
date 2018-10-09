@@ -48,6 +48,23 @@ void activityEngine::genEvents()
     }
 }
 
+void activityEngine::startEngine(int days)
+{
+    for(int i = 0; i < days; i++)
+    {
+        genEvents();
+        simDay();
+        //Statistics recording function here
+        printInstances();
+        clearInstances();
+    }
+}
+
+void activityEngine::clearInstances()
+{
+    instances.clear();
+}
+
 void activityEngine::simDay()
 {
     srand(time(NULL));
