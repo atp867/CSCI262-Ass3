@@ -1,0 +1,8 @@
+#Ignore Dev C++ project files
+*.dev
+*.layout
+Makefile.win
+
+#Ignore compiled files
+*.exe
+*.o
