@@ -1,16 +1,29 @@
+/*************************************
+*   CSCI262 Assignment 3
+*   Intrusion Detection
+*   activity.cpp :Activity file
+*   1/10/2018
+*   <name - atp867 - Student #>
+*   <Daniel Nichols - dn688 - 5728356>
+*   <name - login - Student #>
+*************************************/
+
 #include "activity.h"
 #include <iostream>
 
+//Adds a vehicle to vehicle vector
 void activityEngine::pushVehicles(Vehicle sample)
 {
     vehicleSim.push_back(sample);
 }
 
+//Adds a stats object to vehicleStats vector
 void activityEngine::pushStats(Stats sample)
 {
     vehicleStats.push_back(sample);
 }
 
+//High-level description of function and parameters
 void activityEngine::pushRoad(Road sample)
 {   
     road.length = sample.length;
@@ -18,6 +31,7 @@ void activityEngine::pushRoad(Road sample)
     road.numParking = sample.numParking;
 }
 
+//Generates events for activity engine
 void activityEngine::genEvents()
 {
     srand(time(NULL));
@@ -27,7 +41,7 @@ void activityEngine::genEvents()
     for(std::vector<Vehicle>::iterator it = vehicleSim.begin(); it != vehicleSim.end(); it++)
     {
          //Use normal distribution to determine number of vehicles
-         std::normal_distribution<float> normal(vehicleStats[i].avg,vehicleStats[i].stdDev);
+         std::normal_distribution<float> normal(vehicleStats[i].avg, vehicleStats[i].stdDev);
         int loop = lround(normal(randEng));    
         for(int x = 0; x < loop; x++)
         {
@@ -37,7 +51,7 @@ void activityEngine::genEvents()
             temp.startTime = (rand() % MINUTESINDAY);
             while(temp.speed < 1)
             {//Vehicles must be moving forward to enter road
-                std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg,vehicleStats[i].speedStdDev);
+                std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg, vehicleStats[i].speedStdDev);
                 temp.speed = lround(normalSpeed(randEng));
             }
 
@@ -48,9 +62,10 @@ void activityEngine::genEvents()
     }
 }
 
+//Start the activity engine
 void activityEngine::startEngine(int days)
 {
-    for(int i = 0; i < days; i++)
+    for(int i = 0; i < days; i++) //Simulation main driver loop
     {
         genEvents();
         simDay();
@@ -60,11 +75,13 @@ void activityEngine::startEngine(int days)
     }
 }
 
+//Clears all instances from simulation
 void activityEngine::clearInstances()
 {
     instances.clear();
 }
 
+//Simulates a day of activity
 void activityEngine::simDay()
 {
     srand(time(NULL));
@@ -132,6 +149,7 @@ void activityEngine::simDay()
     }
 }
 
+//Print vehicle details and stats for all vehicles in simulation
 void activityEngine::printVehicles()
 {
     std::vector<Stats>::iterator iterateStats = vehicleStats.begin();
@@ -153,6 +171,7 @@ void activityEngine::printVehicles()
     }
 }
 
+//Print all current vehicle instances in simulation
 void activityEngine::printInstances()
 {
     

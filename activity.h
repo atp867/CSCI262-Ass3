@@ -1,10 +1,13 @@
 /*************************************
 *   CSCI262 Assignment 3
 *   Intrusion Detection
-*   atp867, 
 *   activity.h :Header file
 *   1/10/2018
+*   <name - atp867 - Student #>
+*   <Daniel Nichols - dn688 - 5728356>
+*   <name - login - Student #>
 *************************************/
+
 #ifndef ACTIVITY_H
 #define ACTIVITY_H 
 
