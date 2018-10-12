@@ -89,6 +89,9 @@ void activityEngine::simDay()
     int hourClock = 0;
     int parkingUsed = 0;
 
+    int exited = 0;
+    std::cout << " There are " << instances.size() << " instances" << std::endl;
+
     for(int i = 0; i < MINUTESINDAY; i++)
     {
         if(i % 60 == 0)
@@ -107,8 +110,18 @@ void activityEngine::simDay()
                 }
                 if((rand() % MINUTESINDAY) < ISPARKED && parkingUsed < road.numParking && it->parked==false)//probability of parking
                 {
-                    std::cout << "I have parked" <<std::endl;
                     it->parked = true;
+                    if(!vehicleSim[it->type].parking)
+                    {// vehicle not allowed to park
+                        if(rand() % ISPARKED != 1)//probabilty they park anyway is 1/200
+                        {//bit roundabout...
+                            it->parked = false;
+                            parkingUsed--;
+                        }
+                        else
+                            std::cout << "Not allowed to park but i did it anyway?" << std::endl;
+                    }
+                    std::cout << "I have parked" <<std::endl;
                     parkingUsed++;
                 }
                 if(it->curLocation >= road.length)
@@ -116,15 +129,16 @@ void activityEngine::simDay()
                     std::cout << "Vehicle has reached the end!" << std::endl;
                     it->endTime = i;
                     it->totalTime = it->endTime - it->startTime;
+                    exited++;
                 }
                 if((rand() % MINUTESINDAY) == STREETEXIT && it->endTime == 0)
                 {
                     std::cout << "I have exited" << std::endl;
                     it->endTime = i;
                     it->totalTime = it->endTime - it->startTime;
+                    exited++;
                 }
                 int random = rand() % MINUTESINDAY;
-                //std::cout <<"THIS STUPID NUMBER IS " << random << std::endl;
                 if(random < CHANGESPEED && it->endTime == 0)
                 {//Probability to change speed
                 //NEED TO FIND A WAY TO LINK TO STATS
@@ -139,14 +153,15 @@ void activityEngine::simDay()
                     it->speed = lround(normal(randEng));
                     std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
-                if(i == MINUTESINDAY-1 && !it->parked && it->endTime ==0)
+                if(i == MINUTESINDAY-1 && it->endTime ==0)
                 {//If day ends, the vehicle has left via street
-                    it->endTime = MINUTESINDAY;
-                    it->totalTime = it->endTime - it->startTime;
+                    instances.erase(it);
                 }
             }
         }
     }
+    std::cout << exited << " MANY CARS EXITED" << std::endl;
+    std::cout << " There are " << instances.size() << " instances" << std::endl;
 }
 
 //Print vehicle details and stats for all vehicles in simulation
