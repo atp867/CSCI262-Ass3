@@ -90,6 +90,7 @@ void activityEngine::simDay()
     int parkingUsed = 0;
 
     int exited = 0;
+    int sideExited = 0;
     std::cout << " There are " << instances.size() << " instances" << std::endl;
 
     for(int i = 0; i < MINUTESINDAY; i++)
@@ -136,7 +137,7 @@ void activityEngine::simDay()
                     std::cout << "I have exited" << std::endl;
                     it->endTime = i;
                     it->totalTime = it->endTime - it->startTime;
-                    exited++;
+                    sideExited++;
                 }
                 int random = rand() % MINUTESINDAY;
                 if(random < CHANGESPEED && it->endTime == 0)
@@ -154,13 +155,14 @@ void activityEngine::simDay()
                     std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
                 if(i == MINUTESINDAY-1 && it->endTime ==0)
-                {//If day ends, the vehicle has left via street
+                {//If day ends, remove vehicle
                     instances.erase(it);
                 }
             }
         }
     }
     std::cout << exited << " MANY CARS EXITED" << std::endl;
+    std::cout << sideExited << " MANY CARS EXITED VIA STREET" << std::endl;
     std::cout << " There are " << instances.size() << " instances" << std::endl;
 }
 
