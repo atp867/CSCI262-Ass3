@@ -3,7 +3,7 @@
 *   Intrusion Detection
 *   activity.h :Header file
 *   1/10/2018
-*   <name - atp867 - Student #>
+*   <Anthony Pham - atp867 - 5146562>
 *   <Daniel Nichols - dn688 - 5728356>
 *   <name - login - Student #>
 *************************************/

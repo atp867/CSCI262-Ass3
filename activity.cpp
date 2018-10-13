@@ -2,14 +2,13 @@
 *   CSCI262 Assignment 3
 *   Intrusion Detection
 *   activity.cpp :Activity file
-*   1/10/2018
-*   <name - atp867 - Student #>
+*   13/10/2018
+*   <Anthony Pham - atp867 - 5146562>
 *   <Daniel Nichols - dn688 - 5728356>
 *   <name - login - Student #>
 *************************************/
 
 #include "activity.h"
-#include <iostream>
 #include <sstream>
 #include <cstring>
 
@@ -200,7 +199,6 @@ void activityEngine::printInstances(int days)
     char file[12];
     std::ostringstream oss;
     oss << "day" << days << ".txt";
-    std::cout << oss.str() << std::endl;
     strcpy(file,(oss.str()).c_str());
 
     std::ofstream fout;
@@ -212,9 +210,9 @@ void activityEngine::printInstances(int days)
     {
         fout << "******Vehicle******" << std::endl;
         fout << "Name : " << vehicleSim[it->type].name << std::endl;
+        fout << "Type : " << it->type << std::endl;
         fout << "Start : " << it->startTime << std::endl;
         fout << "Speed : " << it->speed << std::endl;
-        fout << "Parked : " << it->parked << std::endl;
         fout << "Location : " << it->curLocation << std::endl;
         fout << "Total : " << it->totalTime << std::endl;
         fout << "End : " << it->endTime << std::endl;

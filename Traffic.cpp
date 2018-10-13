@@ -4,8 +4,8 @@
 *   Traffic.cpp :Driver file
 *   Compliation : g++ -std=c++11 Traffic.cpp activity.h
 *   Run : ./a.out Vehicles.txt Stats.txt 1
-*   1/10/2018
-*   <name - atp867 - Student #>
+*   13/10/2018
+*   <Anthony Pham - atp867 - 5146562>
 *   <Daniel Nichols - dn688 - 5728356>
 *   <name - login - Student #>
 *************************************/
@@ -16,6 +16,7 @@
 #include <cmath>
 #include <string>
 #include "activity.h"
+#include "analysis.h"
 
 using namespace std;
 
@@ -48,7 +49,9 @@ int main(int argc, char * argv[])
 		exit(1);
 
     fin >> numTypeV; //First integer of Vehicles.txt
+    fin.ignore(1,'\r');
     ifs >> numTypeS; //First integer of Stats.txt   
+    ifs.ignore(1,'\r');
     if(numTypeS != numTypeV)
     {
         std::cerr << "Error: Given file arguements have a different number of Types!" << std::endl;
@@ -57,6 +60,7 @@ int main(int argc, char * argv[])
     }
 
     activityEngine simulation;
+    analysisEngine analysis;
 
     if(readVehicles(fin, simulation, numTypeV) == -1)
 	{
@@ -74,6 +78,9 @@ int main(int argc, char * argv[])
 
     simulation.printVehicles();
     simulation.startEngine(atoi(argv[3]));
+
+    analysis.readLogs(atoi(argv[3]), numTypeV);
+    analysis.printInstances();
 
     return 0;
 }
