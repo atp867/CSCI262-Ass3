@@ -19,7 +19,7 @@ analysisEngine::analysisEngine()
     totalStdDevVolume = 0;
 }
 
-void analysisEngine::startEngine(int numDays, int num Vehicles)
+void analysisEngine::startEngine(int numDays, int numVehicles)
 {
     std::cout << "*************Starting Analysis*************" << std::endl;
     days.resize(numDays);
@@ -37,7 +37,7 @@ void analysisEngine::readLogs()
     std::cout << "******************** READING SHIT ********************" << std::endl;
     char file[12];
     char temp[256];
-    for(int i = 0; i < numDays; i++)
+    for(int i = 0; i < days.size(); i++)
     {
         int statCntr = 0;
         std::ostringstream oss;
@@ -53,6 +53,8 @@ void analysisEngine::readLogs()
             fin >> tmp.type;
             fin.ignore(256,':');
             fin >> tmp.startTime;
+            fin.ignore(256,':');
+            fin >> tmp.parkingTime;
             fin.ignore(256,':');
             fin >> tmp.speed;
             fin.ignore(256,':');
@@ -87,7 +89,7 @@ void analysisEngine::dayStatistics(int dayIndex)
             speedStdDev = pow(speedStdDev,2);
             days[dayIndex].vehicleStats[i].stdDevSpeed += speedStdDev;
             days[dayIndex].vehicleStats[i].stdDevSpeed /= days[dayIndex].vehicleStats[i].total;
-            days[dayIndex].vehicleStats[i].stdDevSpeed = sqrt(days[dayIndex].vehicleStats[i]);
+            days[dayIndex].vehicleStats[i].stdDevSpeed = sqrt(days[dayIndex].vehicleStats[i].stdDevSpeed);
 
         }
     }

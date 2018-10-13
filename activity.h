@@ -2,7 +2,7 @@
 *   CSCI262 Assignment 3
 *   Intrusion Detection
 *   activity.h :Header file
-*   1/10/2018
+*   13/10/2018
 *   <Anthony Pham - atp867 - 5146562>
 *   <Daniel Nichols - dn688 - 5728356>
 *   <name - login - Student #>
@@ -50,6 +50,7 @@ struct Instances{
         int startTime;
         float speed;
         bool parked;
+        int parkingTime;
         /***Stats data***/
         float curLocation;
         int totalTime;
@@ -58,6 +59,7 @@ struct Instances{
             type = -1;
             speed = 0;
             parked = 0;
+            parkingTime = 0;
             curLocation = 0;
             totalTime = 0;
             endTime = 0;

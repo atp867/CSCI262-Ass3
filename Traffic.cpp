@@ -79,8 +79,10 @@ int main(int argc, char * argv[])
     simulation.printVehicles();
     simulation.startEngine(atoi(argv[3]));
 
+    /*
     analysis.readLogs(atoi(argv[3]), numTypeV);
     analysis.printInstances();
+    */
 
     return 0;
 }

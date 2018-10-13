@@ -109,18 +109,20 @@ void activityEngine::simDay()
         {
             if(it->startTime < i && it->endTime == 0)
             {
+                if(it->parked)
+                    it->parkingTime++;
                 if(it->curLocation >= road.length)
                 {//vehicle reached end of road
                     //std::cout << "Vehicle has reached the end!" << std::endl;
                     it->endTime = i;
-                    it->totalTime = it->endTime - it->startTime;
+                    it->totalTime = it->endTime - it->startTime - it->parkingTime;
                     exited++;
                 }
                 if((rand() % MINUTESINDAY) == STREETEXIT && it->endTime == 0)
                 {
                     //std::cout << "I have exited" << std::endl;
                     it->endTime = i;
-                    it->totalTime = it->endTime - it->startTime;
+                    it->totalTime = it->endTime - it->startTime - it->parkingTime;
                     sideExited++;
                 }
                 if(it->startTime < i && it->parked == false && it->endTime ==0)
@@ -212,6 +214,7 @@ void activityEngine::printInstances(int days)
         fout << "Name : " << vehicleSim[it->type].name << std::endl;
         fout << "Type : " << it->type << std::endl;
         fout << "Start : " << it->startTime << std::endl;
+        fout << "ParkingTime : " << it->parkingTime << std::endl;
         fout << "Speed : " << it->speed << std::endl;
         fout << "Location : " << it->curLocation << std::endl;
         fout << "Total : " << it->totalTime << std::endl;
