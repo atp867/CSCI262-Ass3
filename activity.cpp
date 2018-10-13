@@ -10,6 +10,10 @@
 
 #include "activity.h"
 #include <iostream>
+#include <sstream>
+#include <cstring>
+
+using namespace std;
 
 //Adds a vehicle to vehicle vector
 void activityEngine::pushVehicles(Vehicle sample)
@@ -48,7 +52,7 @@ void activityEngine::genEvents()
             //Other variable intialised in constructor
             Instances temp;
             temp.type = i;//associate type by vector index
-            temp.startTime = (rand() % MINUTESINDAY);
+            temp.startTime = (rand() % MINUTESINDAY);//discrete event thus no stats required for generation
             while(temp.speed < 1)
             {//Vehicles must be moving forward to enter road
                 std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg, vehicleStats[i].speedStdDev);
@@ -67,12 +71,14 @@ void activityEngine::startEngine(int days)
 {
     for(int i = 0; i < days; i++) //Simulation main driver loop
     {
+        std::cout << "---------------- DAY " << i << " ----------------" << std::endl;
         genEvents();
         simDay();
         //Statistics recording function here
-        printInstances();
+        printInstances(i);
         clearInstances();
     }
+
 }
 
 //Clears all instances from simulation
@@ -97,16 +103,30 @@ void activityEngine::simDay()
     {
         if(i % 60 == 0)
         {
-            std::cout << "*****************Hour " << hourClock << "***************" <<std::endl;
+            std::cout << "***************** Hour " << hourClock << "***************" <<std::endl;
             hourClock++;
         }
         for(std::vector<Instances>::iterator it = instances.begin(); it != instances.end(); it++)
         {
             if(it->startTime < i && it->endTime == 0)
             {
-                if(it->startTime < i && it->parked == false)
+                if(it->curLocation >= road.length)
+                {//vehicle reached end of road
+                    //std::cout << "Vehicle has reached the end!" << std::endl;
+                    it->endTime = i;
+                    it->totalTime = it->endTime - it->startTime;
+                    exited++;
+                }
+                if((rand() % MINUTESINDAY) == STREETEXIT && it->endTime == 0)
                 {
-                    std::cout << "HELP " << std::endl;
+                    //std::cout << "I have exited" << std::endl;
+                    it->endTime = i;
+                    it->totalTime = it->endTime - it->startTime;
+                    sideExited++;
+                }
+                if(it->startTime < i && it->parked == false && it->endTime ==0)
+                {
+                    //std::cout << "HELP " << std::endl;
                     it->curLocation += it->speed/60;//update location if vehicle not parked 
                 }
                 if((rand() % MINUTESINDAY) < ISPARKED && parkingUsed < road.numParking && it->parked==false)//probability of parking
@@ -122,22 +142,8 @@ void activityEngine::simDay()
                         else
                             std::cout << "Not allowed to park but i did it anyway?" << std::endl;
                     }
-                    std::cout << "I have parked" <<std::endl;
+                    //std::cout << "I have parked" <<std::endl;
                     parkingUsed++;
-                }
-                if(it->curLocation >= road.length)
-                {//vehicle reached end of road
-                    std::cout << "Vehicle has reached the end!" << std::endl;
-                    it->endTime = i;
-                    it->totalTime = it->endTime - it->startTime;
-                    exited++;
-                }
-                if((rand() % MINUTESINDAY) == STREETEXIT && it->endTime == 0)
-                {
-                    std::cout << "I have exited" << std::endl;
-                    it->endTime = i;
-                    it->totalTime = it->endTime - it->startTime;
-                    sideExited++;
                 }
                 int random = rand() % MINUTESINDAY;
                 if(random < CHANGESPEED && it->endTime == 0)
@@ -145,14 +151,14 @@ void activityEngine::simDay()
                 //NEED TO FIND A WAY TO LINK TO STATS
                     if(it->parked)
                     {
-                        std::cout << "WAS PARKING" <<std::endl;
+                        //std::cout << "WAS PARKING" <<std::endl;
                         it->parked = false;
                         parkingUsed--;
                     }
-                    std::cout << "I have changed speeds" << std::endl;
+                    //std::cout << "I have changed speeds" << std::endl;
                     std::normal_distribution<float> normal(vehicleStats[it->type].speedAvg,vehicleStats[it->type].speedStdDev);
                     it->speed = lround(normal(randEng));
-                    std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
+                    //std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
                 if(i == MINUTESINDAY-1 && it->endTime ==0)
                 {//If day ends, remove vehicle
@@ -189,18 +195,29 @@ void activityEngine::printVehicles()
 }
 
 //Print all current vehicle instances in simulation
-void activityEngine::printInstances()
+void activityEngine::printInstances(int days)
 {
-    
+    char file[12];
+    std::ostringstream oss;
+    oss << "day" << days << ".txt";
+    std::cout << oss.str() << std::endl;
+    strcpy(file,(oss.str()).c_str());
+
+    std::ofstream fout;
+    fout.open(file);
+    std::cout << "Day " << days << " Simulation complete " << std::endl;
+    std::cout << "Day " << days << " Complete logging data to " << file << std::endl;
+
     for(std::vector<Instances>::iterator it = instances.begin(); it != instances.end(); it++)
     {
-        std::cout << "******Vehicle******" << std::endl;
-        std::cout << "Name : " << it->type << std::endl;
-        std::cout << "Start : " << it->startTime << std::endl;
-        std::cout << "Speed : " << it->speed << std::endl;
-        std::cout << "Parked : " << it->parked << std::endl;
-        std::cout << "Location : " << it->curLocation << std::endl;
-        std::cout << "Total : " << it->totalTime << std::endl;
-        std::cout << "End : " << it->endTime << std::endl;
+        fout << "******Vehicle******" << std::endl;
+        fout << "Name : " << vehicleSim[it->type].name << std::endl;
+        fout << "Start : " << it->startTime << std::endl;
+        fout << "Speed : " << it->speed << std::endl;
+        fout << "Parked : " << it->parked << std::endl;
+        fout << "Location : " << it->curLocation << std::endl;
+        fout << "Total : " << it->totalTime << std::endl;
+        fout << "End : " << it->endTime << std::endl;
     }
+    fout.close();
 }

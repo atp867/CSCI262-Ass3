@@ -15,10 +15,11 @@
 #include <vector>
 #include <random>
 #include <ctime>
+#include <fstream>
 
 const static int MINUTESINDAY = 1440;
 /***********Probability***********/
-const static int ISPARKED = 200;
+const static int ISPARKED = 244;
 const static int CHANGESPEED = 100;
 const static int STREETEXIT = 13;
 
@@ -78,6 +79,6 @@ class activityEngine{
         void clearInstances();
         void simDay();
         void printVehicles();
-        void printInstances();
+        void printInstances(int);
 };
 #endif
