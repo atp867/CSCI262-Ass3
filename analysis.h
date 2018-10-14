@@ -14,6 +14,7 @@
 #include <iostream>
 #include <sstream>
 #include <cstring>
+#include <map>
 
 struct stats{
     std::string type;
@@ -28,23 +29,29 @@ struct stats{
 struct Day{
     int vehicleTotal;
     std::vector<stats> vehicleStats;
-    float averageSpeed;
+    float meanSpeed;
+    float meanVolume;
+    float stdDevSpeed;
+    float stdDevVolume;
 };
 
 class analysisEngine{
     private:
         std::vector<Day> days;
         std::vector<stats> totalStats;
+        std::vector<Instances> totalInstances;
+        std::map<int,Instances> speedBreaches;
         float totalAvgSpeed;
         float totalStdDevSpeed;
         float totalAvgVolume;
         float totalStdDevVolume;
     public:
         analysisEngine();
-        void startEngine(int, int);
+        void startEngine(int, int,Road);
         void readLogs();
+        void dayStatistics(int,Road);
+        void totalStatistics(Road);
         void printInstances();
-        void dayStatistics(int);
-        void totalStatistics();
+        void printStatistics();
 };
 #endif

@@ -34,10 +34,14 @@ void activityEngine::pushRoad(Road sample)
     road.numParking = sample.numParking;
 }
 
+Road activityEngine::getRoad()
+{
+    return road;
+}
+
 //Generates events for activity engine
 void activityEngine::genEvents()
 {
-    srand(time(NULL));
     std::default_random_engine randEng;//not using seed for predictable testing
     int i = 0;
     //Iterate through all vehicle types
@@ -52,10 +56,15 @@ void activityEngine::genEvents()
             Instances temp;
             temp.type = i;//associate type by vector index
             temp.startTime = (rand() % MINUTESINDAY);//discrete event thus no stats required for generation
-            while(temp.speed < 1)
+            std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg, vehicleStats[i].speedStdDev);
+            temp.initSpeed = lround(normalSpeed(randEng));
+            temp.speed = temp.initSpeed;
+            while(temp.initSpeed < 1)
             {//Vehicles must be moving forward to enter road
+                std::cerr << "Vehicle " << x << " Type : " << vehicleStats[i].name << " just had speed < 1" << std::endl;
                 std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg, vehicleStats[i].speedStdDev);
-                temp.speed = lround(normalSpeed(randEng));
+                temp.initSpeed = lround(normalSpeed(randEng));
+                temp.speed = temp.initSpeed;
             }
 
             temp.endTime = 0;
@@ -68,6 +77,7 @@ void activityEngine::genEvents()
 //Start the activity engine
 void activityEngine::startEngine(int days)
 {
+    srand(time(NULL));
     for(int i = 0; i < days; i++) //Simulation main driver loop
     {
         std::cout << "---------------- DAY " << i << " ----------------" << std::endl;
@@ -159,6 +169,11 @@ void activityEngine::simDay()
                     //std::cout << "I have changed speeds" << std::endl;
                     std::normal_distribution<float> normal(vehicleStats[it->type].speedAvg,vehicleStats[it->type].speedStdDev);
                     it->speed = lround(normal(randEng));
+                    if(rand() % MINUTESINDAY < CHANGESPEED && it->endTime == 0)
+                    {//Probabilty one crazy boi
+                        std::cout << "Some Boi is Speed !" << std::endl;
+                        it->speed += 100;
+                    }
                     //std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
                 if(i == MINUTESINDAY-1 && it->endTime ==0)
@@ -215,7 +230,7 @@ void activityEngine::printInstances(int days)
         fout << "Type : " << it->type << std::endl;
         fout << "Start : " << it->startTime << std::endl;
         fout << "ParkingTime : " << it->parkingTime << std::endl;
-        fout << "Speed : " << it->speed << std::endl;
+        fout << "Initial Speed : " << it->initSpeed << std::endl;
         fout << "Location : " << it->curLocation << std::endl;
         fout << "Total : " << it->totalTime << std::endl;
         fout << "End : " << it->endTime << std::endl;

@@ -51,12 +51,14 @@ struct Instances{
         float speed;
         bool parked;
         int parkingTime;
+        int endTime;
         /***Stats data***/
+        float initSpeed;
         float curLocation;
         int totalTime;
-        int endTime;
         Instances(){
             type = -1;
+            initSpeed = 0;
             speed = 0;
             parked = 0;
             parkingTime = 0;
@@ -80,6 +82,7 @@ class activityEngine{
         void startEngine(int);
         void clearInstances();
         void simDay();
+        Road getRoad();
         void printVehicles();
         void printInstances(int);
 };
