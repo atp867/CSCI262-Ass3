@@ -28,10 +28,6 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
         days[i].vehicleStats.resize(numVehicles);
 
     readLogs();
-    /*
-    for(int i = 0; i < numDays; i++)
-        dayStatistics(i,road);
-        */
     totalStatistics(road);
     printStatistics();
 
@@ -77,35 +73,6 @@ void analysisEngine::readLogs()
     }
 }
 
-void analysisEngine::dayStatistics(int dayIndex,Road road)
-{
-    float speedMean = 0;
-    float speedStdDev = 0;
-    for(int i = 0; i < days[dayIndex].vehicleStats.size(); i++)
-    {
-        for(int x = 0; x < days[dayIndex].vehicleStats[i].instances.size(); x++)
-        {
-            if(days[dayIndex].vehicleStats[i].instances[x].curLocation >= road.length)
-            {//Only vehicles that reached end of road
-                days[dayIndex].vehicleStats[i].total++;
-                speedMean += (days[dayIndex].vehicleStats[i].instances[x].curLocation/days[dayIndex].vehicleStats[i].instances[x].totalTime) *60;
-            }
-        }
-        days[dayIndex].vehicleStats[i].averageSpeed = speedMean;
-        for(int x = 0; x < days[dayIndex].vehicleStats[i].instances.size(); x++)
-        {
-            if(days[dayIndex].vehicleStats[i].instances[x].curLocation >= road.length)
-            {//Only vehicles that reached end of road
-                speedStdDev = speedMean - days[dayIndex].vehicleStats[i].instances[x].initSpeed;
-                speedStdDev = pow(speedStdDev,2);
-                days[dayIndex].vehicleStats[i].stdDevSpeed += speedStdDev;
-                days[dayIndex].vehicleStats[i].stdDevSpeed /= days[dayIndex].vehicleStats[i].total;
-                days[dayIndex].vehicleStats[i].stdDevSpeed = sqrt(days[dayIndex].vehicleStats[i].stdDevSpeed);
-            }
-        }
-    }
-}
-
 
 void analysisEngine::totalStatistics(Road road)
 {
@@ -148,27 +115,6 @@ void analysisEngine::totalStatistics(Road road)
     totalStdDevSpeed = sqrt(totalStdDevSpeed);
 }
 
-void analysisEngine::printInstances()
-{
-    for(int i = 0; i < days.size();i++)
-    {
-        std::cout << "*********Day********* " << i << std::endl;
-        for(int x = 0; x < days[i].vehicleStats.size(); x++)
-        {
-            std::cout << "*********Vehicle Type********* " << x << std::endl;
-            for(int k = 0; k < days[i].vehicleStats[x].instances.size(); k ++)
-            {
-                std::cout <<"Type " << days[i].vehicleStats[x].instances[k].type << std::endl;
-                std::cout <<"StartTime " << days[i].vehicleStats[x].instances[k].startTime << std::endl;
-                std::cout <<"Speed " << days[i].vehicleStats[x].instances[k].initSpeed << std::endl;
-                std::cout <<"Location " << days[i].vehicleStats[x].instances[k].curLocation << std::endl;
-                std::cout <<"TotalTime " << days[i].vehicleStats[x].instances[k].totalTime << std::endl;
-                std::cout <<"EndTime " << days[i].vehicleStats[x].instances[k].endTime << std::endl;
-            }
-        }
-    }
-}
-
 void analysisEngine::printStatistics()
 {
     std::ofstream fout;
@@ -200,3 +146,55 @@ void analysisEngine::printStatistics()
         fout << "EndTime :" << it->second.endTime << std::endl;
     }
 }
+
+/*
+void analysisEngine::dayStatistics(int dayIndex,Road road)
+{
+    float speedMean = 0;
+    float speedStdDev = 0;
+    for(int i = 0; i < days[dayIndex].vehicleStats.size(); i++)
+    {
+        for(int x = 0; x < days[dayIndex].vehicleStats[i].instances.size(); x++)
+        {
+            if(days[dayIndex].vehicleStats[i].instances[x].curLocation >= road.length)
+            {//Only vehicles that reached end of road
+                days[dayIndex].vehicleStats[i].total++;
+                speedMean += (days[dayIndex].vehicleStats[i].instances[x].curLocation/days[dayIndex].vehicleStats[i].instances[x].totalTime) *60;
+            }
+        }
+        days[dayIndex].vehicleStats[i].averageSpeed = speedMean;
+        for(int x = 0; x < days[dayIndex].vehicleStats[i].instances.size(); x++)
+        {
+            if(days[dayIndex].vehicleStats[i].instances[x].curLocation >= road.length)
+            {//Only vehicles that reached end of road
+                speedStdDev = speedMean - days[dayIndex].vehicleStats[i].instances[x].initSpeed;
+                speedStdDev = pow(speedStdDev,2);
+                days[dayIndex].vehicleStats[i].stdDevSpeed += speedStdDev;
+                days[dayIndex].vehicleStats[i].stdDevSpeed /= days[dayIndex].vehicleStats[i].total;
+                days[dayIndex].vehicleStats[i].stdDevSpeed = sqrt(days[dayIndex].vehicleStats[i].stdDevSpeed);
+            }
+        }
+    }
+}
+void analysisEngine::printInstances()
+{
+    for(int i = 0; i < days.size();i++)
+    {
+        std::cout << "*********Day********* " << i << std::endl;
+        for(int x = 0; x < days[i].vehicleStats.size(); x++)
+        {
+            std::cout << "*********Vehicle Type********* " << x << std::endl;
+            for(int k = 0; k < days[i].vehicleStats[x].instances.size(); k ++)
+            {
+                std::cout <<"Type " << days[i].vehicleStats[x].instances[k].type << std::endl;
+                std::cout <<"StartTime " << days[i].vehicleStats[x].instances[k].startTime << std::endl;
+                std::cout <<"Speed " << days[i].vehicleStats[x].instances[k].initSpeed << std::endl;
+                std::cout <<"Location " << days[i].vehicleStats[x].instances[k].curLocation << std::endl;
+                std::cout <<"TotalTime " << days[i].vehicleStats[x].instances[k].totalTime << std::endl;
+                std::cout <<"EndTime " << days[i].vehicleStats[x].instances[k].endTime << std::endl;
+            }
+        }
+    }
+}
+
+*/

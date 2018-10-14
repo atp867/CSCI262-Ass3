@@ -17,18 +17,20 @@
 #include <map>
 
 struct stats{
-    std::string type;
+    std::vector<Instances> instances;
     int total;
+    /****Potentially redundant data****/
+    std::string type;
     float averageSpeed;
     float stdDevSpeed;
     float average;
-    std::vector<Instances> instances;
 
 };
 
 struct Day{
     int vehicleTotal;
     std::vector<stats> vehicleStats;
+    /****Potentially redundant data****/
     float meanSpeed;
     float meanVolume;
     float stdDevSpeed;
@@ -49,9 +51,11 @@ class analysisEngine{
         analysisEngine();
         void startEngine(int, int,Road);
         void readLogs();
-        void dayStatistics(int,Road);
         void totalStatistics(Road);
-        void printInstances();
         void printStatistics();
+        /*
+        void dayStatistics(int,Road);
+        void printInstances();
+        */
 };
 #endif
