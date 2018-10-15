@@ -43,7 +43,6 @@ void analysisEngine::readLogs()
     char temp[256];
     for(int i = 0; i < days.size(); i++)
     {
-        int statCntr = 0;
         std::ostringstream oss;
         oss << "day" << i << ".txt";
         strcpy(file,(oss.str()).c_str());
@@ -100,8 +99,7 @@ void analysisEngine::totalStatistics(Road road)
     }
     for(int i = 0; i < totalInstances.size(); i++)
     {
-        if(totalInstances[i].curLocation > road.length)
-            totalAvgSpeed += totalInstances[i].initSpeed;
+        totalAvgSpeed += totalInstances[i].initSpeed;
     }
     //Mean
     totalAvgSpeed = totalAvgSpeed/totalInstances.size();
@@ -205,6 +203,7 @@ void analysisEngine::printStatistics()
         std::cout << "StartTime :" << it->second.startTime << std::endl;
         std::cout << "EndTime :" << it->second.endTime << std::endl;
     }
+    fout.close();
 }
 
 /*
