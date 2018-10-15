@@ -200,6 +200,10 @@ void analysisEngine::printStatistics()
         std::cout << "---------Day :" << it->first << std::endl;
         std::cout << "Type :" << it->second.type << std::endl;
         std::cout << "Speed :" << it->second.initSpeed << std::endl;
+        std::cout << "Must have went :" << it->second.speed << std::endl;
+        std::cout << "Length :" << it->second.curLocation << std::endl;
+        std::cout << "Parking Time :" << it->second.parkingTime << std::endl;
+        std::cout << "Total Time :" << it->second.totalTime << std::endl;
         std::cout << "StartTime :" << it->second.startTime << std::endl;
         std::cout << "EndTime :" << it->second.endTime << std::endl;
     }
