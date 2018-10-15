@@ -6,3 +6,7 @@ Makefile.win
 #Ignore compiled files
 *.exe
 *.o
+
+#Ignore vim trash
+*.swp
+*.txt
