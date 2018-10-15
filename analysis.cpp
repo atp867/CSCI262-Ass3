@@ -21,14 +21,14 @@ analysisEngine::analysisEngine()
 
 void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
 {
-    std::cout << "*************Starting Analysis*************" << std::endl;
+    std::cout << "\n\n*************Starting Analysis*************" << std::endl;
     //Initialise vector sizes
     days.resize(numDays);
     for(int i = 0; i < numDays;i++)
         days[i].vehicleStats.resize(numVehicles);
-
     readLogs();
     totalStatistics(road);
+    std::cout << "Calculating statistics across data" << std::endl;
     printStatistics();
 
 }
@@ -44,6 +44,7 @@ void analysisEngine::readLogs()
         std::ostringstream oss;
         oss << "day" << i << ".txt";
         strcpy(file,(oss.str()).c_str());
+        std::cout << "*********Reading log file " << file << " *********" << std::endl;
         std::ifstream fin;
         fin.open(file);
         while(fin.getline(temp,256,'\n'))
@@ -115,8 +116,40 @@ void analysisEngine::totalStatistics(Road road)
     totalStdDevSpeed = sqrt(totalStdDevSpeed);
 }
 
+void analysisEngine::vehicleStatistics()
+{
+    float volStdDev = 0;
+    float temp = 0;
+    totalStats.resize(days[i].vehicleStats.size()); 
+    for(int i = 0; i < days.size(); i++)
+    {
+        for(int x = 0; x <days[i].vehicleStats.size(); x++)
+        {
+            for(int k = 0; k < days[i].vehicleStats[x].instances.size(); k++)
+            {
+                totalStats[x].total++;
+                totalStats[x].averageSpeed += days[i].vehicleStats[x].instances[k].initSpeed;
+            }
+        }
+    }
+
+    for(int i = 0; i < totalStats.size(); i++)// speed mean
+        totalStats[i].averageSpeed = totalStats[i].averageSpeed /totalStats[x].total; 
+    for(int i = 0; i < totalStats.size(); i++)// volume mean
+        totalStats[i].averageVolume = totalStats[i].total /days.size();
+
+    for(int i = 0; i < totalStats.size(); i++)// speed Standard Deviation
+        temp += pow(totalStats[i].averageSpeed - totalStats[i].total,2);
+        /*****WIP*****/
+    for(int i = 0; i < totalStats.size(); i++)// volume Standard Deviation
+        volStdDev += pow(totalStats[i].averageVolume - totalStats[i].total,2);
+
+
+}
+
 void analysisEngine::printStatistics()
 {
+    std::cout << "Printing Calculated Statistics to : analysisLog.txt" << std::endl;
     std::ofstream fout;
     fout.open("analysisLog.txt");
     fout << "**************Statistics**************" << std::endl;
@@ -136,14 +169,14 @@ void analysisEngine::printStatistics()
         fout << std::endl;
     }
 
-    fout << "**************Speed Breaches**************" << std::endl;
+    std::cout << "**************Speed Breaches**************" << std::endl;
     for(std::map<int,Instances>::iterator it = speedBreaches.begin(); it != speedBreaches.end(); it++)
     {
-        fout << "---------Day :" << it->first << std::endl;
-        fout << "Type :" << it->second.type << std::endl;
-        fout << "Speed :" << it->second.initSpeed << std::endl;
-        fout << "StartTime :" << it->second.startTime << std::endl;
-        fout << "EndTime :" << it->second.endTime << std::endl;
+        std::cout << "---------Day :" << it->first << std::endl;
+        std::cout << "Type :" << it->second.type << std::endl;
+        std::cout << "Speed :" << it->second.initSpeed << std::endl;
+        std::cout << "StartTime :" << it->second.startTime << std::endl;
+        std::cout << "EndTime :" << it->second.endTime << std::endl;
     }
 }
 

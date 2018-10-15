@@ -23,8 +23,8 @@ struct stats{
     std::string type;
     float averageSpeed;
     float stdDevSpeed;
-    float average;
-
+    float averageVolume;
+    float stdDevVolume;
 };
 
 struct Day{
@@ -53,6 +53,7 @@ class analysisEngine{
         void readLogs();
         void totalStatistics(Road);
         void printStatistics();
+        void vehicleStatistics(Road);
         /*
         void dayStatistics(int,Road);
         void printInstances();
