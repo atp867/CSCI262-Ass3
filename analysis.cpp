@@ -29,8 +29,8 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
     totalStats.resize(days[0].vehicleStats.size()); 
 
     readLogs();
-    totalStatistics(road);
     std::cout << "Calculating statistics across data" << std::endl;
+    totalStatistics(road);
     vehicleStatistics();
     printStatistics();
 
