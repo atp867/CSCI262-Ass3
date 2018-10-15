@@ -29,8 +29,8 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
     totalStats.resize(days[0].vehicleStats.size()); 
 
     readLogs();
-    totalStatistics(road);
     std::cout << "Calculating statistics across data" << std::endl;
+    totalStatistics(road);
     vehicleStatistics();
     printStatistics();
 
@@ -43,7 +43,6 @@ void analysisEngine::readLogs()
     char temp[256];
     for(int i = 0; i < days.size(); i++)
     {
-        int statCntr = 0;
         std::ostringstream oss;
         oss << "day" << i << ".txt";
         strcpy(file,(oss.str()).c_str());
@@ -205,6 +204,7 @@ void analysisEngine::printStatistics()
         std::cout << "StartTime :" << it->second.startTime << std::endl;
         std::cout << "EndTime :" << it->second.endTime << std::endl;
     }
+    fout.close();
 }
 
 /*
