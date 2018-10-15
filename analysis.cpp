@@ -26,9 +26,12 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
     days.resize(numDays);
     for(int i = 0; i < numDays;i++)
         days[i].vehicleStats.resize(numVehicles);
+    totalStats.resize(days[0].vehicleStats.size()); 
+
     readLogs();
     totalStatistics(road);
     std::cout << "Calculating statistics across data" << std::endl;
+    vehicleStatistics();
     printStatistics();
 
 }
@@ -69,6 +72,7 @@ void analysisEngine::readLogs()
             days[i].vehicleStats[tmp.type].instances.push_back(tmp);
             totalInstances.push_back(tmp);
             days[i].vehicleTotal++;
+            totalStats[tmp.type].total++;
         }
         fin.close();
     }
@@ -104,13 +108,13 @@ void analysisEngine::totalStatistics(Road road)
     totalAvgVolume = totalInstances.size() / days.size();
     for(int i = 0; i <days.size();i++)
     {
-        volStdDev += pow(totalAvgVolume - days[i].vehicleTotal,2);
+        volStdDev += pow(days[i].vehicleTotal - totalAvgVolume ,2);
     }
     volStdDev = volStdDev / days.size();
     totalStdDevVolume = sqrt(volStdDev);
     for(int i = 0; i <totalInstances.size(); i++)
     {
-        temp += pow(totalAvgSpeed - totalInstances[i].initSpeed,2);
+        temp += pow(totalInstances[i].initSpeed - totalAvgSpeed ,2);
     }
     totalStdDevSpeed = temp/totalInstances.size();
     totalStdDevSpeed = sqrt(totalStdDevSpeed);
@@ -118,32 +122,48 @@ void analysisEngine::totalStatistics(Road road)
 
 void analysisEngine::vehicleStatistics()
 {
-    float volStdDev = 0;
-    float temp = 0;
-    totalStats.resize(days[i].vehicleStats.size()); 
-    for(int i = 0; i < days.size(); i++)
+    float *volStdDev = new float[totalStats.size()];
+    float *temp = new float[totalStats.size()];
+    for(int i =0; i < totalStats.size();i++)
+    {//initialise temp variables
+        volStdDev[i] = 0;
+        temp[i] = 0;
+    }
+                /********Speed Statistics*********/
+    for(int i = 0; i < days.size(); i++)// speed mean
     {
         for(int x = 0; x <days[i].vehicleStats.size(); x++)
         {
             for(int k = 0; k < days[i].vehicleStats[x].instances.size(); k++)
-            {
-                totalStats[x].total++;
                 totalStats[x].averageSpeed += days[i].vehicleStats[x].instances[k].initSpeed;
-            }
         }
     }
-
-    for(int i = 0; i < totalStats.size(); i++)// speed mean
-        totalStats[i].averageSpeed = totalStats[i].averageSpeed /totalStats[x].total; 
-    for(int i = 0; i < totalStats.size(); i++)// volume mean
-        totalStats[i].averageVolume = totalStats[i].total /days.size();
+    for(int i = 0; i < totalStats.size(); i++)
+        totalStats[i].averageSpeed = totalStats[i].averageSpeed /totalStats[i].total; 
 
     for(int i = 0; i < totalStats.size(); i++)// speed Standard Deviation
-        temp += pow(totalStats[i].averageSpeed - totalStats[i].total,2);
-        /*****WIP*****/
-    for(int i = 0; i < totalStats.size(); i++)// volume Standard Deviation
-        volStdDev += pow(totalStats[i].averageVolume - totalStats[i].total,2);
+        temp[i] += pow(totalStats[i].total - totalStats[i].averageSpeed,2);
+    for(int i = 0; i < totalStats.size();i++)
+    {
+        totalStats[i].stdDevSpeed = temp[i]/totalStats[i].total;
+        totalStats[i].stdDevSpeed = sqrt(totalStats[i].stdDevSpeed);
+    }
 
+                /********Volume Statistics*********/
+    for(int i = 0; i < totalStats.size(); i++)// volume mean
+        totalStats[i].averageVolume = totalStats[i].total /days.size();
+    for(int x = 0; x < days.size(); x++)
+    {
+        for(int i = 0; i < totalStats.size(); i++)// volume Standard Deviation
+        {
+            volStdDev[i] += pow(days[x].vehicleStats[i].instances.size() - totalStats[i].averageVolume ,2);
+        }
+    }
+    for(int i = 0; i < totalStats.size();i++)
+    {
+        totalStats[i].stdDevVolume = volStdDev[i]/days.size();
+        totalStats[i].stdDevVolume = sqrt(totalStats[i].stdDevVolume);
+    }
 
 }
 
@@ -152,7 +172,14 @@ void analysisEngine::printStatistics()
     std::cout << "Printing Calculated Statistics to : analysisLog.txt" << std::endl;
     std::ofstream fout;
     fout.open("analysisLog.txt");
-    fout << "**************Statistics**************" << std::endl;
+    fout << days.size() << " days **************Statistics**************" << std::endl;
+    for(int i = 0; i < totalStats.size();i++)
+    {//No annoying : inbetween data :)
+        fout << i << ' ' << totalStats[i].averageVolume  << ' '
+            << totalStats[i].stdDevVolume << ' '
+            << totalStats[i].averageSpeed << ' ' 
+            << totalStats[i].stdDevSpeed << std::endl;
+    }
     fout << "Total Speed average : " << totalAvgSpeed << std::endl;
     fout << "Total Speed Standard Deviation : " << totalStdDevSpeed << std::endl;
     fout << "Total Volume average : " << totalAvgVolume << std::endl;

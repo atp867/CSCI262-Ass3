@@ -53,7 +53,7 @@ class analysisEngine{
         void readLogs();
         void totalStatistics(Road);
         void printStatistics();
-        void vehicleStatistics(Road);
+        void vehicleStatistics();
         /*
         void dayStatistics(int,Road);
         void printInstances();
