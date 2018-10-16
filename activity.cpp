@@ -8,6 +8,11 @@
 *   <name - login - Student #>
 *************************************/
 
+/*
+Do we need even distribution for all randomness???
+Because rand() % n is biased to lower values...
+*/
+
 #include "activity.h"
 #include <sstream>
 #include <cstring>
@@ -26,7 +31,7 @@ void activityEngine::pushStats(Stats sample)
     vehicleStats.push_back(sample);
 }
 
-//High-level description of function and parameters
+//Sets road parameters from given road
 void activityEngine::pushRoad(Road sample)
 {   
     road.length = sample.length;
@@ -34,6 +39,7 @@ void activityEngine::pushRoad(Road sample)
     road.numParking = sample.numParking;
 }
 
+//Returns the road
 Road activityEngine::getRoad()
 {
     return road;
@@ -108,7 +114,9 @@ void activityEngine::clearInstances()
 void activityEngine::simDay()
 {
     srand(time(NULL));
-    std::default_random_engine randEng;
+    //std::default_random_engine randEng;
+    std::random_device rd;
+    std::mt19937 randEng(rd()); //Seed Mersenne Twist random engine with random number from hardware (more random than default random engine)
     int hourClock = 0;
     int parkingUsed = 0;
 
@@ -116,26 +124,34 @@ void activityEngine::simDay()
     int sideExited = 0;
     std::cout << " There are " << instances.size() << " instances" << std::endl;
 
+    //Simluates each minute of day
     for(int i = 0; i < MINUTESINDAY; i++)
     {
+        //Runs on each hour
         if(i % 60 == 0)
         {
             std::cout << "***************** Hour " << hourClock << "***************" <<std::endl;
             hourClock++;
         }
+        //Iterates through instances and triggers events
         for(std::vector<Instances>::iterator it = instances.begin(); it != instances.end(); it++)
         {
+            
             if(it->startTime < i && it->endTime == 0)
             {
                 if(it->parked)
                     it->parkingTime++;
+                
+                //Vehicle reaches end of road
                 if(it->curLocation >= road.length)
-                {//vehicle reached end of road
+                {
                     //std::cout << "Vehicle has reached the end!" << std::endl;
                     it->endTime = i;
                     it->totalTime = it->endTime - it->startTime - it->parkingTime;
                     exited++;
                 }
+                
+                //Vehicle exits via side road?
                 if((rand() % MINUTESINDAY) == STREETEXIT && it->endTime == 0)
                 {
                     //std::cout << "I have exited" << std::endl;
@@ -143,11 +159,15 @@ void activityEngine::simDay()
                     it->totalTime = it->endTime - it->startTime - it->parkingTime;
                     sideExited++;
                 }
+                
+                //Vehicle is not parked: update location
                 if(it->startTime < i && it->parked == false && it->endTime ==0)
                 {
                     //std::cout << "HELP " << std::endl;
                     it->curLocation += it->speed/60;//update location if vehicle not parked 
                 }
+                
+                //Random chance to try and park if isn't parked
                 if((rand() % MINUTESINDAY) < ISPARKED && parkingUsed < road.numParking && it->parked==false)//probability of parking
                 {
                     it->parked = true;
@@ -165,8 +185,10 @@ void activityEngine::simDay()
                     parkingUsed++;
                 }
                 int random = rand() % MINUTESINDAY;
+                
+                //Random chance to change speed
                 if(random < CHANGESPEED && it->endTime == 0)
-                {//Probability to change speed
+                {
                 //NEED TO FIND A WAY TO LINK TO STATS
                     if(it->parked)
                     {
@@ -184,8 +206,10 @@ void activityEngine::simDay()
                     }
                     //std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
+                
+                //If last minute of day, remove vehicle
                 if(i == MINUTESINDAY-1 && it->endTime ==0)
-                {//If day ends, remove vehicle
+                {
                     instances.erase(it);
                 }
             }
