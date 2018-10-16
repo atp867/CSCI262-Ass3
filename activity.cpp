@@ -47,8 +47,8 @@ void activityEngine::genEvents()
     //Iterate through all vehicle types
     for(std::vector<Vehicle>::iterator it = vehicleSim.begin(); it != vehicleSim.end(); it++)
     {
-         //Use normal distribution to determine number of vehicles
-         std::normal_distribution<float> normal(vehicleStats[i].avg, vehicleStats[i].stdDev);
+        //Use normal distribution to determine number of vehicles
+        std::normal_distribution<float> normal(vehicleStats[i].avg, vehicleStats[i].stdDev);
         int loop = lround(normal(randEng));    
         for(int x = 0; x < loop; x++)
         {
@@ -58,6 +58,14 @@ void activityEngine::genEvents()
             temp.startTime = (rand() % MINUTESINDAY);//discrete event thus no stats required for generation
             std::normal_distribution<float> normalSpeed(vehicleStats[i].speedAvg, vehicleStats[i].speedStdDev);
             temp.initSpeed = lround(normalSpeed(randEng));
+            temp.rego = vehicleSim[i].rego;//Initalise instances rego
+            for(int k = 0; k < vehicleSim[i].rego.length();k++)//Generate random rego number
+            {
+                if(vehicleSim[i].rego[k] =='L')
+                    temp.rego[k] = (rand() % (90-65 + 1) + 65);//random char
+                else
+                    temp.rego[k] = (rand() % (57-48 + 1) + 48);//random int
+            }
             temp.speed = temp.initSpeed;
             while(temp.initSpeed < 1)
             {//Vehicles must be moving forward to enter road
@@ -227,6 +235,7 @@ void activityEngine::printInstances(int days)
     {
         fout << "******Vehicle******" << std::endl;
         fout << "Name : " << vehicleSim[it->type].name << std::endl;
+        fout << "Rego : " << it->rego << std::endl;
         fout << "Type : " << it->type << std::endl;
         fout << "Start : " << it->startTime << std::endl;
         fout << "ParkingTime : " << it->parkingTime << std::endl;

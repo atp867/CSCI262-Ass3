@@ -53,6 +53,9 @@ void analysisEngine::readLogs()
         {
             Instances tmp;
             fin.getline(temp,256,'\n');
+            fin.getline(temp,256,'\n');
+            std::cout << temp << std::endl;
+            tmp.rego = temp;
             fin.ignore(256,':');
             fin >> tmp.type;
             fin.ignore(256,':');
@@ -200,6 +203,7 @@ void analysisEngine::printStatistics()
         std::cout << "---------Day :" << it->first << std::endl;
         std::cout << "Type :" << it->second.type << std::endl;
         std::cout << "Speed :" << it->second.initSpeed << std::endl;
+        std::cout << "Rego :" << it->second.rego << std::endl;
         std::cout << "Must have went :" << it->second.speed << std::endl;
         std::cout << "Length :" << it->second.curLocation << std::endl;
         std::cout << "Parking Time :" << it->second.parkingTime << std::endl;

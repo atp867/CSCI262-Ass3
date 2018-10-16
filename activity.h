@@ -46,17 +46,19 @@ struct Road{
 };
 
 struct Instances{
+        std::string rego;
         int type;
         int startTime;
-        float speed;
-        bool parked;
         int parkingTime;
         int endTime;
+        float speed;
+        bool parked;
         /***Stats data***/
         float initSpeed;
         float curLocation;
         int totalTime;
         Instances(){
+            rego = "";
             type = -1;
             initSpeed = 0;
             speed = 0;

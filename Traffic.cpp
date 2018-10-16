@@ -49,9 +49,9 @@ int main(int argc, char * argv[])
 		exit(1);
 
     fin >> numTypeV; //First integer of Vehicles.txt
-    fin.ignore(1,'\r');
+    fin.ignore(1);
     ifs >> numTypeS; //First integer of Stats.txt   
-    ifs.ignore(1,'\r');
+    ifs.ignore(1);
     if(numTypeS != numTypeV)
     {
         std::cerr << "Error: Given file arguements have a different number of Types!" << std::endl;
@@ -90,6 +90,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     char tmp[12];
     int cntr = 0;
     Vehicle temp;
+    fin.ignore();
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
         fin.getline(tmp, 18, ':');
