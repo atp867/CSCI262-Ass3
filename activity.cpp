@@ -92,6 +92,7 @@ void activityEngine::genEvents()
 void activityEngine::startEngine(int days)
 {
     srand(time(NULL));
+    std::cout << "---------------- Beginning Activity Engine---------------- " << std::endl;
     for(int i = 0; i < days; i++) //Simulation main driver loop
     {
         std::cout << "---------------- DAY " << i << " ----------------" << std::endl;
@@ -130,7 +131,7 @@ void activityEngine::simDay()
         //Runs on each hour
         if(i % 60 == 0)
         {
-            std::cout << "***************** Hour " << hourClock << "***************" <<std::endl;
+            std::cout << "**** Hour " << hourClock << "****" <<std::endl;
             hourClock++;
         }
         //Iterates through instances and triggers events

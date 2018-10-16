@@ -38,7 +38,6 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
 
 void analysisEngine::readLogs()
 {
-    std::cout << "******************** READING SHIT ********************" << std::endl;
     char file[12];
     char temp[256];
     for(int i = 0; i < days.size(); i++)
@@ -54,7 +53,6 @@ void analysisEngine::readLogs()
             Instances tmp;
             fin.getline(temp,256,'\n');
             fin.getline(temp,256,'\n');
-            std::cout << temp << std::endl;
             tmp.rego = temp;
             fin.ignore(256,':');
             fin >> tmp.type;

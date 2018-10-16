@@ -90,6 +90,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     char tmp[12];
     int cntr = 0;
     Vehicle temp;
+
     fin.ignore();
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
@@ -124,7 +125,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
 
     simulation.pushRoad(tempRoad);
 
-
+    fin.ignore();
     for(int i = 0; i < num; i++)
     {
         fin.getline(tmp, 25, ':');
