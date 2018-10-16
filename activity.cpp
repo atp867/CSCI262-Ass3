@@ -5,7 +5,7 @@
 *   13/10/2018
 *   <Anthony Pham - atp867 - 5146562>
 *   <Daniel Nichols - dn688 - 5728356>
-*   <name - login - Student #>
+*   <Olivia Followes - of767 - 5395707>
 *************************************/
 
 /*
