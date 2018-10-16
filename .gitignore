@@ -10,3 +10,9 @@ Makefile.win
 #Ignore vim trash
 *.swp
 *.txt
+
+#ignore atom files
+.atom-build.yml
+
+#ignore misc files
+*.bat
