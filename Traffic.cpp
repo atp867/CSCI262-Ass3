@@ -50,10 +50,16 @@ int main(int argc, char * argv[])
     	std::cerr << "Terminating Program..." << std::endl;
         exit(0);
 	}
+	if(numDays <= 0)
+    {
+    	std::cerr << "Error: There must be at least one day to simulate" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
     
     std::cout << "-------------Beginning Program------------" << std::endl;
     std::cout << "--------------Reading in Files------------" << std::endl;
-    int numTypeV = 0, numTypeS;
+    
     ifstream fin; //Vehicles.txt
     ifstream ifs; //Stats.txt
     fin.open(argv[1]);
@@ -64,11 +70,17 @@ int main(int argc, char * argv[])
         exit(1);
 	if(!checkConsistency(ifs, 0))
 		exit(1);
-
+	
+	int numTypeV, numTypeS;
     fin >> numTypeV; //First integer of Vehicles.txt
     fin.ignore(1);
-    ifs >> numTypeS; //First integer of Stats.txt   
+    ifs >> numTypeS; //First integer of Stats.txt  
     ifs.ignore(1);
+    
+    //Convert negative to positive
+    numTypeV = abs(numTypeV);
+    numTypeS = abs(numTypeS);
+    
     if(numTypeS != numTypeV)
     {
         std::cerr << "Error: Given file arguements have a different number of Types!" << std::endl;
@@ -117,11 +129,20 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
         fin.ignore(3,':');
         fin.getline(tmp, 18, ':');
         temp.rego = tmp;
-        fin >> temp.volWeight;
+        
+        float num;
+        fin >> num;
+        num = abs(num);
+        temp.volWeight = num;
         fin.ignore(3, ':');
-        fin >> temp.speedWeight;
+        
+        fin >> num;
+        num = abs(num);
+        temp.speedWeight = num;
         fin.ignore(256, '\n');
+        
         simulation.pushVehicles(temp);
+        
         if(!checkConsistency(fin, 1)) //Check if there are not enough vehicles
             return -1;
     }
@@ -136,10 +157,21 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     char tmp[25];
     Stats temp;
     Road tempRoad;
-    fin >> tempRoad.length;
-    fin >> tempRoad.speedLim;
-    fin >> tempRoad.numParking;;
-
+    
+    //Assigning a negative to unsigned int does BAD things
+    float nmbr;
+    fin >> nmbr;
+    nmbr= abs(nmbr);
+    tempRoad.length = nmbr;
+    
+    fin >> nmbr;
+    nmbr = abs(nmbr);
+    tempRoad.speedLim = nmbr;
+    
+    fin >> nmbr;
+    nmbr = abs(nmbr);
+    tempRoad.numParking = nmbr;
+    
     simulation.pushRoad(tempRoad);
 
     for(int i = 0; i < num; i++)
@@ -154,7 +186,15 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
         fin.ignore(3, ':');
         fin >> temp.speedStdDev;
         fin.ignore(256, '\n');
+        
+        //No negatives pls
+        temp.avg = abs(temp.avg);
+        temp.speedAvg = abs(temp.speedAvg);
+        temp.speedStdDev = abs(temp.speedStdDev);
+        temp.stdDev = abs(temp.stdDev);
+        
         simulation.pushStats(temp);
+        
         if(!checkConsistency(fin, 1)) //Check if there are not enough stats
             return -1;
     }
