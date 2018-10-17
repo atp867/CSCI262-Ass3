@@ -231,9 +231,9 @@ void activityEngine::simDay()
 		}
 	}
     
-    std::cout << exited << " MANY CARS EXITED" << std::endl;
-    std::cout << sideExited << " MANY CARS EXITED VIA STREET" << std::endl;
-    std::cout << " There are " << instances.size() << " instances" << std::endl;
+    std::cout << exited << " CARS EXITED" << std::endl;
+    std::cout << sideExited << " CARS EXITED VIA STREET" << std::endl;
+    std::cout << "There are " << instances.size() << " instances" << std::endl;
 }
 
 //Print vehicle details and stats for all vehicles in simulation
