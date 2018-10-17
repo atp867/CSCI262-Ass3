@@ -38,13 +38,16 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road, std::v
 
 void analysisEngine::readLogs()
 {
-    char file[12];
+    char file[13];
     char temp[256];
     for(int i = 0; i < days.size(); i++)
     {
+    	
         std::ostringstream oss;
         oss << "day" << i << ".txt";
         strcpy(file,(oss.str()).c_str());
+        
+        
         std::cout << "*********Reading log file " << file << " *********" << std::endl;
         std::ifstream fin;
         fin.open(file);
@@ -182,7 +185,8 @@ void analysisEngine::printStatistics(std::vector<Vehicle> vehicles)
     std::cout << "Printing Calculated Statistics to : analysisLog.txt" << std::endl;
     std::ofstream fout;
     fout.open("analysisLog.txt");
-    fout << days.size() << " days **************Statistics**************" << std::endl;
+    fout << "**************Statistics**************" << std::endl;
+    fout << days.size() << " days" << std::endl;
     for(int i = 0; i < totalStats.size();i++)
     {//No annoying : inbetween data :)
         fout << vehicles[i].name << ' ' << totalStats[i].averageVolume  << ' '

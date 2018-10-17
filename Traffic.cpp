@@ -11,8 +11,8 @@
 *************************************/
 
 #include <iostream>
-#include <cstdlib>
 #include <fstream>
+#include <cstdlib>
 #include <cmath>
 #include <string>
 #include "activity.h"
@@ -33,7 +33,24 @@ int main(int argc, char * argv[])
         std::cerr << "Terminating Program..." << std::endl;
         exit(0);
     }
-
+    
+    //cout << argv[3] << endl;
+    
+    int numDays;
+    std::istringstream iss(argv[3]);
+    if(!(iss >> numDays))
+    {
+    	std::cerr << "Error: Days parameter is not an integer" << std::endl;
+        std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
+    if(numDays > 999999)
+    {
+    	std::cerr << "Error: Too many days! Max number of days is 999,999" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
+    
     std::cout << "-------------Beginning Program------------" << std::endl;
     std::cout << "--------------Reading in Files------------" << std::endl;
     int numTypeV = 0, numTypeS;
@@ -68,19 +85,20 @@ int main(int argc, char * argv[])
         exit(2);
 	}
 	fin.close();
-
+	
     if(readStats(ifs, simulation, numTypeS) == -1)
 	{
-		fin.close();
+		ifs.close();
         exit(2);
 	}
-	fin.close();
-
+	ifs.close();
+	
     simulation.printVehicles();
+    
     simulation.startEngine(atoi(argv[3]));
-
+    
     analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
-
+    
     return 0;
 }
 
@@ -90,7 +108,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     char tmp[12];
     int cntr = 0;
     Vehicle temp;
-
+    
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
         fin.getline(tmp, 18, ':');
