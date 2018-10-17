@@ -16,6 +16,7 @@ Because rand() % n is biased to lower values...
 #include "activity.h"
 #include <sstream>
 #include <cstring>
+#include <iomanip>
 
 using namespace std;
 
@@ -137,7 +138,7 @@ void activityEngine::simDay()
         //Runs on each hour
         if(i % 60 == 0)
         {
-            std::cout << "**** Hour " << hourClock << "****" <<std::endl;
+            std::cout << "**** Hour " << std::setw(2) << hourClock << "****" <<std::endl;
             hourClock++;
         }
         //Iterates through instances and triggers events
@@ -260,7 +261,8 @@ void activityEngine::printVehicles()
 //Print all current vehicle instances in simulation
 void activityEngine::printInstances(int days)
 {
-    char file[12];
+	
+    char file[13];
     std::ostringstream oss;
     oss << "day" << days << ".txt";
     strcpy(file,(oss.str()).c_str());
