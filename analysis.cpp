@@ -48,6 +48,11 @@ void analysisEngine::readLogs()
         std::cout << "*********Reading log file " << file << " *********" << std::endl;
         std::ifstream fin;
         fin.open(file);
+        if(!fin.good())
+        {
+            std::cerr << "File does not exist" << std::endl;
+            exit(5);
+        }
         while(fin.getline(temp,256,'\n'))
         {
             Instances tmp;
