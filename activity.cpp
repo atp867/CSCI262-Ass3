@@ -125,11 +125,12 @@ void activityEngine::simDay()
     std::mt19937 randEng(rd()); //Seed Mersenne Twist random engine with random number from hardware (more random than default random engine)
     int hourClock = 0;
     int parkingUsed = 0;
-
+    
     int exited = 0;
     int sideExited = 0;
     std::cout << " There are " << instances.size() << " instances" << std::endl;
-
+    
+    
     //Simluates each minute of day
     for(int i = 0; i < MINUTESINDAY; i++)
     {
@@ -212,15 +213,23 @@ void activityEngine::simDay()
                     }
                     //std::cout << "MY SPEED NOW IS " << it->speed << std::endl;
                 }
-                
-                //If last minute of day, remove vehicle
-                if(i == MINUTESINDAY-1 && it->endTime ==0)
-                {
-                    instances.erase(it);
-                }
             }
         }
     }
+    
+    //Remove vehicles that have not exited at end of day
+    for(std::vector<Instances>::iterator it = instances.begin(); it != instances.end();)
+    {
+    	if(it->endTime == 0)
+    	{
+    		instances.erase(it);
+		}
+		else
+		{
+			it++;
+		}
+	}
+    
     std::cout << exited << " MANY CARS EXITED" << std::endl;
     std::cout << sideExited << " MANY CARS EXITED VIA STREET" << std::endl;
     std::cout << " There are " << instances.size() << " instances" << std::endl;
