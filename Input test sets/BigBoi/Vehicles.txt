@@ -1,0 +1,2167 @@
+2166
+Bus:0:LLLDDD:3:2:
+Motorbike:0:LLDDLL:1:1:
+Red car:1:LDLLDL:1:1:
+Elephant:1:LD:2:5:
+Taxi:0:LDDL:0:2:
+Emergency:0:LLDD:3:0:
+Bus1:0:LLLDDD:3:2:
+Motorbike2:0:LLDDLL:1:1:
+Red car3:1:LDLLDL:1:1:
+Elephant4:1:LD:2:5:
+Taxi5:0:LDDL:0:2:
+Emergency6:0:LLDD:3:0:
+Bus7:0:LLLDDD:3:2:
+Motorbike8:0:LLDDLL:1:1:
+Red car9:1:LDLLDL:1:1:
+Elephant10:1:LD:2:5:
+Taxi11:0:LDDL:0:2:
+Emergency12:0:LLDD:3:0:
+Bus13:0:LLLDDD:3:2:
+Motorbike14:0:LLDDLL:1:1:
+Red car15:1:LDLLDL:1:1:
+Elephant16:1:LD:2:5:
+Taxi17:0:LDDL:0:2:
+Emergency18:0:LLDD:3:0:
+Bus19:0:LLLDDD:3:2:
+Motorbike20:0:LLDDLL:1:1:
+Red car21:1:LDLLDL:1:1:
+Elephant22:1:LD:2:5:
+Taxi23:0:LDDL:0:2:
+Emergency24:0:LLDD:3:0:
+Bus25:0:LLLDDD:3:2:
+Motorbike26:0:LLDDLL:1:1:
+Red car27:1:LDLLDL:1:1:
+Elephant28:1:LD:2:5:
+Taxi29:0:LDDL:0:2:
+Emergency30:0:LLDD:3:0:
+Bus31:0:LLLDDD:3:2:
+Motorbike32:0:LLDDLL:1:1:
+Red car33:1:LDLLDL:1:1:
+Elephant34:1:LD:2:5:
+Taxi35:0:LDDL:0:2:
+Emergency36:0:LLDD:3:0:
+Bus37:0:LLLDDD:3:2:
+Motorbike38:0:LLDDLL:1:1:
+Red car39:1:LDLLDL:1:1:
+Elephant40:1:LD:2:5:
+Taxi41:0:LDDL:0:2:
+Emergency42:0:LLDD:3:0:
+Bus43:0:LLLDDD:3:2:
+Motorbike44:0:LLDDLL:1:1:
+Red car45:1:LDLLDL:1:1:
+Elephant46:1:LD:2:5:
+Taxi47:0:LDDL:0:2:
+Emergency48:0:LLDD:3:0:
+Bus49:0:LLLDDD:3:2:
+Motorbike50:0:LLDDLL:1:1:
+Red car51:1:LDLLDL:1:1:
+Elephant52:1:LD:2:5:
+Taxi53:0:LDDL:0:2:
+Emergency54:0:LLDD:3:0:
+Bus55:0:LLLDDD:3:2:
+Motorbike56:0:LLDDLL:1:1:
+Red car57:1:LDLLDL:1:1:
+Elephant58:1:LD:2:5:
+Taxi59:0:LDDL:0:2:
+Emergency60:0:LLDD:3:0:
+Bus61:0:LLLDDD:3:2:
+Motorbike62:0:LLDDLL:1:1:
+Red car63:1:LDLLDL:1:1:
+Elephant64:1:LD:2:5:
+Taxi65:0:LDDL:0:2:
+Emergency66:0:LLDD:3:0:
+Bus67:0:LLLDDD:3:2:
+Motorbike68:0:LLDDLL:1:1:
+Red car69:1:LDLLDL:1:1:
+Elephant70:1:LD:2:5:
+Taxi71:0:LDDL:0:2:
+Emergency72:0:LLDD:3:0:
+Bus73:0:LLLDDD:3:2:
+Motorbike74:0:LLDDLL:1:1:
+Red car75:1:LDLLDL:1:1:
+Elephant76:1:LD:2:5:
+Taxi77:0:LDDL:0:2:
+Emergency78:0:LLDD:3:0:
+Bus79:0:LLLDDD:3:2:
+Motorbike80:0:LLDDLL:1:1:
+Red car81:1:LDLLDL:1:1:
+Elephant82:1:LD:2:5:
+Taxi83:0:LDDL:0:2:
+Emergency84:0:LLDD:3:0:
+Bus85:0:LLLDDD:3:2:
+Motorbike86:0:LLDDLL:1:1:
+Red car87:1:LDLLDL:1:1:
+Elephant88:1:LD:2:5:
+Taxi89:0:LDDL:0:2:
+Emergency90:0:LLDD:3:0:
+Bus91:0:LLLDDD:3:2:
+Motorbike92:0:LLDDLL:1:1:
+Red car93:1:LDLLDL:1:1:
+Elephant94:1:LD:2:5:
+Taxi95:0:LDDL:0:2:
+Emergency96:0:LLDD:3:0:
+Bus97:0:LLLDDD:3:2:
+Motorbike98:0:LLDDLL:1:1:
+Red car99:1:LDLLDL:1:1:
+Elephant100:1:LD:2:5:
+Taxi101:0:LDDL:0:2:
+Emergency102:0:LLDD:3:0:
+Bus103:0:LLLDDD:3:2:
+Motorbike104:0:LLDDLL:1:1:
+Red car105:1:LDLLDL:1:1:
+Elephant106:1:LD:2:5:
+Taxi107:0:LDDL:0:2:
+Emergency108:0:LLDD:3:0:
+Bus109:0:LLLDDD:3:2:
+Motorbike110:0:LLDDLL:1:1:
+Red car111:1:LDLLDL:1:1:
+Elephant112:1:LD:2:5:
+Taxi113:0:LDDL:0:2:
+Emergency114:0:LLDD:3:0:
+Bus115:0:LLLDDD:3:2:
+Motorbike116:0:LLDDLL:1:1:
+Red car117:1:LDLLDL:1:1:
+Elephant118:1:LD:2:5:
+Taxi119:0:LDDL:0:2:
+Emergency120:0:LLDD:3:0:
+Bus121:0:LLLDDD:3:2:
+Motorbike122:0:LLDDLL:1:1:
+Red car123:1:LDLLDL:1:1:
+Elephant124:1:LD:2:5:
+Taxi125:0:LDDL:0:2:
+Emergency126:0:LLDD:3:0:
+Bus127:0:LLLDDD:3:2:
+Motorbike128:0:LLDDLL:1:1:
+Red car129:1:LDLLDL:1:1:
+Elephant130:1:LD:2:5:
+Taxi131:0:LDDL:0:2:
+Emergency132:0:LLDD:3:0:
+Bus133:0:LLLDDD:3:2:
+Motorbike134:0:LLDDLL:1:1:
+Red car135:1:LDLLDL:1:1:
+Elephant136:1:LD:2:5:
+Taxi137:0:LDDL:0:2:
+Emergency138:0:LLDD:3:0:
+Bus139:0:LLLDDD:3:2:
+Motorbike140:0:LLDDLL:1:1:
+Red car141:1:LDLLDL:1:1:
+Elephant142:1:LD:2:5:
+Taxi143:0:LDDL:0:2:
+Emergency144:0:LLDD:3:0:
+Bus145:0:LLLDDD:3:2:
+Motorbike146:0:LLDDLL:1:1:
+Red car147:1:LDLLDL:1:1:
+Elephant148:1:LD:2:5:
+Taxi149:0:LDDL:0:2:
+Emergency150:0:LLDD:3:0:
+Bus151:0:LLLDDD:3:2:
+Motorbike152:0:LLDDLL:1:1:
+Red car153:1:LDLLDL:1:1:
+Elephant154:1:LD:2:5:
+Taxi155:0:LDDL:0:2:
+Emergency156:0:LLDD:3:0:
+Bus157:0:LLLDDD:3:2:
+Motorbike158:0:LLDDLL:1:1:
+Red car159:1:LDLLDL:1:1:
+Elephant160:1:LD:2:5:
+Taxi161:0:LDDL:0:2:
+Emergency162:0:LLDD:3:0:
+Bus163:0:LLLDDD:3:2:
+Motorbike164:0:LLDDLL:1:1:
+Red car165:1:LDLLDL:1:1:
+Elephant166:1:LD:2:5:
+Taxi167:0:LDDL:0:2:
+Emergency168:0:LLDD:3:0:
+Bus169:0:LLLDDD:3:2:
+Motorbike170:0:LLDDLL:1:1:
+Red car171:1:LDLLDL:1:1:
+Elephant172:1:LD:2:5:
+Taxi173:0:LDDL:0:2:
+Emergency174:0:LLDD:3:0:
+Bus175:0:LLLDDD:3:2:
+Motorbike176:0:LLDDLL:1:1:
+Red car177:1:LDLLDL:1:1:
+Elephant178:1:LD:2:5:
+Taxi179:0:LDDL:0:2:
+Emergency180:0:LLDD:3:0:
+Bus181:0:LLLDDD:3:2:
+Motorbike182:0:LLDDLL:1:1:
+Red car183:1:LDLLDL:1:1:
+Elephant184:1:LD:2:5:
+Taxi185:0:LDDL:0:2:
+Emergency186:0:LLDD:3:0:
+Bus187:0:LLLDDD:3:2:
+Motorbike188:0:LLDDLL:1:1:
+Red car189:1:LDLLDL:1:1:
+Elephant190:1:LD:2:5:
+Taxi191:0:LDDL:0:2:
+Emergency192:0:LLDD:3:0:
+Bus193:0:LLLDDD:3:2:
+Motorbike194:0:LLDDLL:1:1:
+Red car195:1:LDLLDL:1:1:
+Elephant196:1:LD:2:5:
+Taxi197:0:LDDL:0:2:
+Emergency198:0:LLDD:3:0:
+Bus199:0:LLLDDD:3:2:
+Motorbike200:0:LLDDLL:1:1:
+Red car201:1:LDLLDL:1:1:
+Elephant202:1:LD:2:5:
+Taxi203:0:LDDL:0:2:
+Emergency204:0:LLDD:3:0:
+Bus205:0:LLLDDD:3:2:
+Motorbike206:0:LLDDLL:1:1:
+Red car207:1:LDLLDL:1:1:
+Elephant208:1:LD:2:5:
+Taxi209:0:LDDL:0:2:
+Emergency210:0:LLDD:3:0:
+Bus211:0:LLLDDD:3:2:
+Motorbike212:0:LLDDLL:1:1:
+Red car213:1:LDLLDL:1:1:
+Elephant214:1:LD:2:5:
+Taxi215:0:LDDL:0:2:
+Emergency216:0:LLDD:3:0:
+Bus217:0:LLLDDD:3:2:
+Motorbike218:0:LLDDLL:1:1:
+Red car219:1:LDLLDL:1:1:
+Elephant220:1:LD:2:5:
+Taxi221:0:LDDL:0:2:
+Emergency222:0:LLDD:3:0:
+Bus223:0:LLLDDD:3:2:
+Motorbike224:0:LLDDLL:1:1:
+Red car225:1:LDLLDL:1:1:
+Elephant226:1:LD:2:5:
+Taxi227:0:LDDL:0:2:
+Emergency228:0:LLDD:3:0:
+Bus229:0:LLLDDD:3:2:
+Motorbike230:0:LLDDLL:1:1:
+Red car231:1:LDLLDL:1:1:
+Elephant232:1:LD:2:5:
+Taxi233:0:LDDL:0:2:
+Emergency234:0:LLDD:3:0:
+Bus235:0:LLLDDD:3:2:
+Motorbike236:0:LLDDLL:1:1:
+Red car237:1:LDLLDL:1:1:
+Elephant238:1:LD:2:5:
+Taxi239:0:LDDL:0:2:
+Emergency240:0:LLDD:3:0:
+Bus241:0:LLLDDD:3:2:
+Motorbike242:0:LLDDLL:1:1:
+Red car243:1:LDLLDL:1:1:
+Elephant244:1:LD:2:5:
+Taxi245:0:LDDL:0:2:
+Emergency246:0:LLDD:3:0:
+Bus247:0:LLLDDD:3:2:
+Motorbike248:0:LLDDLL:1:1:
+Red car249:1:LDLLDL:1:1:
+Elephant250:1:LD:2:5:
+Taxi251:0:LDDL:0:2:
+Emergency252:0:LLDD:3:0:
+Bus253:0:LLLDDD:3:2:
+Motorbike254:0:LLDDLL:1:1:
+Red car255:1:LDLLDL:1:1:
+Elephant256:1:LD:2:5:
+Taxi257:0:LDDL:0:2:
+Emergency258:0:LLDD:3:0:
+Bus259:0:LLLDDD:3:2:
+Motorbike260:0:LLDDLL:1:1:
+Red car261:1:LDLLDL:1:1:
+Elephant262:1:LD:2:5:
+Taxi263:0:LDDL:0:2:
+Emergency264:0:LLDD:3:0:
+Bus265:0:LLLDDD:3:2:
+Motorbike266:0:LLDDLL:1:1:
+Red car267:1:LDLLDL:1:1:
+Elephant268:1:LD:2:5:
+Taxi269:0:LDDL:0:2:
+Emergency270:0:LLDD:3:0:
+Bus271:0:LLLDDD:3:2:
+Motorbike272:0:LLDDLL:1:1:
+Red car273:1:LDLLDL:1:1:
+Elephant274:1:LD:2:5:
+Taxi275:0:LDDL:0:2:
+Emergency276:0:LLDD:3:0:
+Bus277:0:LLLDDD:3:2:
+Motorbike278:0:LLDDLL:1:1:
+Red car279:1:LDLLDL:1:1:
+Elephant280:1:LD:2:5:
+Taxi281:0:LDDL:0:2:
+Emergency282:0:LLDD:3:0:
+Bus283:0:LLLDDD:3:2:
+Motorbike284:0:LLDDLL:1:1:
+Red car285:1:LDLLDL:1:1:
+Elephant286:1:LD:2:5:
+Taxi287:0:LDDL:0:2:
+Emergency288:0:LLDD:3:0:
+Bus289:0:LLLDDD:3:2:
+Motorbike290:0:LLDDLL:1:1:
+Red car291:1:LDLLDL:1:1:
+Elephant292:1:LD:2:5:
+Taxi293:0:LDDL:0:2:
+Emergency294:0:LLDD:3:0:
+Bus295:0:LLLDDD:3:2:
+Motorbike296:0:LLDDLL:1:1:
+Red car297:1:LDLLDL:1:1:
+Elephant298:1:LD:2:5:
+Taxi299:0:LDDL:0:2:
+Emergency300:0:LLDD:3:0:
+Bus301:0:LLLDDD:3:2:
+Motorbike302:0:LLDDLL:1:1:
+Red car303:1:LDLLDL:1:1:
+Elephant304:1:LD:2:5:
+Taxi305:0:LDDL:0:2:
+Emergency306:0:LLDD:3:0:
+Bus307:0:LLLDDD:3:2:
+Motorbike308:0:LLDDLL:1:1:
+Red car309:1:LDLLDL:1:1:
+Elephant310:1:LD:2:5:
+Taxi311:0:LDDL:0:2:
+Emergency312:0:LLDD:3:0:
+Bus313:0:LLLDDD:3:2:
+Motorbike314:0:LLDDLL:1:1:
+Red car315:1:LDLLDL:1:1:
+Elephant316:1:LD:2:5:
+Taxi317:0:LDDL:0:2:
+Emergency318:0:LLDD:3:0:
+Bus319:0:LLLDDD:3:2:
+Motorbike320:0:LLDDLL:1:1:
+Red car321:1:LDLLDL:1:1:
+Elephant322:1:LD:2:5:
+Taxi323:0:LDDL:0:2:
+Emergency324:0:LLDD:3:0:
+Bus325:0:LLLDDD:3:2:
+Motorbike326:0:LLDDLL:1:1:
+Red car327:1:LDLLDL:1:1:
+Elephant328:1:LD:2:5:
+Taxi329:0:LDDL:0:2:
+Emergency330:0:LLDD:3:0:
+Bus331:0:LLLDDD:3:2:
+Motorbike332:0:LLDDLL:1:1:
+Red car333:1:LDLLDL:1:1:
+Elephant334:1:LD:2:5:
+Taxi335:0:LDDL:0:2:
+Emergency336:0:LLDD:3:0:
+Bus337:0:LLLDDD:3:2:
+Motorbike338:0:LLDDLL:1:1:
+Red car339:1:LDLLDL:1:1:
+Elephant340:1:LD:2:5:
+Taxi341:0:LDDL:0:2:
+Emergency342:0:LLDD:3:0:
+Bus343:0:LLLDDD:3:2:
+Motorbike344:0:LLDDLL:1:1:
+Red car345:1:LDLLDL:1:1:
+Elephant346:1:LD:2:5:
+Taxi347:0:LDDL:0:2:
+Emergency348:0:LLDD:3:0:
+Bus349:0:LLLDDD:3:2:
+Motorbike350:0:LLDDLL:1:1:
+Red car351:1:LDLLDL:1:1:
+Elephant352:1:LD:2:5:
+Taxi353:0:LDDL:0:2:
+Emergency354:0:LLDD:3:0:
+Bus355:0:LLLDDD:3:2:
+Motorbike356:0:LLDDLL:1:1:
+Red car357:1:LDLLDL:1:1:
+Elephant358:1:LD:2:5:
+Taxi359:0:LDDL:0:2:
+Emergency360:0:LLDD:3:0:
+Bus361:0:LLLDDD:3:2:
+Motorbike362:0:LLDDLL:1:1:
+Red car363:1:LDLLDL:1:1:
+Elephant364:1:LD:2:5:
+Taxi365:0:LDDL:0:2:
+Emergency366:0:LLDD:3:0:
+Bus367:0:LLLDDD:3:2:
+Motorbike368:0:LLDDLL:1:1:
+Red car369:1:LDLLDL:1:1:
+Elephant370:1:LD:2:5:
+Taxi371:0:LDDL:0:2:
+Emergency372:0:LLDD:3:0:
+Bus373:0:LLLDDD:3:2:
+Motorbike374:0:LLDDLL:1:1:
+Red car375:1:LDLLDL:1:1:
+Elephant376:1:LD:2:5:
+Taxi377:0:LDDL:0:2:
+Emergency378:0:LLDD:3:0:
+Bus379:0:LLLDDD:3:2:
+Motorbike380:0:LLDDLL:1:1:
+Red car381:1:LDLLDL:1:1:
+Elephant382:1:LD:2:5:
+Taxi383:0:LDDL:0:2:
+Emergency384:0:LLDD:3:0:
+Bus385:0:LLLDDD:3:2:
+Motorbike386:0:LLDDLL:1:1:
+Red car387:1:LDLLDL:1:1:
+Elephant388:1:LD:2:5:
+Taxi389:0:LDDL:0:2:
+Emergency390:0:LLDD:3:0:
+Bus391:0:LLLDDD:3:2:
+Motorbike392:0:LLDDLL:1:1:
+Red car393:1:LDLLDL:1:1:
+Elephant394:1:LD:2:5:
+Taxi395:0:LDDL:0:2:
+Emergency396:0:LLDD:3:0:
+Bus397:0:LLLDDD:3:2:
+Motorbike398:0:LLDDLL:1:1:
+Red car399:1:LDLLDL:1:1:
+Elephant400:1:LD:2:5:
+Taxi401:0:LDDL:0:2:
+Emergency402:0:LLDD:3:0:
+Bus403:0:LLLDDD:3:2:
+Motorbike404:0:LLDDLL:1:1:
+Red car405:1:LDLLDL:1:1:
+Elephant406:1:LD:2:5:
+Taxi407:0:LDDL:0:2:
+Emergency408:0:LLDD:3:0:
+Bus409:0:LLLDDD:3:2:
+Motorbike410:0:LLDDLL:1:1:
+Red car411:1:LDLLDL:1:1:
+Elephant412:1:LD:2:5:
+Taxi413:0:LDDL:0:2:
+Emergency414:0:LLDD:3:0:
+Bus415:0:LLLDDD:3:2:
+Motorbike416:0:LLDDLL:1:1:
+Red car417:1:LDLLDL:1:1:
+Elephant418:1:LD:2:5:
+Taxi419:0:LDDL:0:2:
+Emergency420:0:LLDD:3:0:
+Bus421:0:LLLDDD:3:2:
+Motorbike422:0:LLDDLL:1:1:
+Red car423:1:LDLLDL:1:1:
+Elephant424:1:LD:2:5:
+Taxi425:0:LDDL:0:2:
+Emergency426:0:LLDD:3:0:
+Bus427:0:LLLDDD:3:2:
+Motorbike428:0:LLDDLL:1:1:
+Red car429:1:LDLLDL:1:1:
+Elephant430:1:LD:2:5:
+Taxi431:0:LDDL:0:2:
+Emergency432:0:LLDD:3:0:
+Bus433:0:LLLDDD:3:2:
+Motorbike434:0:LLDDLL:1:1:
+Red car435:1:LDLLDL:1:1:
+Elephant436:1:LD:2:5:
+Taxi437:0:LDDL:0:2:
+Emergency438:0:LLDD:3:0:
+Bus439:0:LLLDDD:3:2:
+Motorbike440:0:LLDDLL:1:1:
+Red car441:1:LDLLDL:1:1:
+Elephant442:1:LD:2:5:
+Taxi443:0:LDDL:0:2:
+Emergency444:0:LLDD:3:0:
+Bus445:0:LLLDDD:3:2:
+Motorbike446:0:LLDDLL:1:1:
+Red car447:1:LDLLDL:1:1:
+Elephant448:1:LD:2:5:
+Taxi449:0:LDDL:0:2:
+Emergency450:0:LLDD:3:0:
+Bus451:0:LLLDDD:3:2:
+Motorbike452:0:LLDDLL:1:1:
+Red car453:1:LDLLDL:1:1:
+Elephant454:1:LD:2:5:
+Taxi455:0:LDDL:0:2:
+Emergency456:0:LLDD:3:0:
+Bus457:0:LLLDDD:3:2:
+Motorbike458:0:LLDDLL:1:1:
+Red car459:1:LDLLDL:1:1:
+Elephant460:1:LD:2:5:
+Taxi461:0:LDDL:0:2:
+Emergency462:0:LLDD:3:0:
+Bus463:0:LLLDDD:3:2:
+Motorbike464:0:LLDDLL:1:1:
+Red car465:1:LDLLDL:1:1:
+Elephant466:1:LD:2:5:
+Taxi467:0:LDDL:0:2:
+Emergency468:0:LLDD:3:0:
+Bus469:0:LLLDDD:3:2:
+Motorbike470:0:LLDDLL:1:1:
+Red car471:1:LDLLDL:1:1:
+Elephant472:1:LD:2:5:
+Taxi473:0:LDDL:0:2:
+Emergency474:0:LLDD:3:0:
+Bus475:0:LLLDDD:3:2:
+Motorbike476:0:LLDDLL:1:1:
+Red car477:1:LDLLDL:1:1:
+Elephant478:1:LD:2:5:
+Taxi479:0:LDDL:0:2:
+Emergency480:0:LLDD:3:0:
+Bus481:0:LLLDDD:3:2:
+Motorbike482:0:LLDDLL:1:1:
+Red car483:1:LDLLDL:1:1:
+Elephant484:1:LD:2:5:
+Taxi485:0:LDDL:0:2:
+Emergency486:0:LLDD:3:0:
+Bus487:0:LLLDDD:3:2:
+Motorbike488:0:LLDDLL:1:1:
+Red car489:1:LDLLDL:1:1:
+Elephant490:1:LD:2:5:
+Taxi491:0:LDDL:0:2:
+Emergency492:0:LLDD:3:0:
+Bus493:0:LLLDDD:3:2:
+Motorbike494:0:LLDDLL:1:1:
+Red car495:1:LDLLDL:1:1:
+Elephant496:1:LD:2:5:
+Taxi497:0:LDDL:0:2:
+Emergency498:0:LLDD:3:0:
+Bus499:0:LLLDDD:3:2:
+Motorbike500:0:LLDDLL:1:1:
+Red car501:1:LDLLDL:1:1:
+Elephant502:1:LD:2:5:
+Taxi503:0:LDDL:0:2:
+Emergency504:0:LLDD:3:0:
+Bus505:0:LLLDDD:3:2:
+Motorbike506:0:LLDDLL:1:1:
+Red car507:1:LDLLDL:1:1:
+Elephant508:1:LD:2:5:
+Taxi509:0:LDDL:0:2:
+Emergency510:0:LLDD:3:0:
+Bus511:0:LLLDDD:3:2:
+Motorbike512:0:LLDDLL:1:1:
+Red car513:1:LDLLDL:1:1:
+Elephant514:1:LD:2:5:
+Taxi515:0:LDDL:0:2:
+Emergency516:0:LLDD:3:0:
+Bus517:0:LLLDDD:3:2:
+Motorbike518:0:LLDDLL:1:1:
+Red car519:1:LDLLDL:1:1:
+Elephant520:1:LD:2:5:
+Taxi521:0:LDDL:0:2:
+Emergency522:0:LLDD:3:0:
+Bus523:0:LLLDDD:3:2:
+Motorbike524:0:LLDDLL:1:1:
+Red car525:1:LDLLDL:1:1:
+Elephant526:1:LD:2:5:
+Taxi527:0:LDDL:0:2:
+Emergency528:0:LLDD:3:0:
+Bus529:0:LLLDDD:3:2:
+Motorbike530:0:LLDDLL:1:1:
+Red car531:1:LDLLDL:1:1:
+Elephant532:1:LD:2:5:
+Taxi533:0:LDDL:0:2:
+Emergency534:0:LLDD:3:0:
+Bus535:0:LLLDDD:3:2:
+Motorbike536:0:LLDDLL:1:1:
+Red car537:1:LDLLDL:1:1:
+Elephant538:1:LD:2:5:
+Taxi539:0:LDDL:0:2:
+Emergency540:0:LLDD:3:0:
+Bus541:0:LLLDDD:3:2:
+Motorbike542:0:LLDDLL:1:1:
+Red car543:1:LDLLDL:1:1:
+Elephant544:1:LD:2:5:
+Taxi545:0:LDDL:0:2:
+Emergency546:0:LLDD:3:0:
+Bus547:0:LLLDDD:3:2:
+Motorbike548:0:LLDDLL:1:1:
+Red car549:1:LDLLDL:1:1:
+Elephant550:1:LD:2:5:
+Taxi551:0:LDDL:0:2:
+Emergency552:0:LLDD:3:0:
+Bus553:0:LLLDDD:3:2:
+Motorbike554:0:LLDDLL:1:1:
+Red car555:1:LDLLDL:1:1:
+Elephant556:1:LD:2:5:
+Taxi557:0:LDDL:0:2:
+Emergency558:0:LLDD:3:0:
+Bus559:0:LLLDDD:3:2:
+Motorbike560:0:LLDDLL:1:1:
+Red car561:1:LDLLDL:1:1:
+Elephant562:1:LD:2:5:
+Taxi563:0:LDDL:0:2:
+Emergency564:0:LLDD:3:0:
+Bus565:0:LLLDDD:3:2:
+Motorbike566:0:LLDDLL:1:1:
+Red car567:1:LDLLDL:1:1:
+Elephant568:1:LD:2:5:
+Taxi569:0:LDDL:0:2:
+Emergency570:0:LLDD:3:0:
+Bus571:0:LLLDDD:3:2:
+Motorbike572:0:LLDDLL:1:1:
+Red car573:1:LDLLDL:1:1:
+Elephant574:1:LD:2:5:
+Taxi575:0:LDDL:0:2:
+Emergency576:0:LLDD:3:0:
+Bus577:0:LLLDDD:3:2:
+Motorbike578:0:LLDDLL:1:1:
+Red car579:1:LDLLDL:1:1:
+Elephant580:1:LD:2:5:
+Taxi581:0:LDDL:0:2:
+Emergency582:0:LLDD:3:0:
+Bus583:0:LLLDDD:3:2:
+Motorbike584:0:LLDDLL:1:1:
+Red car585:1:LDLLDL:1:1:
+Elephant586:1:LD:2:5:
+Taxi587:0:LDDL:0:2:
+Emergency588:0:LLDD:3:0:
+Bus589:0:LLLDDD:3:2:
+Motorbike590:0:LLDDLL:1:1:
+Red car591:1:LDLLDL:1:1:
+Elephant592:1:LD:2:5:
+Taxi593:0:LDDL:0:2:
+Emergency594:0:LLDD:3:0:
+Bus595:0:LLLDDD:3:2:
+Motorbike596:0:LLDDLL:1:1:
+Red car597:1:LDLLDL:1:1:
+Elephant598:1:LD:2:5:
+Taxi599:0:LDDL:0:2:
+Emergency600:0:LLDD:3:0:
+Bus601:0:LLLDDD:3:2:
+Motorbike602:0:LLDDLL:1:1:
+Red car603:1:LDLLDL:1:1:
+Elephant604:1:LD:2:5:
+Taxi605:0:LDDL:0:2:
+Emergency606:0:LLDD:3:0:
+Bus607:0:LLLDDD:3:2:
+Motorbike608:0:LLDDLL:1:1:
+Red car609:1:LDLLDL:1:1:
+Elephant610:1:LD:2:5:
+Taxi611:0:LDDL:0:2:
+Emergency612:0:LLDD:3:0:
+Bus613:0:LLLDDD:3:2:
+Motorbike614:0:LLDDLL:1:1:
+Red car615:1:LDLLDL:1:1:
+Elephant616:1:LD:2:5:
+Taxi617:0:LDDL:0:2:
+Emergency618:0:LLDD:3:0:
+Bus619:0:LLLDDD:3:2:
+Motorbike620:0:LLDDLL:1:1:
+Red car621:1:LDLLDL:1:1:
+Elephant622:1:LD:2:5:
+Taxi623:0:LDDL:0:2:
+Emergency624:0:LLDD:3:0:
+Bus625:0:LLLDDD:3:2:
+Motorbike626:0:LLDDLL:1:1:
+Red car627:1:LDLLDL:1:1:
+Elephant628:1:LD:2:5:
+Taxi629:0:LDDL:0:2:
+Emergency630:0:LLDD:3:0:
+Bus631:0:LLLDDD:3:2:
+Motorbike632:0:LLDDLL:1:1:
+Red car633:1:LDLLDL:1:1:
+Elephant634:1:LD:2:5:
+Taxi635:0:LDDL:0:2:
+Emergency636:0:LLDD:3:0:
+Bus637:0:LLLDDD:3:2:
+Motorbike638:0:LLDDLL:1:1:
+Red car639:1:LDLLDL:1:1:
+Elephant640:1:LD:2:5:
+Taxi641:0:LDDL:0:2:
+Emergency642:0:LLDD:3:0:
+Bus643:0:LLLDDD:3:2:
+Motorbike644:0:LLDDLL:1:1:
+Red car645:1:LDLLDL:1:1:
+Elephant646:1:LD:2:5:
+Taxi647:0:LDDL:0:2:
+Emergency648:0:LLDD:3:0:
+Bus649:0:LLLDDD:3:2:
+Motorbike650:0:LLDDLL:1:1:
+Red car651:1:LDLLDL:1:1:
+Elephant652:1:LD:2:5:
+Taxi653:0:LDDL:0:2:
+Emergency654:0:LLDD:3:0:
+Bus655:0:LLLDDD:3:2:
+Motorbike656:0:LLDDLL:1:1:
+Red car657:1:LDLLDL:1:1:
+Elephant658:1:LD:2:5:
+Taxi659:0:LDDL:0:2:
+Emergency660:0:LLDD:3:0:
+Bus661:0:LLLDDD:3:2:
+Motorbike662:0:LLDDLL:1:1:
+Red car663:1:LDLLDL:1:1:
+Elephant664:1:LD:2:5:
+Taxi665:0:LDDL:0:2:
+Emergency666:0:LLDD:3:0:
+Bus667:0:LLLDDD:3:2:
+Motorbike668:0:LLDDLL:1:1:
+Red car669:1:LDLLDL:1:1:
+Elephant670:1:LD:2:5:
+Taxi671:0:LDDL:0:2:
+Emergency672:0:LLDD:3:0:
+Bus673:0:LLLDDD:3:2:
+Motorbike674:0:LLDDLL:1:1:
+Red car675:1:LDLLDL:1:1:
+Elephant676:1:LD:2:5:
+Taxi677:0:LDDL:0:2:
+Emergency678:0:LLDD:3:0:
+Bus679:0:LLLDDD:3:2:
+Motorbike680:0:LLDDLL:1:1:
+Red car681:1:LDLLDL:1:1:
+Elephant682:1:LD:2:5:
+Taxi683:0:LDDL:0:2:
+Emergency684:0:LLDD:3:0:
+Bus685:0:LLLDDD:3:2:
+Motorbike686:0:LLDDLL:1:1:
+Red car687:1:LDLLDL:1:1:
+Elephant688:1:LD:2:5:
+Taxi689:0:LDDL:0:2:
+Emergency690:0:LLDD:3:0:
+Bus691:0:LLLDDD:3:2:
+Motorbike692:0:LLDDLL:1:1:
+Red car693:1:LDLLDL:1:1:
+Elephant694:1:LD:2:5:
+Taxi695:0:LDDL:0:2:
+Emergency696:0:LLDD:3:0:
+Bus697:0:LLLDDD:3:2:
+Motorbike698:0:LLDDLL:1:1:
+Red car699:1:LDLLDL:1:1:
+Elephant700:1:LD:2:5:
+Taxi701:0:LDDL:0:2:
+Emergency702:0:LLDD:3:0:
+Bus703:0:LLLDDD:3:2:
+Motorbike704:0:LLDDLL:1:1:
+Red car705:1:LDLLDL:1:1:
+Elephant706:1:LD:2:5:
+Taxi707:0:LDDL:0:2:
+Emergency708:0:LLDD:3:0:
+Bus709:0:LLLDDD:3:2:
+Motorbike710:0:LLDDLL:1:1:
+Red car711:1:LDLLDL:1:1:
+Elephant712:1:LD:2:5:
+Taxi713:0:LDDL:0:2:
+Emergency714:0:LLDD:3:0:
+Bus715:0:LLLDDD:3:2:
+Motorbike716:0:LLDDLL:1:1:
+Red car717:1:LDLLDL:1:1:
+Elephant718:1:LD:2:5:
+Taxi719:0:LDDL:0:2:
+Emergency720:0:LLDD:3:0:
+Bus721:0:LLLDDD:3:2:
+Motorbike722:0:LLDDLL:1:1:
+Red car723:1:LDLLDL:1:1:
+Elephant724:1:LD:2:5:
+Taxi725:0:LDDL:0:2:
+Emergency726:0:LLDD:3:0:
+Bus727:0:LLLDDD:3:2:
+Motorbike728:0:LLDDLL:1:1:
+Red car729:1:LDLLDL:1:1:
+Elephant730:1:LD:2:5:
+Taxi731:0:LDDL:0:2:
+Emergency732:0:LLDD:3:0:
+Bus733:0:LLLDDD:3:2:
+Motorbike734:0:LLDDLL:1:1:
+Red car735:1:LDLLDL:1:1:
+Elephant736:1:LD:2:5:
+Taxi737:0:LDDL:0:2:
+Emergency738:0:LLDD:3:0:
+Bus739:0:LLLDDD:3:2:
+Motorbike740:0:LLDDLL:1:1:
+Red car741:1:LDLLDL:1:1:
+Elephant742:1:LD:2:5:
+Taxi743:0:LDDL:0:2:
+Emergency744:0:LLDD:3:0:
+Bus745:0:LLLDDD:3:2:
+Motorbike746:0:LLDDLL:1:1:
+Red car747:1:LDLLDL:1:1:
+Elephant748:1:LD:2:5:
+Taxi749:0:LDDL:0:2:
+Emergency750:0:LLDD:3:0:
+Bus751:0:LLLDDD:3:2:
+Motorbike752:0:LLDDLL:1:1:
+Red car753:1:LDLLDL:1:1:
+Elephant754:1:LD:2:5:
+Taxi755:0:LDDL:0:2:
+Emergency756:0:LLDD:3:0:
+Bus757:0:LLLDDD:3:2:
+Motorbike758:0:LLDDLL:1:1:
+Red car759:1:LDLLDL:1:1:
+Elephant760:1:LD:2:5:
+Taxi761:0:LDDL:0:2:
+Emergency762:0:LLDD:3:0:
+Bus763:0:LLLDDD:3:2:
+Motorbike764:0:LLDDLL:1:1:
+Red car765:1:LDLLDL:1:1:
+Elephant766:1:LD:2:5:
+Taxi767:0:LDDL:0:2:
+Emergency768:0:LLDD:3:0:
+Bus769:0:LLLDDD:3:2:
+Motorbike770:0:LLDDLL:1:1:
+Red car771:1:LDLLDL:1:1:
+Elephant772:1:LD:2:5:
+Taxi773:0:LDDL:0:2:
+Emergency774:0:LLDD:3:0:
+Bus775:0:LLLDDD:3:2:
+Motorbike776:0:LLDDLL:1:1:
+Red car777:1:LDLLDL:1:1:
+Elephant778:1:LD:2:5:
+Taxi779:0:LDDL:0:2:
+Emergency780:0:LLDD:3:0:
+Bus781:0:LLLDDD:3:2:
+Motorbike782:0:LLDDLL:1:1:
+Red car783:1:LDLLDL:1:1:
+Elephant784:1:LD:2:5:
+Taxi785:0:LDDL:0:2:
+Emergency786:0:LLDD:3:0:
+Bus787:0:LLLDDD:3:2:
+Motorbike788:0:LLDDLL:1:1:
+Red car789:1:LDLLDL:1:1:
+Elephant790:1:LD:2:5:
+Taxi791:0:LDDL:0:2:
+Emergency792:0:LLDD:3:0:
+Bus793:0:LLLDDD:3:2:
+Motorbike794:0:LLDDLL:1:1:
+Red car795:1:LDLLDL:1:1:
+Elephant796:1:LD:2:5:
+Taxi797:0:LDDL:0:2:
+Emergency798:0:LLDD:3:0:
+Bus799:0:LLLDDD:3:2:
+Motorbike800:0:LLDDLL:1:1:
+Red car801:1:LDLLDL:1:1:
+Elephant802:1:LD:2:5:
+Taxi803:0:LDDL:0:2:
+Emergency804:0:LLDD:3:0:
+Bus805:0:LLLDDD:3:2:
+Motorbike806:0:LLDDLL:1:1:
+Red car807:1:LDLLDL:1:1:
+Elephant808:1:LD:2:5:
+Taxi809:0:LDDL:0:2:
+Emergency810:0:LLDD:3:0:
+Bus811:0:LLLDDD:3:2:
+Motorbike812:0:LLDDLL:1:1:
+Red car813:1:LDLLDL:1:1:
+Elephant814:1:LD:2:5:
+Taxi815:0:LDDL:0:2:
+Emergency816:0:LLDD:3:0:
+Bus817:0:LLLDDD:3:2:
+Motorbike818:0:LLDDLL:1:1:
+Red car819:1:LDLLDL:1:1:
+Elephant820:1:LD:2:5:
+Taxi821:0:LDDL:0:2:
+Emergency822:0:LLDD:3:0:
+Bus823:0:LLLDDD:3:2:
+Motorbike824:0:LLDDLL:1:1:
+Red car825:1:LDLLDL:1:1:
+Elephant826:1:LD:2:5:
+Taxi827:0:LDDL:0:2:
+Emergency828:0:LLDD:3:0:
+Bus829:0:LLLDDD:3:2:
+Motorbike830:0:LLDDLL:1:1:
+Red car831:1:LDLLDL:1:1:
+Elephant832:1:LD:2:5:
+Taxi833:0:LDDL:0:2:
+Emergency834:0:LLDD:3:0:
+Bus835:0:LLLDDD:3:2:
+Motorbike836:0:LLDDLL:1:1:
+Red car837:1:LDLLDL:1:1:
+Elephant838:1:LD:2:5:
+Taxi839:0:LDDL:0:2:
+Emergency840:0:LLDD:3:0:
+Bus841:0:LLLDDD:3:2:
+Motorbike842:0:LLDDLL:1:1:
+Red car843:1:LDLLDL:1:1:
+Elephant844:1:LD:2:5:
+Taxi845:0:LDDL:0:2:
+Emergency846:0:LLDD:3:0:
+Bus847:0:LLLDDD:3:2:
+Motorbike848:0:LLDDLL:1:1:
+Red car849:1:LDLLDL:1:1:
+Elephant850:1:LD:2:5:
+Taxi851:0:LDDL:0:2:
+Emergency852:0:LLDD:3:0:
+Bus853:0:LLLDDD:3:2:
+Motorbike854:0:LLDDLL:1:1:
+Red car855:1:LDLLDL:1:1:
+Elephant856:1:LD:2:5:
+Taxi857:0:LDDL:0:2:
+Emergency858:0:LLDD:3:0:
+Bus859:0:LLLDDD:3:2:
+Motorbike860:0:LLDDLL:1:1:
+Red car861:1:LDLLDL:1:1:
+Elephant862:1:LD:2:5:
+Taxi863:0:LDDL:0:2:
+Emergency864:0:LLDD:3:0:
+Bus865:0:LLLDDD:3:2:
+Motorbike866:0:LLDDLL:1:1:
+Red car867:1:LDLLDL:1:1:
+Elephant868:1:LD:2:5:
+Taxi869:0:LDDL:0:2:
+Emergency870:0:LLDD:3:0:
+Bus871:0:LLLDDD:3:2:
+Motorbike872:0:LLDDLL:1:1:
+Red car873:1:LDLLDL:1:1:
+Elephant874:1:LD:2:5:
+Taxi875:0:LDDL:0:2:
+Emergency876:0:LLDD:3:0:
+Bus877:0:LLLDDD:3:2:
+Motorbike878:0:LLDDLL:1:1:
+Red car879:1:LDLLDL:1:1:
+Elephant880:1:LD:2:5:
+Taxi881:0:LDDL:0:2:
+Emergency882:0:LLDD:3:0:
+Bus883:0:LLLDDD:3:2:
+Motorbike884:0:LLDDLL:1:1:
+Red car885:1:LDLLDL:1:1:
+Elephant886:1:LD:2:5:
+Taxi887:0:LDDL:0:2:
+Emergency888:0:LLDD:3:0:
+Bus889:0:LLLDDD:3:2:
+Motorbike890:0:LLDDLL:1:1:
+Red car891:1:LDLLDL:1:1:
+Elephant892:1:LD:2:5:
+Taxi893:0:LDDL:0:2:
+Emergency894:0:LLDD:3:0:
+Bus895:0:LLLDDD:3:2:
+Motorbike896:0:LLDDLL:1:1:
+Red car897:1:LDLLDL:1:1:
+Elephant898:1:LD:2:5:
+Taxi899:0:LDDL:0:2:
+Emergency900:0:LLDD:3:0:
+Bus901:0:LLLDDD:3:2:
+Motorbike902:0:LLDDLL:1:1:
+Red car903:1:LDLLDL:1:1:
+Elephant904:1:LD:2:5:
+Taxi905:0:LDDL:0:2:
+Emergency906:0:LLDD:3:0:
+Bus907:0:LLLDDD:3:2:
+Motorbike908:0:LLDDLL:1:1:
+Red car909:1:LDLLDL:1:1:
+Elephant910:1:LD:2:5:
+Taxi911:0:LDDL:0:2:
+Emergency912:0:LLDD:3:0:
+Bus913:0:LLLDDD:3:2:
+Motorbike914:0:LLDDLL:1:1:
+Red car915:1:LDLLDL:1:1:
+Elephant916:1:LD:2:5:
+Taxi917:0:LDDL:0:2:
+Emergency918:0:LLDD:3:0:
+Bus919:0:LLLDDD:3:2:
+Motorbike920:0:LLDDLL:1:1:
+Red car921:1:LDLLDL:1:1:
+Elephant922:1:LD:2:5:
+Taxi923:0:LDDL:0:2:
+Emergency924:0:LLDD:3:0:
+Bus925:0:LLLDDD:3:2:
+Motorbike926:0:LLDDLL:1:1:
+Red car927:1:LDLLDL:1:1:
+Elephant928:1:LD:2:5:
+Taxi929:0:LDDL:0:2:
+Emergency930:0:LLDD:3:0:
+Bus931:0:LLLDDD:3:2:
+Motorbike932:0:LLDDLL:1:1:
+Red car933:1:LDLLDL:1:1:
+Elephant934:1:LD:2:5:
+Taxi935:0:LDDL:0:2:
+Emergency936:0:LLDD:3:0:
+Bus937:0:LLLDDD:3:2:
+Motorbike938:0:LLDDLL:1:1:
+Red car939:1:LDLLDL:1:1:
+Elephant940:1:LD:2:5:
+Taxi941:0:LDDL:0:2:
+Emergency942:0:LLDD:3:0:
+Bus943:0:LLLDDD:3:2:
+Motorbike944:0:LLDDLL:1:1:
+Red car945:1:LDLLDL:1:1:
+Elephant946:1:LD:2:5:
+Taxi947:0:LDDL:0:2:
+Emergency948:0:LLDD:3:0:
+Bus949:0:LLLDDD:3:2:
+Motorbike950:0:LLDDLL:1:1:
+Red car951:1:LDLLDL:1:1:
+Elephant952:1:LD:2:5:
+Taxi953:0:LDDL:0:2:
+Emergency954:0:LLDD:3:0:
+Bus955:0:LLLDDD:3:2:
+Motorbike956:0:LLDDLL:1:1:
+Red car957:1:LDLLDL:1:1:
+Elephant958:1:LD:2:5:
+Taxi959:0:LDDL:0:2:
+Emergency960:0:LLDD:3:0:
+Bus961:0:LLLDDD:3:2:
+Motorbike962:0:LLDDLL:1:1:
+Red car963:1:LDLLDL:1:1:
+Elephant964:1:LD:2:5:
+Taxi965:0:LDDL:0:2:
+Emergency966:0:LLDD:3:0:
+Bus967:0:LLLDDD:3:2:
+Motorbike968:0:LLDDLL:1:1:
+Red car969:1:LDLLDL:1:1:
+Elephant970:1:LD:2:5:
+Taxi971:0:LDDL:0:2:
+Emergency972:0:LLDD:3:0:
+Bus973:0:LLLDDD:3:2:
+Motorbike974:0:LLDDLL:1:1:
+Red car975:1:LDLLDL:1:1:
+Elephant976:1:LD:2:5:
+Taxi977:0:LDDL:0:2:
+Emergency978:0:LLDD:3:0:
+Bus979:0:LLLDDD:3:2:
+Motorbike980:0:LLDDLL:1:1:
+Red car981:1:LDLLDL:1:1:
+Elephant982:1:LD:2:5:
+Taxi983:0:LDDL:0:2:
+Emergency984:0:LLDD:3:0:
+Bus985:0:LLLDDD:3:2:
+Motorbike986:0:LLDDLL:1:1:
+Red car987:1:LDLLDL:1:1:
+Elephant988:1:LD:2:5:
+Taxi989:0:LDDL:0:2:
+Emergency990:0:LLDD:3:0:
+Bus991:0:LLLDDD:3:2:
+Motorbike992:0:LLDDLL:1:1:
+Red car993:1:LDLLDL:1:1:
+Elephant994:1:LD:2:5:
+Taxi995:0:LDDL:0:2:
+Emergency996:0:LLDD:3:0:
+Bus997:0:LLLDDD:3:2:
+Motorbike998:0:LLDDLL:1:1:
+Red car999:1:LDLLDL:1:1:
+Elephant1000:1:LD:2:5:
+Taxi1001:0:LDDL:0:2:
+Emergency1002:0:LLDD:3:0:
+Bus1003:0:LLLDDD:3:2:
+Motorbike1004:0:LLDDLL:1:1:
+Red car1005:1:LDLLDL:1:1:
+Elephant1006:1:LD:2:5:
+Taxi1007:0:LDDL:0:2:
+Emergency1008:0:LLDD:3:0:
+Bus1009:0:LLLDDD:3:2:
+Motorbike1010:0:LLDDLL:1:1:
+Red car1011:1:LDLLDL:1:1:
+Elephant1012:1:LD:2:5:
+Taxi1013:0:LDDL:0:2:
+Emergency1014:0:LLDD:3:0:
+Bus1015:0:LLLDDD:3:2:
+Motorbike1016:0:LLDDLL:1:1:
+Red car1017:1:LDLLDL:1:1:
+Elephant1018:1:LD:2:5:
+Taxi1019:0:LDDL:0:2:
+Emergency1020:0:LLDD:3:0:
+Bus1021:0:LLLDDD:3:2:
+Motorbike1022:0:LLDDLL:1:1:
+Red car1023:1:LDLLDL:1:1:
+Elephant1024:1:LD:2:5:
+Taxi1025:0:LDDL:0:2:
+Emergency1026:0:LLDD:3:0:
+Bus1027:0:LLLDDD:3:2:
+Motorbike1028:0:LLDDLL:1:1:
+Red car1029:1:LDLLDL:1:1:
+Elephant1030:1:LD:2:5:
+Taxi1031:0:LDDL:0:2:
+Emergency1032:0:LLDD:3:0:
+Bus1033:0:LLLDDD:3:2:
+Motorbike1034:0:LLDDLL:1:1:
+Red car1035:1:LDLLDL:1:1:
+Elephant1036:1:LD:2:5:
+Taxi1037:0:LDDL:0:2:
+Emergency1038:0:LLDD:3:0:
+Bus1039:0:LLLDDD:3:2:
+Motorbike1040:0:LLDDLL:1:1:
+Red car1041:1:LDLLDL:1:1:
+Elephant1042:1:LD:2:5:
+Taxi1043:0:LDDL:0:2:
+Emergency1044:0:LLDD:3:0:
+Bus1045:0:LLLDDD:3:2:
+Motorbike1046:0:LLDDLL:1:1:
+Red car1047:1:LDLLDL:1:1:
+Elephant1048:1:LD:2:5:
+Taxi1049:0:LDDL:0:2:
+Emergency1050:0:LLDD:3:0:
+Bus1051:0:LLLDDD:3:2:
+Motorbike1052:0:LLDDLL:1:1:
+Red car1053:1:LDLLDL:1:1:
+Elephant1054:1:LD:2:5:
+Taxi1055:0:LDDL:0:2:
+Emergency1056:0:LLDD:3:0:
+Bus1057:0:LLLDDD:3:2:
+Motorbike1058:0:LLDDLL:1:1:
+Red car1059:1:LDLLDL:1:1:
+Elephant1060:1:LD:2:5:
+Taxi1061:0:LDDL:0:2:
+Emergency1062:0:LLDD:3:0:
+Bus1063:0:LLLDDD:3:2:
+Motorbike1064:0:LLDDLL:1:1:
+Red car1065:1:LDLLDL:1:1:
+Elephant1066:1:LD:2:5:
+Taxi1067:0:LDDL:0:2:
+Emergency1068:0:LLDD:3:0:
+Bus1069:0:LLLDDD:3:2:
+Motorbike1070:0:LLDDLL:1:1:
+Red car1071:1:LDLLDL:1:1:
+Elephant1072:1:LD:2:5:
+Taxi1073:0:LDDL:0:2:
+Emergency1074:0:LLDD:3:0:
+Bus1075:0:LLLDDD:3:2:
+Motorbike1076:0:LLDDLL:1:1:
+Red car1077:1:LDLLDL:1:1:
+Elephant1078:1:LD:2:5:
+Taxi1079:0:LDDL:0:2:
+Emergency1080:0:LLDD:3:0:
+Bus1081:0:LLLDDD:3:2:
+Motorbike1082:0:LLDDLL:1:1:
+Red car1083:1:LDLLDL:1:1:
+Elephant1084:1:LD:2:5:
+Taxi1085:0:LDDL:0:2:
+Emergency1086:0:LLDD:3:0:
+Bus1087:0:LLLDDD:3:2:
+Motorbike1088:0:LLDDLL:1:1:
+Red car1089:1:LDLLDL:1:1:
+Elephant1090:1:LD:2:5:
+Taxi1091:0:LDDL:0:2:
+Emergency1092:0:LLDD:3:0:
+Bus1093:0:LLLDDD:3:2:
+Motorbike1094:0:LLDDLL:1:1:
+Red car1095:1:LDLLDL:1:1:
+Elephant1096:1:LD:2:5:
+Taxi1097:0:LDDL:0:2:
+Emergency1098:0:LLDD:3:0:
+Bus1099:0:LLLDDD:3:2:
+Motorbike1100:0:LLDDLL:1:1:
+Red car1101:1:LDLLDL:1:1:
+Elephant1102:1:LD:2:5:
+Taxi1103:0:LDDL:0:2:
+Emergency1104:0:LLDD:3:0:
+Bus1105:0:LLLDDD:3:2:
+Motorbike1106:0:LLDDLL:1:1:
+Red car1107:1:LDLLDL:1:1:
+Elephant1108:1:LD:2:5:
+Taxi1109:0:LDDL:0:2:
+Emergency1110:0:LLDD:3:0:
+Bus1111:0:LLLDDD:3:2:
+Motorbike1112:0:LLDDLL:1:1:
+Red car1113:1:LDLLDL:1:1:
+Elephant1114:1:LD:2:5:
+Taxi1115:0:LDDL:0:2:
+Emergency1116:0:LLDD:3:0:
+Bus1117:0:LLLDDD:3:2:
+Motorbike1118:0:LLDDLL:1:1:
+Red car1119:1:LDLLDL:1:1:
+Elephant1120:1:LD:2:5:
+Taxi1121:0:LDDL:0:2:
+Emergency1122:0:LLDD:3:0:
+Bus1123:0:LLLDDD:3:2:
+Motorbike1124:0:LLDDLL:1:1:
+Red car1125:1:LDLLDL:1:1:
+Elephant1126:1:LD:2:5:
+Taxi1127:0:LDDL:0:2:
+Emergency1128:0:LLDD:3:0:
+Bus1129:0:LLLDDD:3:2:
+Motorbike1130:0:LLDDLL:1:1:
+Red car1131:1:LDLLDL:1:1:
+Elephant1132:1:LD:2:5:
+Taxi1133:0:LDDL:0:2:
+Emergency1134:0:LLDD:3:0:
+Bus1135:0:LLLDDD:3:2:
+Motorbike1136:0:LLDDLL:1:1:
+Red car1137:1:LDLLDL:1:1:
+Elephant1138:1:LD:2:5:
+Taxi1139:0:LDDL:0:2:
+Emergency1140:0:LLDD:3:0:
+Bus1141:0:LLLDDD:3:2:
+Motorbike1142:0:LLDDLL:1:1:
+Red car1143:1:LDLLDL:1:1:
+Elephant1144:1:LD:2:5:
+Taxi1145:0:LDDL:0:2:
+Emergency1146:0:LLDD:3:0:
+Bus1147:0:LLLDDD:3:2:
+Motorbike1148:0:LLDDLL:1:1:
+Red car1149:1:LDLLDL:1:1:
+Elephant1150:1:LD:2:5:
+Taxi1151:0:LDDL:0:2:
+Emergency1152:0:LLDD:3:0:
+Bus1153:0:LLLDDD:3:2:
+Motorbike1154:0:LLDDLL:1:1:
+Red car1155:1:LDLLDL:1:1:
+Elephant1156:1:LD:2:5:
+Taxi1157:0:LDDL:0:2:
+Emergency1158:0:LLDD:3:0:
+Bus1159:0:LLLDDD:3:2:
+Motorbike1160:0:LLDDLL:1:1:
+Red car1161:1:LDLLDL:1:1:
+Elephant1162:1:LD:2:5:
+Taxi1163:0:LDDL:0:2:
+Emergency1164:0:LLDD:3:0:
+Bus1165:0:LLLDDD:3:2:
+Motorbike1166:0:LLDDLL:1:1:
+Red car1167:1:LDLLDL:1:1:
+Elephant1168:1:LD:2:5:
+Taxi1169:0:LDDL:0:2:
+Emergency1170:0:LLDD:3:0:
+Bus1171:0:LLLDDD:3:2:
+Motorbike1172:0:LLDDLL:1:1:
+Red car1173:1:LDLLDL:1:1:
+Elephant1174:1:LD:2:5:
+Taxi1175:0:LDDL:0:2:
+Emergency1176:0:LLDD:3:0:
+Bus1177:0:LLLDDD:3:2:
+Motorbike1178:0:LLDDLL:1:1:
+Red car1179:1:LDLLDL:1:1:
+Elephant1180:1:LD:2:5:
+Taxi1181:0:LDDL:0:2:
+Emergency1182:0:LLDD:3:0:
+Bus1183:0:LLLDDD:3:2:
+Motorbike1184:0:LLDDLL:1:1:
+Red car1185:1:LDLLDL:1:1:
+Elephant1186:1:LD:2:5:
+Taxi1187:0:LDDL:0:2:
+Emergency1188:0:LLDD:3:0:
+Bus1189:0:LLLDDD:3:2:
+Motorbike1190:0:LLDDLL:1:1:
+Red car1191:1:LDLLDL:1:1:
+Elephant1192:1:LD:2:5:
+Taxi1193:0:LDDL:0:2:
+Emergency1194:0:LLDD:3:0:
+Bus1195:0:LLLDDD:3:2:
+Motorbike1196:0:LLDDLL:1:1:
+Red car1197:1:LDLLDL:1:1:
+Elephant1198:1:LD:2:5:
+Taxi1199:0:LDDL:0:2:
+Emergency1200:0:LLDD:3:0:
+Bus1201:0:LLLDDD:3:2:
+Motorbike1202:0:LLDDLL:1:1:
+Red car1203:1:LDLLDL:1:1:
+Elephant1204:1:LD:2:5:
+Taxi1205:0:LDDL:0:2:
+Emergency1206:0:LLDD:3:0:
+Bus1207:0:LLLDDD:3:2:
+Motorbike1208:0:LLDDLL:1:1:
+Red car1209:1:LDLLDL:1:1:
+Elephant1210:1:LD:2:5:
+Taxi1211:0:LDDL:0:2:
+Emergency1212:0:LLDD:3:0:
+Bus1213:0:LLLDDD:3:2:
+Motorbike1214:0:LLDDLL:1:1:
+Red car1215:1:LDLLDL:1:1:
+Elephant1216:1:LD:2:5:
+Taxi1217:0:LDDL:0:2:
+Emergency1218:0:LLDD:3:0:
+Bus1219:0:LLLDDD:3:2:
+Motorbike1220:0:LLDDLL:1:1:
+Red car1221:1:LDLLDL:1:1:
+Elephant1222:1:LD:2:5:
+Taxi1223:0:LDDL:0:2:
+Emergency1224:0:LLDD:3:0:
+Bus1225:0:LLLDDD:3:2:
+Motorbike1226:0:LLDDLL:1:1:
+Red car1227:1:LDLLDL:1:1:
+Elephant1228:1:LD:2:5:
+Taxi1229:0:LDDL:0:2:
+Emergency1230:0:LLDD:3:0:
+Bus1231:0:LLLDDD:3:2:
+Motorbike1232:0:LLDDLL:1:1:
+Red car1233:1:LDLLDL:1:1:
+Elephant1234:1:LD:2:5:
+Taxi1235:0:LDDL:0:2:
+Emergency1236:0:LLDD:3:0:
+Bus1237:0:LLLDDD:3:2:
+Motorbike1238:0:LLDDLL:1:1:
+Red car1239:1:LDLLDL:1:1:
+Elephant1240:1:LD:2:5:
+Taxi1241:0:LDDL:0:2:
+Emergency1242:0:LLDD:3:0:
+Bus1243:0:LLLDDD:3:2:
+Motorbike1244:0:LLDDLL:1:1:
+Red car1245:1:LDLLDL:1:1:
+Elephant1246:1:LD:2:5:
+Taxi1247:0:LDDL:0:2:
+Emergency1248:0:LLDD:3:0:
+Bus1249:0:LLLDDD:3:2:
+Motorbike1250:0:LLDDLL:1:1:
+Red car1251:1:LDLLDL:1:1:
+Elephant1252:1:LD:2:5:
+Taxi1253:0:LDDL:0:2:
+Emergency1254:0:LLDD:3:0:
+Bus1255:0:LLLDDD:3:2:
+Motorbike1256:0:LLDDLL:1:1:
+Red car1257:1:LDLLDL:1:1:
+Elephant1258:1:LD:2:5:
+Taxi1259:0:LDDL:0:2:
+Emergency1260:0:LLDD:3:0:
+Bus1261:0:LLLDDD:3:2:
+Motorbike1262:0:LLDDLL:1:1:
+Red car1263:1:LDLLDL:1:1:
+Elephant1264:1:LD:2:5:
+Taxi1265:0:LDDL:0:2:
+Emergency1266:0:LLDD:3:0:
+Bus1267:0:LLLDDD:3:2:
+Motorbike1268:0:LLDDLL:1:1:
+Red car1269:1:LDLLDL:1:1:
+Elephant1270:1:LD:2:5:
+Taxi1271:0:LDDL:0:2:
+Emergency1272:0:LLDD:3:0:
+Bus1273:0:LLLDDD:3:2:
+Motorbike1274:0:LLDDLL:1:1:
+Red car1275:1:LDLLDL:1:1:
+Elephant1276:1:LD:2:5:
+Taxi1277:0:LDDL:0:2:
+Emergency1278:0:LLDD:3:0:
+Bus1279:0:LLLDDD:3:2:
+Motorbike1280:0:LLDDLL:1:1:
+Red car1281:1:LDLLDL:1:1:
+Elephant1282:1:LD:2:5:
+Taxi1283:0:LDDL:0:2:
+Emergency1284:0:LLDD:3:0:
+Bus1285:0:LLLDDD:3:2:
+Motorbike1286:0:LLDDLL:1:1:
+Red car1287:1:LDLLDL:1:1:
+Elephant1288:1:LD:2:5:
+Taxi1289:0:LDDL:0:2:
+Emergency1290:0:LLDD:3:0:
+Bus1291:0:LLLDDD:3:2:
+Motorbike1292:0:LLDDLL:1:1:
+Red car1293:1:LDLLDL:1:1:
+Elephant1294:1:LD:2:5:
+Taxi1295:0:LDDL:0:2:
+Emergency1296:0:LLDD:3:0:
+Bus1297:0:LLLDDD:3:2:
+Motorbike1298:0:LLDDLL:1:1:
+Red car1299:1:LDLLDL:1:1:
+Elephant1300:1:LD:2:5:
+Taxi1301:0:LDDL:0:2:
+Emergency1302:0:LLDD:3:0:
+Bus1303:0:LLLDDD:3:2:
+Motorbike1304:0:LLDDLL:1:1:
+Red car1305:1:LDLLDL:1:1:
+Elephant1306:1:LD:2:5:
+Taxi1307:0:LDDL:0:2:
+Emergency1308:0:LLDD:3:0:
+Bus1309:0:LLLDDD:3:2:
+Motorbike1310:0:LLDDLL:1:1:
+Red car1311:1:LDLLDL:1:1:
+Elephant1312:1:LD:2:5:
+Taxi1313:0:LDDL:0:2:
+Emergency1314:0:LLDD:3:0:
+Bus1315:0:LLLDDD:3:2:
+Motorbike1316:0:LLDDLL:1:1:
+Red car1317:1:LDLLDL:1:1:
+Elephant1318:1:LD:2:5:
+Taxi1319:0:LDDL:0:2:
+Emergency1320:0:LLDD:3:0:
+Bus1321:0:LLLDDD:3:2:
+Motorbike1322:0:LLDDLL:1:1:
+Red car1323:1:LDLLDL:1:1:
+Elephant1324:1:LD:2:5:
+Taxi1325:0:LDDL:0:2:
+Emergency1326:0:LLDD:3:0:
+Bus1327:0:LLLDDD:3:2:
+Motorbike1328:0:LLDDLL:1:1:
+Red car1329:1:LDLLDL:1:1:
+Elephant1330:1:LD:2:5:
+Taxi1331:0:LDDL:0:2:
+Emergency1332:0:LLDD:3:0:
+Bus1333:0:LLLDDD:3:2:
+Motorbike1334:0:LLDDLL:1:1:
+Red car1335:1:LDLLDL:1:1:
+Elephant1336:1:LD:2:5:
+Taxi1337:0:LDDL:0:2:
+Emergency1338:0:LLDD:3:0:
+Bus1339:0:LLLDDD:3:2:
+Motorbike1340:0:LLDDLL:1:1:
+Red car1341:1:LDLLDL:1:1:
+Elephant1342:1:LD:2:5:
+Taxi1343:0:LDDL:0:2:
+Emergency1344:0:LLDD:3:0:
+Bus1345:0:LLLDDD:3:2:
+Motorbike1346:0:LLDDLL:1:1:
+Red car1347:1:LDLLDL:1:1:
+Elephant1348:1:LD:2:5:
+Taxi1349:0:LDDL:0:2:
+Emergency1350:0:LLDD:3:0:
+Bus1351:0:LLLDDD:3:2:
+Motorbike1352:0:LLDDLL:1:1:
+Red car1353:1:LDLLDL:1:1:
+Elephant1354:1:LD:2:5:
+Taxi1355:0:LDDL:0:2:
+Emergency1356:0:LLDD:3:0:
+Bus1357:0:LLLDDD:3:2:
+Motorbike1358:0:LLDDLL:1:1:
+Red car1359:1:LDLLDL:1:1:
+Elephant1360:1:LD:2:5:
+Taxi1361:0:LDDL:0:2:
+Emergency1362:0:LLDD:3:0:
+Bus1363:0:LLLDDD:3:2:
+Motorbike1364:0:LLDDLL:1:1:
+Red car1365:1:LDLLDL:1:1:
+Elephant1366:1:LD:2:5:
+Taxi1367:0:LDDL:0:2:
+Emergency1368:0:LLDD:3:0:
+Bus1369:0:LLLDDD:3:2:
+Motorbike1370:0:LLDDLL:1:1:
+Red car1371:1:LDLLDL:1:1:
+Elephant1372:1:LD:2:5:
+Taxi1373:0:LDDL:0:2:
+Emergency1374:0:LLDD:3:0:
+Bus1375:0:LLLDDD:3:2:
+Motorbike1376:0:LLDDLL:1:1:
+Red car1377:1:LDLLDL:1:1:
+Elephant1378:1:LD:2:5:
+Taxi1379:0:LDDL:0:2:
+Emergency1380:0:LLDD:3:0:
+Bus1381:0:LLLDDD:3:2:
+Motorbike1382:0:LLDDLL:1:1:
+Red car1383:1:LDLLDL:1:1:
+Elephant1384:1:LD:2:5:
+Taxi1385:0:LDDL:0:2:
+Emergency1386:0:LLDD:3:0:
+Bus1387:0:LLLDDD:3:2:
+Motorbike1388:0:LLDDLL:1:1:
+Red car1389:1:LDLLDL:1:1:
+Elephant1390:1:LD:2:5:
+Taxi1391:0:LDDL:0:2:
+Emergency1392:0:LLDD:3:0:
+Bus1393:0:LLLDDD:3:2:
+Motorbike1394:0:LLDDLL:1:1:
+Red car1395:1:LDLLDL:1:1:
+Elephant1396:1:LD:2:5:
+Taxi1397:0:LDDL:0:2:
+Emergency1398:0:LLDD:3:0:
+Bus1399:0:LLLDDD:3:2:
+Motorbike1400:0:LLDDLL:1:1:
+Red car1401:1:LDLLDL:1:1:
+Elephant1402:1:LD:2:5:
+Taxi1403:0:LDDL:0:2:
+Emergency1404:0:LLDD:3:0:
+Bus1405:0:LLLDDD:3:2:
+Motorbike1406:0:LLDDLL:1:1:
+Red car1407:1:LDLLDL:1:1:
+Elephant1408:1:LD:2:5:
+Taxi1409:0:LDDL:0:2:
+Emergency1410:0:LLDD:3:0:
+Bus1411:0:LLLDDD:3:2:
+Motorbike1412:0:LLDDLL:1:1:
+Red car1413:1:LDLLDL:1:1:
+Elephant1414:1:LD:2:5:
+Taxi1415:0:LDDL:0:2:
+Emergency1416:0:LLDD:3:0:
+Bus1417:0:LLLDDD:3:2:
+Motorbike1418:0:LLDDLL:1:1:
+Red car1419:1:LDLLDL:1:1:
+Elephant1420:1:LD:2:5:
+Taxi1421:0:LDDL:0:2:
+Emergency1422:0:LLDD:3:0:
+Bus1423:0:LLLDDD:3:2:
+Motorbike1424:0:LLDDLL:1:1:
+Red car1425:1:LDLLDL:1:1:
+Elephant1426:1:LD:2:5:
+Taxi1427:0:LDDL:0:2:
+Emergency1428:0:LLDD:3:0:
+Bus1429:0:LLLDDD:3:2:
+Motorbike1430:0:LLDDLL:1:1:
+Red car1431:1:LDLLDL:1:1:
+Elephant1432:1:LD:2:5:
+Taxi1433:0:LDDL:0:2:
+Emergency1434:0:LLDD:3:0:
+Bus1435:0:LLLDDD:3:2:
+Motorbike1436:0:LLDDLL:1:1:
+Red car1437:1:LDLLDL:1:1:
+Elephant1438:1:LD:2:5:
+Taxi1439:0:LDDL:0:2:
+Emergency1440:0:LLDD:3:0:
+Bus1441:0:LLLDDD:3:2:
+Motorbike1442:0:LLDDLL:1:1:
+Red car1443:1:LDLLDL:1:1:
+Elephant1444:1:LD:2:5:
+Taxi1445:0:LDDL:0:2:
+Emergency1446:0:LLDD:3:0:
+Bus1447:0:LLLDDD:3:2:
+Motorbike1448:0:LLDDLL:1:1:
+Red car1449:1:LDLLDL:1:1:
+Elephant1450:1:LD:2:5:
+Taxi1451:0:LDDL:0:2:
+Emergency1452:0:LLDD:3:0:
+Bus1453:0:LLLDDD:3:2:
+Motorbike1454:0:LLDDLL:1:1:
+Red car1455:1:LDLLDL:1:1:
+Elephant1456:1:LD:2:5:
+Taxi1457:0:LDDL:0:2:
+Emergency1458:0:LLDD:3:0:
+Bus1459:0:LLLDDD:3:2:
+Motorbike1460:0:LLDDLL:1:1:
+Red car1461:1:LDLLDL:1:1:
+Elephant1462:1:LD:2:5:
+Taxi1463:0:LDDL:0:2:
+Emergency1464:0:LLDD:3:0:
+Bus1465:0:LLLDDD:3:2:
+Motorbike1466:0:LLDDLL:1:1:
+Red car1467:1:LDLLDL:1:1:
+Elephant1468:1:LD:2:5:
+Taxi1469:0:LDDL:0:2:
+Emergency1470:0:LLDD:3:0:
+Bus1471:0:LLLDDD:3:2:
+Motorbike1472:0:LLDDLL:1:1:
+Red car1473:1:LDLLDL:1:1:
+Elephant1474:1:LD:2:5:
+Taxi1475:0:LDDL:0:2:
+Emergency1476:0:LLDD:3:0:
+Bus1477:0:LLLDDD:3:2:
+Motorbike1478:0:LLDDLL:1:1:
+Red car1479:1:LDLLDL:1:1:
+Elephant1480:1:LD:2:5:
+Taxi1481:0:LDDL:0:2:
+Emergency1482:0:LLDD:3:0:
+Bus1483:0:LLLDDD:3:2:
+Motorbike1484:0:LLDDLL:1:1:
+Red car1485:1:LDLLDL:1:1:
+Elephant1486:1:LD:2:5:
+Taxi1487:0:LDDL:0:2:
+Emergency1488:0:LLDD:3:0:
+Bus1489:0:LLLDDD:3:2:
+Motorbike1490:0:LLDDLL:1:1:
+Red car1491:1:LDLLDL:1:1:
+Elephant1492:1:LD:2:5:
+Taxi1493:0:LDDL:0:2:
+Emergency1494:0:LLDD:3:0:
+Bus1495:0:LLLDDD:3:2:
+Motorbike1496:0:LLDDLL:1:1:
+Red car1497:1:LDLLDL:1:1:
+Elephant1498:1:LD:2:5:
+Taxi1499:0:LDDL:0:2:
+Emergency1500:0:LLDD:3:0:
+Bus1501:0:LLLDDD:3:2:
+Motorbike1502:0:LLDDLL:1:1:
+Red car1503:1:LDLLDL:1:1:
+Elephant1504:1:LD:2:5:
+Taxi1505:0:LDDL:0:2:
+Emergency1506:0:LLDD:3:0:
+Bus1507:0:LLLDDD:3:2:
+Motorbike1508:0:LLDDLL:1:1:
+Red car1509:1:LDLLDL:1:1:
+Elephant1510:1:LD:2:5:
+Taxi1511:0:LDDL:0:2:
+Emergency1512:0:LLDD:3:0:
+Bus1513:0:LLLDDD:3:2:
+Motorbike1514:0:LLDDLL:1:1:
+Red car1515:1:LDLLDL:1:1:
+Elephant1516:1:LD:2:5:
+Taxi1517:0:LDDL:0:2:
+Emergency1518:0:LLDD:3:0:
+Bus1519:0:LLLDDD:3:2:
+Motorbike1520:0:LLDDLL:1:1:
+Red car1521:1:LDLLDL:1:1:
+Elephant1522:1:LD:2:5:
+Taxi1523:0:LDDL:0:2:
+Emergency1524:0:LLDD:3:0:
+Bus1525:0:LLLDDD:3:2:
+Motorbike1526:0:LLDDLL:1:1:
+Red car1527:1:LDLLDL:1:1:
+Elephant1528:1:LD:2:5:
+Taxi1529:0:LDDL:0:2:
+Emergency1530:0:LLDD:3:0:
+Bus1531:0:LLLDDD:3:2:
+Motorbike1532:0:LLDDLL:1:1:
+Red car1533:1:LDLLDL:1:1:
+Elephant1534:1:LD:2:5:
+Taxi1535:0:LDDL:0:2:
+Emergency1536:0:LLDD:3:0:
+Bus1537:0:LLLDDD:3:2:
+Motorbike1538:0:LLDDLL:1:1:
+Red car1539:1:LDLLDL:1:1:
+Elephant1540:1:LD:2:5:
+Taxi1541:0:LDDL:0:2:
+Emergency1542:0:LLDD:3:0:
+Bus1543:0:LLLDDD:3:2:
+Motorbike1544:0:LLDDLL:1:1:
+Red car1545:1:LDLLDL:1:1:
+Elephant1546:1:LD:2:5:
+Taxi1547:0:LDDL:0:2:
+Emergency1548:0:LLDD:3:0:
+Bus1549:0:LLLDDD:3:2:
+Motorbike1550:0:LLDDLL:1:1:
+Red car1551:1:LDLLDL:1:1:
+Elephant1552:1:LD:2:5:
+Taxi1553:0:LDDL:0:2:
+Emergency1554:0:LLDD:3:0:
+Bus1555:0:LLLDDD:3:2:
+Motorbike1556:0:LLDDLL:1:1:
+Red car1557:1:LDLLDL:1:1:
+Elephant1558:1:LD:2:5:
+Taxi1559:0:LDDL:0:2:
+Emergency1560:0:LLDD:3:0:
+Bus1561:0:LLLDDD:3:2:
+Motorbike1562:0:LLDDLL:1:1:
+Red car1563:1:LDLLDL:1:1:
+Elephant1564:1:LD:2:5:
+Taxi1565:0:LDDL:0:2:
+Emergency1566:0:LLDD:3:0:
+Bus1567:0:LLLDDD:3:2:
+Motorbike1568:0:LLDDLL:1:1:
+Red car1569:1:LDLLDL:1:1:
+Elephant1570:1:LD:2:5:
+Taxi1571:0:LDDL:0:2:
+Emergency1572:0:LLDD:3:0:
+Bus1573:0:LLLDDD:3:2:
+Motorbike1574:0:LLDDLL:1:1:
+Red car1575:1:LDLLDL:1:1:
+Elephant1576:1:LD:2:5:
+Taxi1577:0:LDDL:0:2:
+Emergency1578:0:LLDD:3:0:
+Bus1579:0:LLLDDD:3:2:
+Motorbike1580:0:LLDDLL:1:1:
+Red car1581:1:LDLLDL:1:1:
+Elephant1582:1:LD:2:5:
+Taxi1583:0:LDDL:0:2:
+Emergency1584:0:LLDD:3:0:
+Bus1585:0:LLLDDD:3:2:
+Motorbike1586:0:LLDDLL:1:1:
+Red car1587:1:LDLLDL:1:1:
+Elephant1588:1:LD:2:5:
+Taxi1589:0:LDDL:0:2:
+Emergency1590:0:LLDD:3:0:
+Bus1591:0:LLLDDD:3:2:
+Motorbike1592:0:LLDDLL:1:1:
+Red car1593:1:LDLLDL:1:1:
+Elephant1594:1:LD:2:5:
+Taxi1595:0:LDDL:0:2:
+Emergency1596:0:LLDD:3:0:
+Bus1597:0:LLLDDD:3:2:
+Motorbike1598:0:LLDDLL:1:1:
+Red car1599:1:LDLLDL:1:1:
+Elephant1600:1:LD:2:5:
+Taxi1601:0:LDDL:0:2:
+Emergency1602:0:LLDD:3:0:
+Bus1603:0:LLLDDD:3:2:
+Motorbike1604:0:LLDDLL:1:1:
+Red car1605:1:LDLLDL:1:1:
+Elephant1606:1:LD:2:5:
+Taxi1607:0:LDDL:0:2:
+Emergency1608:0:LLDD:3:0:
+Bus1609:0:LLLDDD:3:2:
+Motorbike1610:0:LLDDLL:1:1:
+Red car1611:1:LDLLDL:1:1:
+Elephant1612:1:LD:2:5:
+Taxi1613:0:LDDL:0:2:
+Emergency1614:0:LLDD:3:0:
+Bus1615:0:LLLDDD:3:2:
+Motorbike1616:0:LLDDLL:1:1:
+Red car1617:1:LDLLDL:1:1:
+Elephant1618:1:LD:2:5:
+Taxi1619:0:LDDL:0:2:
+Emergency1620:0:LLDD:3:0:
+Bus1621:0:LLLDDD:3:2:
+Motorbike1622:0:LLDDLL:1:1:
+Red car1623:1:LDLLDL:1:1:
+Elephant1624:1:LD:2:5:
+Taxi1625:0:LDDL:0:2:
+Emergency1626:0:LLDD:3:0:
+Bus1627:0:LLLDDD:3:2:
+Motorbike1628:0:LLDDLL:1:1:
+Red car1629:1:LDLLDL:1:1:
+Elephant1630:1:LD:2:5:
+Taxi1631:0:LDDL:0:2:
+Emergency1632:0:LLDD:3:0:
+Bus1633:0:LLLDDD:3:2:
+Motorbike1634:0:LLDDLL:1:1:
+Red car1635:1:LDLLDL:1:1:
+Elephant1636:1:LD:2:5:
+Taxi1637:0:LDDL:0:2:
+Emergency1638:0:LLDD:3:0:
+Bus1639:0:LLLDDD:3:2:
+Motorbike1640:0:LLDDLL:1:1:
+Red car1641:1:LDLLDL:1:1:
+Elephant1642:1:LD:2:5:
+Taxi1643:0:LDDL:0:2:
+Emergency1644:0:LLDD:3:0:
+Bus1645:0:LLLDDD:3:2:
+Motorbike1646:0:LLDDLL:1:1:
+Red car1647:1:LDLLDL:1:1:
+Elephant1648:1:LD:2:5:
+Taxi1649:0:LDDL:0:2:
+Emergency1650:0:LLDD:3:0:
+Bus1651:0:LLLDDD:3:2:
+Motorbike1652:0:LLDDLL:1:1:
+Red car1653:1:LDLLDL:1:1:
+Elephant1654:1:LD:2:5:
+Taxi1655:0:LDDL:0:2:
+Emergency1656:0:LLDD:3:0:
+Bus1657:0:LLLDDD:3:2:
+Motorbike1658:0:LLDDLL:1:1:
+Red car1659:1:LDLLDL:1:1:
+Elephant1660:1:LD:2:5:
+Taxi1661:0:LDDL:0:2:
+Emergency1662:0:LLDD:3:0:
+Bus1663:0:LLLDDD:3:2:
+Motorbike1664:0:LLDDLL:1:1:
+Red car1665:1:LDLLDL:1:1:
+Elephant1666:1:LD:2:5:
+Taxi1667:0:LDDL:0:2:
+Emergency1668:0:LLDD:3:0:
+Bus1669:0:LLLDDD:3:2:
+Motorbike1670:0:LLDDLL:1:1:
+Red car1671:1:LDLLDL:1:1:
+Elephant1672:1:LD:2:5:
+Taxi1673:0:LDDL:0:2:
+Emergency1674:0:LLDD:3:0:
+Bus1675:0:LLLDDD:3:2:
+Motorbike1676:0:LLDDLL:1:1:
+Red car1677:1:LDLLDL:1:1:
+Elephant1678:1:LD:2:5:
+Taxi1679:0:LDDL:0:2:
+Emergency1680:0:LLDD:3:0:
+Bus1681:0:LLLDDD:3:2:
+Motorbike1682:0:LLDDLL:1:1:
+Red car1683:1:LDLLDL:1:1:
+Elephant1684:1:LD:2:5:
+Taxi1685:0:LDDL:0:2:
+Emergency1686:0:LLDD:3:0:
+Bus1687:0:LLLDDD:3:2:
+Motorbike1688:0:LLDDLL:1:1:
+Red car1689:1:LDLLDL:1:1:
+Elephant1690:1:LD:2:5:
+Taxi1691:0:LDDL:0:2:
+Emergency1692:0:LLDD:3:0:
+Bus1693:0:LLLDDD:3:2:
+Motorbike1694:0:LLDDLL:1:1:
+Red car1695:1:LDLLDL:1:1:
+Elephant1696:1:LD:2:5:
+Taxi1697:0:LDDL:0:2:
+Emergency1698:0:LLDD:3:0:
+Bus1699:0:LLLDDD:3:2:
+Motorbike1700:0:LLDDLL:1:1:
+Red car1701:1:LDLLDL:1:1:
+Elephant1702:1:LD:2:5:
+Taxi1703:0:LDDL:0:2:
+Emergency1704:0:LLDD:3:0:
+Bus1705:0:LLLDDD:3:2:
+Motorbike1706:0:LLDDLL:1:1:
+Red car1707:1:LDLLDL:1:1:
+Elephant1708:1:LD:2:5:
+Taxi1709:0:LDDL:0:2:
+Emergency1710:0:LLDD:3:0:
+Bus1711:0:LLLDDD:3:2:
+Motorbike1712:0:LLDDLL:1:1:
+Red car1713:1:LDLLDL:1:1:
+Elephant1714:1:LD:2:5:
+Taxi1715:0:LDDL:0:2:
+Emergency1716:0:LLDD:3:0:
+Bus1717:0:LLLDDD:3:2:
+Motorbike1718:0:LLDDLL:1:1:
+Red car1719:1:LDLLDL:1:1:
+Elephant1720:1:LD:2:5:
+Taxi1721:0:LDDL:0:2:
+Emergency1722:0:LLDD:3:0:
+Bus1723:0:LLLDDD:3:2:
+Motorbike1724:0:LLDDLL:1:1:
+Red car1725:1:LDLLDL:1:1:
+Elephant1726:1:LD:2:5:
+Taxi1727:0:LDDL:0:2:
+Emergency1728:0:LLDD:3:0:
+Bus1729:0:LLLDDD:3:2:
+Motorbike1730:0:LLDDLL:1:1:
+Red car1731:1:LDLLDL:1:1:
+Elephant1732:1:LD:2:5:
+Taxi1733:0:LDDL:0:2:
+Emergency1734:0:LLDD:3:0:
+Bus1735:0:LLLDDD:3:2:
+Motorbike1736:0:LLDDLL:1:1:
+Red car1737:1:LDLLDL:1:1:
+Elephant1738:1:LD:2:5:
+Taxi1739:0:LDDL:0:2:
+Emergency1740:0:LLDD:3:0:
+Bus1741:0:LLLDDD:3:2:
+Motorbike1742:0:LLDDLL:1:1:
+Red car1743:1:LDLLDL:1:1:
+Elephant1744:1:LD:2:5:
+Taxi1745:0:LDDL:0:2:
+Emergency1746:0:LLDD:3:0:
+Bus1747:0:LLLDDD:3:2:
+Motorbike1748:0:LLDDLL:1:1:
+Red car1749:1:LDLLDL:1:1:
+Elephant1750:1:LD:2:5:
+Taxi1751:0:LDDL:0:2:
+Emergency1752:0:LLDD:3:0:
+Bus1753:0:LLLDDD:3:2:
+Motorbike1754:0:LLDDLL:1:1:
+Red car1755:1:LDLLDL:1:1:
+Elephant1756:1:LD:2:5:
+Taxi1757:0:LDDL:0:2:
+Emergency1758:0:LLDD:3:0:
+Bus1759:0:LLLDDD:3:2:
+Motorbike1760:0:LLDDLL:1:1:
+Red car1761:1:LDLLDL:1:1:
+Elephant1762:1:LD:2:5:
+Taxi1763:0:LDDL:0:2:
+Emergency1764:0:LLDD:3:0:
+Bus1765:0:LLLDDD:3:2:
+Motorbike1766:0:LLDDLL:1:1:
+Red car1767:1:LDLLDL:1:1:
+Elephant1768:1:LD:2:5:
+Taxi1769:0:LDDL:0:2:
+Emergency1770:0:LLDD:3:0:
+Bus1771:0:LLLDDD:3:2:
+Motorbike1772:0:LLDDLL:1:1:
+Red car1773:1:LDLLDL:1:1:
+Elephant1774:1:LD:2:5:
+Taxi1775:0:LDDL:0:2:
+Emergency1776:0:LLDD:3:0:
+Bus1777:0:LLLDDD:3:2:
+Motorbike1778:0:LLDDLL:1:1:
+Red car1779:1:LDLLDL:1:1:
+Elephant1780:1:LD:2:5:
+Taxi1781:0:LDDL:0:2:
+Emergency1782:0:LLDD:3:0:
+Bus1783:0:LLLDDD:3:2:
+Motorbike1784:0:LLDDLL:1:1:
+Red car1785:1:LDLLDL:1:1:
+Elephant1786:1:LD:2:5:
+Taxi1787:0:LDDL:0:2:
+Emergency1788:0:LLDD:3:0:
+Bus1789:0:LLLDDD:3:2:
+Motorbike1790:0:LLDDLL:1:1:
+Red car1791:1:LDLLDL:1:1:
+Elephant1792:1:LD:2:5:
+Taxi1793:0:LDDL:0:2:
+Emergency1794:0:LLDD:3:0:
+Bus1795:0:LLLDDD:3:2:
+Motorbike1796:0:LLDDLL:1:1:
+Red car1797:1:LDLLDL:1:1:
+Elephant1798:1:LD:2:5:
+Taxi1799:0:LDDL:0:2:
+Emergency1800:0:LLDD:3:0:
+Bus1801:0:LLLDDD:3:2:
+Motorbike1802:0:LLDDLL:1:1:
+Red car1803:1:LDLLDL:1:1:
+Elephant1804:1:LD:2:5:
+Taxi1805:0:LDDL:0:2:
+Emergency1806:0:LLDD:3:0:
+Bus1807:0:LLLDDD:3:2:
+Motorbike1808:0:LLDDLL:1:1:
+Red car1809:1:LDLLDL:1:1:
+Elephant1810:1:LD:2:5:
+Taxi1811:0:LDDL:0:2:
+Emergency1812:0:LLDD:3:0:
+Bus1813:0:LLLDDD:3:2:
+Motorbike1814:0:LLDDLL:1:1:
+Red car1815:1:LDLLDL:1:1:
+Elephant1816:1:LD:2:5:
+Taxi1817:0:LDDL:0:2:
+Emergency1818:0:LLDD:3:0:
+Bus1819:0:LLLDDD:3:2:
+Motorbike1820:0:LLDDLL:1:1:
+Red car1821:1:LDLLDL:1:1:
+Elephant1822:1:LD:2:5:
+Taxi1823:0:LDDL:0:2:
+Emergency1824:0:LLDD:3:0:
+Bus1825:0:LLLDDD:3:2:
+Motorbike1826:0:LLDDLL:1:1:
+Red car1827:1:LDLLDL:1:1:
+Elephant1828:1:LD:2:5:
+Taxi1829:0:LDDL:0:2:
+Emergency1830:0:LLDD:3:0:
+Bus1831:0:LLLDDD:3:2:
+Motorbike1832:0:LLDDLL:1:1:
+Red car1833:1:LDLLDL:1:1:
+Elephant1834:1:LD:2:5:
+Taxi1835:0:LDDL:0:2:
+Emergency1836:0:LLDD:3:0:
+Bus1837:0:LLLDDD:3:2:
+Motorbike1838:0:LLDDLL:1:1:
+Red car1839:1:LDLLDL:1:1:
+Elephant1840:1:LD:2:5:
+Taxi1841:0:LDDL:0:2:
+Emergency1842:0:LLDD:3:0:
+Bus1843:0:LLLDDD:3:2:
+Motorbike1844:0:LLDDLL:1:1:
+Red car1845:1:LDLLDL:1:1:
+Elephant1846:1:LD:2:5:
+Taxi1847:0:LDDL:0:2:
+Emergency1848:0:LLDD:3:0:
+Bus1849:0:LLLDDD:3:2:
+Motorbike1850:0:LLDDLL:1:1:
+Red car1851:1:LDLLDL:1:1:
+Elephant1852:1:LD:2:5:
+Taxi1853:0:LDDL:0:2:
+Emergency1854:0:LLDD:3:0:
+Bus1855:0:LLLDDD:3:2:
+Motorbike1856:0:LLDDLL:1:1:
+Red car1857:1:LDLLDL:1:1:
+Elephant1858:1:LD:2:5:
+Taxi1859:0:LDDL:0:2:
+Emergency1860:0:LLDD:3:0:
+Bus1861:0:LLLDDD:3:2:
+Motorbike1862:0:LLDDLL:1:1:
+Red car1863:1:LDLLDL:1:1:
+Elephant1864:1:LD:2:5:
+Taxi1865:0:LDDL:0:2:
+Emergency1866:0:LLDD:3:0:
+Bus1867:0:LLLDDD:3:2:
+Motorbike1868:0:LLDDLL:1:1:
+Red car1869:1:LDLLDL:1:1:
+Elephant1870:1:LD:2:5:
+Taxi1871:0:LDDL:0:2:
+Emergency1872:0:LLDD:3:0:
+Bus1873:0:LLLDDD:3:2:
+Motorbike1874:0:LLDDLL:1:1:
+Red car1875:1:LDLLDL:1:1:
+Elephant1876:1:LD:2:5:
+Taxi1877:0:LDDL:0:2:
+Emergency1878:0:LLDD:3:0:
+Bus1879:0:LLLDDD:3:2:
+Motorbike1880:0:LLDDLL:1:1:
+Red car1881:1:LDLLDL:1:1:
+Elephant1882:1:LD:2:5:
+Taxi1883:0:LDDL:0:2:
+Emergency1884:0:LLDD:3:0:
+Bus1885:0:LLLDDD:3:2:
+Motorbike1886:0:LLDDLL:1:1:
+Red car1887:1:LDLLDL:1:1:
+Elephant1888:1:LD:2:5:
+Taxi1889:0:LDDL:0:2:
+Emergency1890:0:LLDD:3:0:
+Bus1891:0:LLLDDD:3:2:
+Motorbike1892:0:LLDDLL:1:1:
+Red car1893:1:LDLLDL:1:1:
+Elephant1894:1:LD:2:5:
+Taxi1895:0:LDDL:0:2:
+Emergency1896:0:LLDD:3:0:
+Bus1897:0:LLLDDD:3:2:
+Motorbike1898:0:LLDDLL:1:1:
+Red car1899:1:LDLLDL:1:1:
+Elephant1900:1:LD:2:5:
+Taxi1901:0:LDDL:0:2:
+Emergency1902:0:LLDD:3:0:
+Bus1903:0:LLLDDD:3:2:
+Motorbike1904:0:LLDDLL:1:1:
+Red car1905:1:LDLLDL:1:1:
+Elephant1906:1:LD:2:5:
+Taxi1907:0:LDDL:0:2:
+Emergency1908:0:LLDD:3:0:
+Bus1909:0:LLLDDD:3:2:
+Motorbike1910:0:LLDDLL:1:1:
+Red car1911:1:LDLLDL:1:1:
+Elephant1912:1:LD:2:5:
+Taxi1913:0:LDDL:0:2:
+Emergency1914:0:LLDD:3:0:
+Bus1915:0:LLLDDD:3:2:
+Motorbike1916:0:LLDDLL:1:1:
+Red car1917:1:LDLLDL:1:1:
+Elephant1918:1:LD:2:5:
+Taxi1919:0:LDDL:0:2:
+Emergency1920:0:LLDD:3:0:
+Bus1921:0:LLLDDD:3:2:
+Motorbike1922:0:LLDDLL:1:1:
+Red car1923:1:LDLLDL:1:1:
+Elephant1924:1:LD:2:5:
+Taxi1925:0:LDDL:0:2:
+Emergency1926:0:LLDD:3:0:
+Bus1927:0:LLLDDD:3:2:
+Motorbike1928:0:LLDDLL:1:1:
+Red car1929:1:LDLLDL:1:1:
+Elephant1930:1:LD:2:5:
+Taxi1931:0:LDDL:0:2:
+Emergency1932:0:LLDD:3:0:
+Bus1933:0:LLLDDD:3:2:
+Motorbike1934:0:LLDDLL:1:1:
+Red car1935:1:LDLLDL:1:1:
+Elephant1936:1:LD:2:5:
+Taxi1937:0:LDDL:0:2:
+Emergency1938:0:LLDD:3:0:
+Bus1939:0:LLLDDD:3:2:
+Motorbike1940:0:LLDDLL:1:1:
+Red car1941:1:LDLLDL:1:1:
+Elephant1942:1:LD:2:5:
+Taxi1943:0:LDDL:0:2:
+Emergency1944:0:LLDD:3:0:
+Bus1945:0:LLLDDD:3:2:
+Motorbike1946:0:LLDDLL:1:1:
+Red car1947:1:LDLLDL:1:1:
+Elephant1948:1:LD:2:5:
+Taxi1949:0:LDDL:0:2:
+Emergency1950:0:LLDD:3:0:
+Bus1951:0:LLLDDD:3:2:
+Motorbike1952:0:LLDDLL:1:1:
+Red car1953:1:LDLLDL:1:1:
+Elephant1954:1:LD:2:5:
+Taxi1955:0:LDDL:0:2:
+Emergency1956:0:LLDD:3:0:
+Bus1957:0:LLLDDD:3:2:
+Motorbike1958:0:LLDDLL:1:1:
+Red car1959:1:LDLLDL:1:1:
+Elephant1960:1:LD:2:5:
+Taxi1961:0:LDDL:0:2:
+Emergency1962:0:LLDD:3:0:
+Bus1963:0:LLLDDD:3:2:
+Motorbike1964:0:LLDDLL:1:1:
+Red car1965:1:LDLLDL:1:1:
+Elephant1966:1:LD:2:5:
+Taxi1967:0:LDDL:0:2:
+Emergency1968:0:LLDD:3:0:
+Bus1969:0:LLLDDD:3:2:
+Motorbike1970:0:LLDDLL:1:1:
+Red car1971:1:LDLLDL:1:1:
+Elephant1972:1:LD:2:5:
+Taxi1973:0:LDDL:0:2:
+Emergency1974:0:LLDD:3:0:
+Bus1975:0:LLLDDD:3:2:
+Motorbike1976:0:LLDDLL:1:1:
+Red car1977:1:LDLLDL:1:1:
+Elephant1978:1:LD:2:5:
+Taxi1979:0:LDDL:0:2:
+Emergency1980:0:LLDD:3:0:
+Bus1981:0:LLLDDD:3:2:
+Motorbike1982:0:LLDDLL:1:1:
+Red car1983:1:LDLLDL:1:1:
+Elephant1984:1:LD:2:5:
+Taxi1985:0:LDDL:0:2:
+Emergency1986:0:LLDD:3:0:
+Bus1987:0:LLLDDD:3:2:
+Motorbike1988:0:LLDDLL:1:1:
+Red car1989:1:LDLLDL:1:1:
+Elephant1990:1:LD:2:5:
+Taxi1991:0:LDDL:0:2:
+Emergency1992:0:LLDD:3:0:
+Bus1993:0:LLLDDD:3:2:
+Motorbike1994:0:LLDDLL:1:1:
+Red car1995:1:LDLLDL:1:1:
+Elephant1996:1:LD:2:5:
+Taxi1997:0:LDDL:0:2:
+Emergency1998:0:LLDD:3:0:
+Bus1999:0:LLLDDD:3:2:
+Motorbike2000:0:LLDDLL:1:1:
+Red car2001:1:LDLLDL:1:1:
+Elephant2002:1:LD:2:5:
+Taxi2003:0:LDDL:0:2:
+Emergency2004:0:LLDD:3:0:
+Bus2005:0:LLLDDD:3:2:
+Motorbike2006:0:LLDDLL:1:1:
+Red car2007:1:LDLLDL:1:1:
+Elephant2008:1:LD:2:5:
+Taxi2009:0:LDDL:0:2:
+Emergency2010:0:LLDD:3:0:
+Bus2011:0:LLLDDD:3:2:
+Motorbike2012:0:LLDDLL:1:1:
+Red car2013:1:LDLLDL:1:1:
+Elephant2014:1:LD:2:5:
+Taxi2015:0:LDDL:0:2:
+Emergency2016:0:LLDD:3:0:
+Bus2017:0:LLLDDD:3:2:
+Motorbike2018:0:LLDDLL:1:1:
+Red car2019:1:LDLLDL:1:1:
+Elephant2020:1:LD:2:5:
+Taxi2021:0:LDDL:0:2:
+Emergency2022:0:LLDD:3:0:
+Bus2023:0:LLLDDD:3:2:
+Motorbike2024:0:LLDDLL:1:1:
+Red car2025:1:LDLLDL:1:1:
+Elephant2026:1:LD:2:5:
+Taxi2027:0:LDDL:0:2:
+Emergency2028:0:LLDD:3:0:
+Bus2029:0:LLLDDD:3:2:
+Motorbike2030:0:LLDDLL:1:1:
+Red car2031:1:LDLLDL:1:1:
+Elephant2032:1:LD:2:5:
+Taxi2033:0:LDDL:0:2:
+Emergency2034:0:LLDD:3:0:
+Bus2035:0:LLLDDD:3:2:
+Motorbike2036:0:LLDDLL:1:1:
+Red car2037:1:LDLLDL:1:1:
+Elephant2038:1:LD:2:5:
+Taxi2039:0:LDDL:0:2:
+Emergency2040:0:LLDD:3:0:
+Bus2041:0:LLLDDD:3:2:
+Motorbike2042:0:LLDDLL:1:1:
+Red car2043:1:LDLLDL:1:1:
+Elephant2044:1:LD:2:5:
+Taxi2045:0:LDDL:0:2:
+Emergency2046:0:LLDD:3:0:
+Bus2047:0:LLLDDD:3:2:
+Motorbike2048:0:LLDDLL:1:1:
+Red car2049:1:LDLLDL:1:1:
+Elephant2050:1:LD:2:5:
+Taxi2051:0:LDDL:0:2:
+Emergency2052:0:LLDD:3:0:
+Bus2053:0:LLLDDD:3:2:
+Motorbike2054:0:LLDDLL:1:1:
+Red car2055:1:LDLLDL:1:1:
+Elephant2056:1:LD:2:5:
+Taxi2057:0:LDDL:0:2:
+Emergency2058:0:LLDD:3:0:
+Bus2059:0:LLLDDD:3:2:
+Motorbike2060:0:LLDDLL:1:1:
+Red car2061:1:LDLLDL:1:1:
+Elephant2062:1:LD:2:5:
+Taxi2063:0:LDDL:0:2:
+Emergency2064:0:LLDD:3:0:
+Bus2065:0:LLLDDD:3:2:
+Motorbike2066:0:LLDDLL:1:1:
+Red car2067:1:LDLLDL:1:1:
+Elephant2068:1:LD:2:5:
+Taxi2069:0:LDDL:0:2:
+Emergency2070:0:LLDD:3:0:
+Bus2071:0:LLLDDD:3:2:
+Motorbike2072:0:LLDDLL:1:1:
+Red car2073:1:LDLLDL:1:1:
+Elephant2074:1:LD:2:5:
+Taxi2075:0:LDDL:0:2:
+Emergency2076:0:LLDD:3:0:
+Bus2077:0:LLLDDD:3:2:
+Motorbike2078:0:LLDDLL:1:1:
+Red car2079:1:LDLLDL:1:1:
+Elephant2080:1:LD:2:5:
+Taxi2081:0:LDDL:0:2:
+Emergency2082:0:LLDD:3:0:
+Bus2083:0:LLLDDD:3:2:
+Motorbike2084:0:LLDDLL:1:1:
+Red car2085:1:LDLLDL:1:1:
+Elephant2086:1:LD:2:5:
+Taxi2087:0:LDDL:0:2:
+Emergency2088:0:LLDD:3:0:
+Bus2089:0:LLLDDD:3:2:
+Motorbike2090:0:LLDDLL:1:1:
+Red car2091:1:LDLLDL:1:1:
+Elephant2092:1:LD:2:5:
+Taxi2093:0:LDDL:0:2:
+Emergency2094:0:LLDD:3:0:
+Bus2095:0:LLLDDD:3:2:
+Motorbike2096:0:LLDDLL:1:1:
+Red car2097:1:LDLLDL:1:1:
+Elephant2098:1:LD:2:5:
+Taxi2099:0:LDDL:0:2:
+Emergency2100:0:LLDD:3:0:
+Bus2101:0:LLLDDD:3:2:
+Motorbike2102:0:LLDDLL:1:1:
+Red car2103:1:LDLLDL:1:1:
+Elephant2104:1:LD:2:5:
+Taxi2105:0:LDDL:0:2:
+Emergency2106:0:LLDD:3:0:
+Bus2107:0:LLLDDD:3:2:
+Motorbike2108:0:LLDDLL:1:1:
+Red car2109:1:LDLLDL:1:1:
+Elephant2110:1:LD:2:5:
+Taxi2111:0:LDDL:0:2:
+Emergency2112:0:LLDD:3:0:
+Bus2113:0:LLLDDD:3:2:
+Motorbike2114:0:LLDDLL:1:1:
+Red car2115:1:LDLLDL:1:1:
+Elephant2116:1:LD:2:5:
+Taxi2117:0:LDDL:0:2:
+Emergency2118:0:LLDD:3:0:
+Bus2119:0:LLLDDD:3:2:
+Motorbike2120:0:LLDDLL:1:1:
+Red car2121:1:LDLLDL:1:1:
+Elephant2122:1:LD:2:5:
+Taxi2123:0:LDDL:0:2:
+Emergency2124:0:LLDD:3:0:
+Bus2125:0:LLLDDD:3:2:
+Motorbike2126:0:LLDDLL:1:1:
+Red car2127:1:LDLLDL:1:1:
+Elephant2128:1:LD:2:5:
+Taxi2129:0:LDDL:0:2:
+Emergency2130:0:LLDD:3:0:
+Bus2131:0:LLLDDD:3:2:
+Motorbike2132:0:LLDDLL:1:1:
+Red car2133:1:LDLLDL:1:1:
+Elephant2134:1:LD:2:5:
+Taxi2135:0:LDDL:0:2:
+Emergency2136:0:LLDD:3:0:
+Bus2137:0:LLLDDD:3:2:
+Motorbike2138:0:LLDDLL:1:1:
+Red car2139:1:LDLLDL:1:1:
+Elephant2140:1:LD:2:5:
+Taxi2141:0:LDDL:0:2:
+Emergency2142:0:LLDD:3:0:
+Bus2143:0:LLLDDD:3:2:
+Motorbike2144:0:LLDDLL:1:1:
+Red car2145:1:LDLLDL:1:1:
+Elephant2146:1:LD:2:5:
+Taxi2147:0:LDDL:0:2:
+Emergency2148:0:LLDD:3:0:
+Bus2149:0:LLLDDD:3:2:
+Motorbike2150:0:LLDDLL:1:1:
+Red car2151:1:LDLLDL:1:1:
+Elephant2152:1:LD:2:5:
+Taxi2153:0:LDDL:0:2:
+Emergency2154:0:LLDD:3:0:
+Bus2155:0:LLLDDD:3:2:
+Motorbike2156:0:LLDDLL:1:1:
+Red car2157:1:LDLLDL:1:1:
+Elephant2158:1:LD:2:5:
+Taxi2159:0:LDDL:0:2:
+Emergency2160:0:LLDD:3:0:
