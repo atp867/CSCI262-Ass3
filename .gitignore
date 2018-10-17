@@ -2,6 +2,7 @@
 *.dev
 *.layout
 Makefile.win
+gmon.out
 
 #Ignore compiled files
 *.exe
