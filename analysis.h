@@ -30,6 +30,7 @@ struct stats{
 struct Day{
     int vehicleTotal;
     std::vector<stats> vehicleStats;
+    std::vector<float> speedMean;//Mean speed for each type
     /****Potentially redundant data****/
     float meanSpeed;
     float meanVolume;
@@ -49,10 +50,10 @@ class analysisEngine{
         float totalStdDevVolume;
     public:
         analysisEngine();
-        void startEngine(int, int,Road);
+        void startEngine(int, int,Road,std::vector<Vehicle>);
         void readLogs();
         void totalStatistics(Road);
-        void printStatistics();
+        void printStatistics(std::vector<Vehicle>);
         void vehicleStatistics();
         /*
         void dayStatistics(int,Road);

@@ -19,7 +19,7 @@ analysisEngine::analysisEngine()
     totalStdDevVolume = 0;
 }
 
-void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
+void analysisEngine::startEngine(int numDays, int numVehicles, Road road, std::vector<Vehicle> vehicles)
 {
     std::cout << "\n\n*************Starting Analysis*************" << std::endl;
     //Initialise vector sizes
@@ -32,7 +32,7 @@ void analysisEngine::startEngine(int numDays, int numVehicles, Road road)
     std::cout << "Calculating statistics across data" << std::endl;
     totalStatistics(road);
     vehicleStatistics();
-    printStatistics();
+    printStatistics(vehicles);
 
 }
 
@@ -123,6 +123,7 @@ void analysisEngine::vehicleStatistics()
 {
     float *volStdDev = new float[totalStats.size()];
     float *temp = new float[totalStats.size()];
+    
     for(int i =0; i < totalStats.size();i++)
     {//initialise temp variables
         volStdDev[i] = 0;
@@ -130,11 +131,16 @@ void analysisEngine::vehicleStatistics()
     }
                 /********Speed Statistics*********/
     for(int i = 0; i < days.size(); i++)// speed mean
-    {
+    {//Iterate every day
+        days[i].speedMean.resize(days[0].vehicleStats.size());//Initialise size for type mean speed
         for(int x = 0; x <days[i].vehicleStats.size(); x++)
-        {
+        {// Iterate every vehicle type in that day
             for(int k = 0; k < days[i].vehicleStats[x].instances.size(); k++)
-                totalStats[x].averageSpeed += days[i].vehicleStats[x].instances[k].initSpeed;
+            {//Iterate very instance of that type
+                totalStats[x].averageSpeed += days[i].vehicleStats[x].instances[k].initSpeed;// Mean over every day
+                days[i].speedMean[x] += days[i].vehicleStats[x].instances[k].initSpeed;// Mean of that day
+            }
+            days[i].speedMean[x] = days[i].speedMean[x] / days[i].vehicleStats[x].instances.size();//type mean of day calculated
         }
     }
     for(int i = 0; i < totalStats.size(); i++)
@@ -166,7 +172,7 @@ void analysisEngine::vehicleStatistics()
 
 }
 
-void analysisEngine::printStatistics()
+void analysisEngine::printStatistics(std::vector<Vehicle> vehicles)
 {
     std::cout << "Printing Calculated Statistics to : analysisLog.txt" << std::endl;
     std::ofstream fout;
@@ -174,12 +180,12 @@ void analysisEngine::printStatistics()
     fout << days.size() << " days **************Statistics**************" << std::endl;
     for(int i = 0; i < totalStats.size();i++)
     {//No annoying : inbetween data :)
-        fout << i << ' ' << totalStats[i].averageVolume  << ' '
+        fout << vehicles[i].name << ' ' << totalStats[i].averageVolume  << ' '
             << totalStats[i].stdDevVolume << ' '
             << totalStats[i].averageSpeed << ' ' 
             << totalStats[i].stdDevSpeed << std::endl;
     }
-    fout << "Total Speed average : " << totalAvgSpeed << std::endl;
+    fout << "\nTotal Speed average : " << totalAvgSpeed << std::endl;
     fout << "Total Speed Standard Deviation : " << totalStdDevSpeed << std::endl;
     fout << "Total Volume average : " << totalAvgVolume << std::endl;
     fout << "Total Volume Standard Deviation : " << totalStdDevVolume << std::endl << std::endl;
@@ -189,8 +195,8 @@ void analysisEngine::printStatistics()
         fout << "Total vehicles today : " << days[i].vehicleTotal << std::endl;
         for(int x = 0; x < days[i].vehicleStats.size(); x++)
         {
-            fout << "------Type " << x << "------" << std::endl;
-            fout << "Total vehicles : " << days[i].vehicleStats[x].instances.size() << std::endl;
+            fout << "------Type " << vehicles[x].name << "------" << std::endl;
+            fout << "Total vehicles : " << days[i].vehicleStats[x].instances.size() << " " << days[i].speedMean[x] << std::endl;
         }
         fout << std::endl;
     }

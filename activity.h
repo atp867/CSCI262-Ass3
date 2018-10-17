@@ -85,6 +85,7 @@ class activityEngine{
         void clearInstances();
         void simDay();
         Road getRoad();
+        std::vector<Vehicle> getVehicles();
         void printVehicles();
         void printInstances(int);
 };

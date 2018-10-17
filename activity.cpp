@@ -45,6 +45,11 @@ Road activityEngine::getRoad()
     return road;
 }
 
+std::vector<Vehicle> activityEngine::getVehicles()
+{
+    return vehicleSim;
+}   
+
 //Generates events for activity engine
 void activityEngine::genEvents()
 {
