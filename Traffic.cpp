@@ -68,19 +68,20 @@ int main(int argc, char * argv[])
         exit(2);
 	}
 	fin.close();
-
+	
     if(readStats(ifs, simulation, numTypeS) == -1)
 	{
-		fin.close();
+		ifs.close();
         exit(2);
 	}
-	fin.close();
-
+	ifs.close();
+	
     simulation.printVehicles();
+    
     simulation.startEngine(atoi(argv[3]));
-
+    
     analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
-
+    
     return 0;
 }
 
@@ -91,7 +92,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     int cntr = 0;
     Vehicle temp;
 
-    fin.ignore();
+    //fin.ignore();
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
         fin.getline(tmp, 18, ':');
