@@ -7,6 +7,6 @@
 - VolumeBoi: High mean volumes for all vehicles (Also for volume testing... pun intended)
 - NegativeBoi: Has negative values for various fields
 - MissingBoi: Missing parts of input (i.e. has highly invalid input)
-- ExtraBoi: Has extra parameters for each vehicle [CURRENTLY UNHANDLED]
+- ExtraBoi: Has extra parameters for each vehicle
 - LetterBoi: Has letters where there should be numbers
-- MultiBoi: Has multiple parameters for some fields (i.e. has a number, a space, and then another number) [CURRENTLY UNHANDLED]
+- MultiBoi: Has multiple parameters for some fields (i.e. has a number, a space, and then another number)
