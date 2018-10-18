@@ -25,12 +25,13 @@ int readVehicles(std::ifstream&, activityEngine&, int);
 int readStats(std::ifstream&, activityEngine&, int);
 double getInput(std::ifstream&, int, string, char);
 bool checkConsistency(std::ifstream&, int);
-bool checkParams(int, char*[] );
+bool checkParams(int, char*[]);
 
 int main(int argc, char * argv[])
 {
 	if(!checkParams(argc, argv))
 		exit(1);
+	
     std::cout << "-------------Beginning Program------------" << std::endl;
     std::cout << "--------------Reading in Files------------" << std::endl;
     ifstream fin; //Vehicles.txt
@@ -109,6 +110,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     int cntr = 0;
     Vehicle temp;
     
+    //Input each line in file
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
     
@@ -211,7 +213,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     
     simulation.pushRoad(tempRoad);
     
-    
+    //Input each line in file
     for(int i = 0; i < num; i++)
     {
     	//Support DOS AND Unix
@@ -221,17 +223,9 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     	//get vehicle type
         fin.getline(tmp, 25, ':');
         temp.name = tmp;
-        
-        //get volume average
 		temp.avg = getInput(fin, i, "volume average", ':');
-        
-        //get volume stdDev
 		temp.stdDev = getInput(fin, i, "volume stdDev", ':');
-        
-        //get speed average
 		temp.speedAvg = getInput(fin, i, "speed average", ':');
-        
-        //get speed stdDev
 		temp.speedStdDev = getInput(fin, i, "speed stdDev", ':');
 		fin.ignore(256, '\n'); //Chops off everything after last required value
         
@@ -258,7 +252,6 @@ double getInput(std::ifstream& fin, int line, string type, char delim)
 {
 	char tmp[25];
 	fin.getline(tmp, 25, delim);
-    //fin.ignore(3, ':');
     if(strlen(tmp)==0){
     	std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
     	std::cerr << "Empty value" << std::endl;
