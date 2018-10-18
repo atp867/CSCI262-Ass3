@@ -24,6 +24,7 @@ using namespace std;
 int readVehicles(std::ifstream&, activityEngine&, int);
 int readStats(std::ifstream&, activityEngine&, int);
 bool checkConsistency(std::ifstream&, int);
+double getInput(std::ifstream&, int, string);
 
 int main(int argc, char * argv[])
 {
@@ -137,23 +138,36 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     {   //each loop is a new line
         fin.getline(tmp, 18, ':');
         temp.name = tmp;
+        
+        //get parking bool
+        if(!(fin.peek()=='0'||fin.peek()=='1'))
+        {
+        	std::cerr << "Error: Failed input of parking bool at line " << i+2 << std::endl;
+			std::cerr << "Terminating Program..." << std::endl;
+   			exit(0);
+		}
         fin >> temp.parking;
         fin.ignore(3,':');
+        
+        //get rego pattern
         fin.getline(tmp, 18, ':');
+        if(strlen(tmp)==0){
+        	std::cerr << "Error: Failed input of rego pattern at line " << i+2 << std::endl;
+			std::cerr << "Terminating Program..." << std::endl;
+   			exit(0);
+		}
         temp.rego = tmp;
         
-        float num;
-        fin >> num;
-        num = abs(num);
-        temp.volWeight = num;
-        fin.ignore(3, ':');
+        //get volume weight
+        temp.volWeight = abs(getInput(fin, i, "volume weight"));
         
-        fin >> num;
-        num = abs(num);
-        temp.speedWeight = num;
+        //get speed weight
+        temp.speedWeight = abs(getInput(fin, i, "speed weight"));
         fin.ignore(256, '\n');
         
         simulation.pushVehicles(temp);
+        
+        //cout<<temp.name<<":"<<temp.parking<<":"<<temp.rego<<":"<<temp.speedWeight<<":"<<temp.volWeight<<":\n";
         
         if(!checkConsistency(fin, 1)) //Check if there are not enough vehicles
             return -1;
@@ -200,19 +214,25 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     tempRoad.numParking = nmbr;
     
     simulation.pushRoad(tempRoad);
-
+    
+    
     for(int i = 0; i < num; i++)
     {
         fin.getline(tmp, 25, ':');
         temp.name = tmp;
-        fin >> temp.avg;
-        fin.ignore(3, ':');
-        fin >> temp.stdDev;
-        fin.ignore(3, ':');
-        fin >> temp.speedAvg;
-        fin.ignore(3, ':');
-        fin >> temp.speedStdDev;
-        fin.ignore(256, '\n');
+        
+        //get volume average
+		temp.avg = getInput(fin, i, "volume average");
+        
+        //get volume stdDev
+		temp.stdDev = getInput(fin, i, "volume stdDev");
+        
+        //get speed average
+		temp.speedAvg = getInput(fin, i, "speed average");
+        
+        //get speed stdDev
+		temp.speedStdDev = getInput(fin, i, "speed stdDev");
+		fin.ignore(256, '\n');
         
         //No negatives pls
         temp.avg = abs(temp.avg);
@@ -221,6 +241,8 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
         temp.stdDev = abs(temp.stdDev);
         
         simulation.pushStats(temp);
+        
+        //cout<<temp.name<<":"<<temp.avg<<":"<<temp.stdDev<<":"<<temp.speedAvg<<":"<<temp.speedStdDev<<":\n";
         
         if(!checkConsistency(fin, 1)) //Check if there are not enough stats
             return -1;
@@ -246,7 +268,7 @@ bool checkConsistency(std::ifstream& fin, int state)
             break;
         case 1:
             if(fin.eof())
-            {   //If number of vehicles is larger than vehicles given
+            {   //If specified number of vehicles is more than number of vehicles in file
                 std::cerr << "Error: Inconsistency found in file!" << std::endl;
                 std::cerr << "Unacceptable! Terminating Program..." << std::endl;
                 check = false;
@@ -254,7 +276,7 @@ bool checkConsistency(std::ifstream& fin, int state)
             break;
         case 2:
             if(fin.getline(tmp, 256, '\n'))
-            {   //If number of vehicles stated at start is less than number of vehicles in file
+            {   //If specified number of vehicles is less than number of vehicles in file
                 std::cerr << "Error: Outside and still Inconsistency found in file!" << std::endl;
                 std::cerr << "Unacceptable! Terminating Program..." << std::endl;
                 check = false;
@@ -264,4 +286,28 @@ bool checkConsistency(std::ifstream& fin, int state)
             break;
     }
     return check;
+}
+
+//gets the next number value from file input
+double getInput(std::ifstream& fin, int line, string type)
+{
+	char tmp[25];
+	fin.getline(tmp, 25, ':');
+    //fin.ignore(3, ':');
+    if(strlen(tmp)==0){
+    	std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
+    	std::cerr << "Empty value" << std::endl;
+		std::cerr << "Terminating Program..." << std::endl;
+		exit(0);
+	}
+    for(int j = 0; j<strlen(tmp); j++)
+    {
+    	if(!(isdigit(tmp[j]) || tmp[j]=='.')||strlen(tmp)==0)
+    	{
+    		std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
+			std::cerr << "Terminating Program..." << std::endl;
+   			exit(0);
+		}
+	}
+	return strtod(tmp, NULL);
 }
