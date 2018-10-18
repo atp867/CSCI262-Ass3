@@ -128,6 +128,12 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
    			exit(1);
 		}
         fin >> temp.parking;
+        if(fin.peek()!=':')
+        {
+        	std::cerr << "Error: Failed input of parking bool at line " << i+2 << std::endl;
+			std::cerr << "Terminating Program..." << std::endl;
+   			exit(1);
+		}
         fin.ignore(3,':');
         
         //get rego pattern
@@ -153,11 +159,11 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
         
         //get speed weight
         temp.speedWeight = abs(getInput(fin, i, "speed weight", ':'));
-        fin.ignore(256, '\n');
+        fin.ignore(256, '\n'); //Chops off everything after last required value
         
         simulation.pushVehicles(temp);
         
-        //cout<<temp.name<<":"<<temp.parking<<":"<<temp.rego<<":"<<temp.speedWeight<<":"<<temp.volWeight<<":\n";
+        //cout<<temp.name<<":"<<temp.parking<<":"<<temp.rego<<":"<<temp.volWeight<<":"<<temp.speedWeight<<":\n";
         
         if(!checkConsistency(fin, 1)) //Check if there are not enough vehicles
             return -1;
@@ -227,7 +233,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
         
         //get speed stdDev
 		temp.speedStdDev = getInput(fin, i, "speed stdDev", ':');
-		fin.ignore(256, '\n');
+		fin.ignore(256, '\n'); //Chops off everything after last required value
         
         //No negatives pls
         temp.avg = abs(temp.avg);
