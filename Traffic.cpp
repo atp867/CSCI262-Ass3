@@ -136,6 +136,12 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
     
     for(int i = 0 ; i < numVehicles; i++)
     {   //each loop is a new line
+    
+    	//Support DOS AND Unix
+   		if(fin.peek()=='\n')
+    		fin.ignore();
+    		
+    	//get vehicle type
         fin.getline(tmp, 18, ':');
         temp.name = tmp;
         
@@ -218,6 +224,11 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     
     for(int i = 0; i < num; i++)
     {
+    	//Support DOS AND Unix
+    	if(fin.peek()=='\n')
+    		fin.ignore();
+    		
+    	//get vehicle type
         fin.getline(tmp, 25, ':');
         temp.name = tmp;
         
