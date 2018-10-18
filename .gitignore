@@ -18,3 +18,6 @@ process-palette.json
 
 #ignore misc files
 *.bat
+
+##inclusions##
+!Input test sets/*Boi/*.txt
