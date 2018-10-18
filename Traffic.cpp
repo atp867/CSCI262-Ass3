@@ -23,44 +23,16 @@ using namespace std;
 //Function Prototypes
 int readVehicles(std::ifstream&, activityEngine&, int);
 int readStats(std::ifstream&, activityEngine&, int);
+double getInput(std::ifstream&, int, string, char);
 bool checkConsistency(std::ifstream&, int);
-double getInput(std::ifstream&, int, string);
+bool checkParams(int, char*[] );
 
 int main(int argc, char * argv[])
 {
-    if(argc != 4)
-    {
-        std::cerr << "Error: Invalid number of Arguement Parameters" << std::endl;
-        std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
-    }
-    
-    //cout << argv[3] << endl;
-    
-    int numDays;
-    std::istringstream iss(argv[3]);
-    if(!(iss >> numDays))
-    {
-    	std::cerr << "Error: Days parameter is not an integer" << std::endl;
-        std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
-	}
-    if(numDays > 999999)
-    {
-    	std::cerr << "Error: Too many days! Max number of days is 999,999" << std::endl;
-    	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
-	}
-	if(numDays <= 0)
-    {
-    	std::cerr << "Error: There must be at least one day to simulate" << std::endl;
-    	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
-	}
-    
+	if(!checkParams(argc, argv))
+		exit(1);
     std::cout << "-------------Beginning Program------------" << std::endl;
     std::cout << "--------------Reading in Files------------" << std::endl;
-    
     ifstream fin; //Vehicles.txt
     ifstream ifs; //Stats.txt
     fin.open(argv[1]);
@@ -78,7 +50,7 @@ int main(int argc, char * argv[])
 	{
 		std::cerr << "Error: Failed input of first parameter in vehicles file" << std::endl;
     	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
+        exit(1);
 	}
     fin.ignore(1);
     
@@ -86,7 +58,7 @@ int main(int argc, char * argv[])
 	{
 		std::cerr << "Error: Failed input of first parameter in stats file" << std::endl;
     	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
+        exit(1);
 	}
     ifs.ignore(1);
     
@@ -94,16 +66,18 @@ int main(int argc, char * argv[])
     numTypeV = abs(numTypeV);
     numTypeS = abs(numTypeS);
     
+    //Check that vehicles and stats files have same number of vehicle types
     if(numTypeS != numTypeV)
     {
-        std::cerr << "Error: Given file arguements have a different number of Types!" << std::endl;
+        std::cerr << "Error: Given file arguments have a different number of Types!" << std::endl;
         std::cerr << "Terminating Program..." << std::endl;
         exit(3);
     }
 
     activityEngine simulation;
     analysisEngine analysis;
-
+    
+    //Read vehicles
     if(readVehicles(fin, simulation, numTypeV) == -1)
 	{
 		fin.close();
@@ -111,6 +85,7 @@ int main(int argc, char * argv[])
 	}
 	fin.close();
 	
+	//Read stats
     if(readStats(ifs, simulation, numTypeS) == -1)
 	{
 		ifs.close();
@@ -150,7 +125,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
         {
         	std::cerr << "Error: Failed input of parking bool at line " << i+2 << std::endl;
 			std::cerr << "Terminating Program..." << std::endl;
-   			exit(0);
+   			exit(1);
 		}
         fin >> temp.parking;
         fin.ignore(3,':');
@@ -160,7 +135,7 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
         if(strlen(tmp)==0){
         	std::cerr << "Error: Failed input of rego pattern at line " << i+2 << std::endl;
 			std::cerr << "Terminating Program..." << std::endl;
-   			exit(0);
+   			exit(1);
 		}
 		for(int j = 0; j<strlen(tmp); j++)
 	    {
@@ -168,16 +143,16 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
 	    	{
 	    		std::cerr << "Error: Failed input of rego pattern at line " << i+2 << std::endl;
 				std::cerr << "Terminating Program..." << std::endl;
-	   			exit(0);
+	   			exit(1);
 			}
 		}
         temp.rego = tmp;
         
         //get volume weight
-        temp.volWeight = abs(getInput(fin, i, "volume weight"));
+        temp.volWeight = abs(getInput(fin, i, "volume weight", ':'));
         
         //get speed weight
-        temp.speedWeight = abs(getInput(fin, i, "speed weight"));
+        temp.speedWeight = abs(getInput(fin, i, "speed weight", ':'));
         fin.ignore(256, '\n');
         
         simulation.pushVehicles(temp);
@@ -205,7 +180,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
 	{
 		std::cerr << "Error: Failed input of second parameter in stats file" << std::endl;
     	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
+        exit(1);
 	}
     nmbr = abs(nmbr);
     tempRoad.length = nmbr;
@@ -214,7 +189,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
 	{
 		std::cerr << "Error: Failed input of third parameter in stats file" << std::endl;
     	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
+        exit(1);
 	}
     nmbr = abs(nmbr);
     tempRoad.speedLim = nmbr;
@@ -223,7 +198,7 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
 	{
 		std::cerr << "Error: Failed input of fourth parameter in stats file" << std::endl;
     	std::cerr << "Terminating Program..." << std::endl;
-        exit(0);
+        exit(1);
 	}
     nmbr = abs(nmbr);
     tempRoad.numParking = nmbr;
@@ -242,16 +217,16 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
         temp.name = tmp;
         
         //get volume average
-		temp.avg = getInput(fin, i, "volume average");
+		temp.avg = getInput(fin, i, "volume average", ':');
         
         //get volume stdDev
-		temp.stdDev = getInput(fin, i, "volume stdDev");
+		temp.stdDev = getInput(fin, i, "volume stdDev", ':');
         
         //get speed average
-		temp.speedAvg = getInput(fin, i, "speed average");
+		temp.speedAvg = getInput(fin, i, "speed average", ':');
         
         //get speed stdDev
-		temp.speedStdDev = getInput(fin, i, "speed stdDev");
+		temp.speedStdDev = getInput(fin, i, "speed stdDev", ':');
 		fin.ignore(256, '\n');
         
         //No negatives pls
@@ -270,6 +245,65 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     if(!checkConsistency(fin, 2)) //Check if there are too many stats
         return -1;
     return 1;
+}
+
+//gets the next number value from file input
+double getInput(std::ifstream& fin, int line, string type, char delim)
+{
+	char tmp[25];
+	fin.getline(tmp, 25, delim);
+    //fin.ignore(3, ':');
+    if(strlen(tmp)==0){
+    	std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
+    	std::cerr << "Empty value" << std::endl;
+		std::cerr << "Terminating Program..." << std::endl;
+		exit(1);
+	}
+    for(int j = 0; j<strlen(tmp); j++)
+    {
+    	if(!(isdigit(tmp[j]) || tmp[j]=='.')||strlen(tmp)==0)
+    	{
+    		std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
+			std::cerr << "Terminating Program..." << std::endl;
+   			exit(1);
+		}
+	}
+	return strtod(tmp, NULL);
+}
+
+//Check program parameters
+bool checkParams(int argc, char * argv[])
+{
+	//Check number of parameters
+	if(argc != 4)
+    {
+        std::cerr << "Error: Invalid number of Arguement Parameters" << std::endl;
+        std::cerr << "Terminating Program..." << std::endl;
+        return false;
+    }
+    
+    //Check number of days
+    int numDays;
+    std::istringstream iss(argv[3]);
+	if(!(iss >> numDays))
+    {
+    	std::cerr << "Error: Days parameter is not an integer" << std::endl;
+        std::cerr << "Terminating Program..." << std::endl;
+        return false;
+	}
+    if(numDays > 999999)
+    {
+    	std::cerr << "Error: Too many days! Max number of days is 999,999" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        return false;
+	}
+	if(numDays <= 0)
+    {
+    	std::cerr << "Error: There must be at least one day to simulate" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        return false;
+	}
+	return true;
 }
 
 //Takes the ifstream to be tested and the state of input (i.e. what stage input is up to), and runs a corresponding consistency check
@@ -308,26 +342,3 @@ bool checkConsistency(std::ifstream& fin, int state)
     return check;
 }
 
-//gets the next number value from file input
-double getInput(std::ifstream& fin, int line, string type)
-{
-	char tmp[25];
-	fin.getline(tmp, 25, ':');
-    //fin.ignore(3, ':');
-    if(strlen(tmp)==0){
-    	std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
-    	std::cerr << "Empty value" << std::endl;
-		std::cerr << "Terminating Program..." << std::endl;
-		exit(0);
-	}
-    for(int j = 0; j<strlen(tmp); j++)
-    {
-    	if(!(isdigit(tmp[j]) || tmp[j]=='.')||strlen(tmp)==0)
-    	{
-    		std::cerr << "Error: Failed input of " << type << " at line " << line+2 << std::endl;
-			std::cerr << "Terminating Program..." << std::endl;
-   			exit(0);
-		}
-	}
-	return strtod(tmp, NULL);
-}
