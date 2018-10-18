@@ -172,15 +172,30 @@ int readStats(std::ifstream& fin, activityEngine& simulation, int num )
     
     //Assigning a negative to unsigned int does BAD things
     float nmbr;
-    fin >> nmbr;
-    nmbr= abs(nmbr);
+    if(!(fin >> nmbr))
+	{
+		std::cerr << "Error: Failed input of second parameter in stats file" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
+    nmbr = abs(nmbr);
     tempRoad.length = nmbr;
     
-    fin >> nmbr;
+    if(!(fin >> nmbr))
+	{
+		std::cerr << "Error: Failed input of third parameter in stats file" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
     nmbr = abs(nmbr);
     tempRoad.speedLim = nmbr;
     
-    fin >> nmbr;
+    if(!(fin >> nmbr))
+	{
+		std::cerr << "Error: Failed input of fourth parameter in stats file" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
     nmbr = abs(nmbr);
     tempRoad.numParking = nmbr;
     
