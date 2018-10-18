@@ -71,10 +71,22 @@ int main(int argc, char * argv[])
 	if(!checkConsistency(ifs, 0))
 		exit(1);
 	
+	//Input first parameter of each file and handle invalid values
 	int numTypeV, numTypeS;
-    fin >> numTypeV; //First integer of Vehicles.txt
+	if(!(fin >> numTypeV))
+	{
+		std::cerr << "Error: Failed input of first parameter in vehicles file" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
     fin.ignore(1);
-    ifs >> numTypeS; //First integer of Stats.txt  
+    
+    if(!(ifs >> numTypeS))
+	{
+		std::cerr << "Error: Failed input of first parameter in stats file" << std::endl;
+    	std::cerr << "Terminating Program..." << std::endl;
+        exit(0);
+	}
     ifs.ignore(1);
     
     //Convert negative to positive
