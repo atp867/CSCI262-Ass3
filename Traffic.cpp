@@ -162,6 +162,15 @@ int readVehicles(std::ifstream& fin, activityEngine& simulation, int numVehicles
 			std::cerr << "Terminating Program..." << std::endl;
    			exit(0);
 		}
+		for(int j = 0; j<strlen(tmp); j++)
+	    {
+	    	if(!(tmp[j]=='L' || tmp[j]=='D'))
+	    	{
+	    		std::cerr << "Error: Failed input of rego pattern at line " << i+2 << std::endl;
+				std::cerr << "Terminating Program..." << std::endl;
+	   			exit(0);
+			}
+		}
         temp.rego = tmp;
         
         //get volume weight
