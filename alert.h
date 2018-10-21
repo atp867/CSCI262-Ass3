@@ -52,6 +52,6 @@ class alertEngine
 		
 	public:
 		void calcThreshold(std::vector<Vehicle> vehicleSim);
-		void calcAnomalyCount();
+		void calcAnomalyCount(activityEngine activity);
 		void startEngine();	
 };
