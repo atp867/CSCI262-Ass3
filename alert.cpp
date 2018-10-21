@@ -176,7 +176,7 @@ void alertEngine::readUserFile()
 }
 
 // Caluclates the anomaly thingos idk
-void alertEngine::calcAnomalyCount()
+void alertEngine::calcAnomalyCount(activityEngine activity)
 {
 	// Header Printout
 	cout << endl << "-------------------------------------------" << endl;
@@ -196,10 +196,24 @@ void alertEngine::startEngine()
 		readAnalysisFile();
 		readUserFile();
 		
-		//cout << "Enter a number of days: ";
-		//cin >> newDays;
+		cout << "Enter a number of days: ";
+		cin >> newDays;
 		
-		//calcAnomalyCount();
+		
+		srand(time(NULL));
+		for(int i = 0; i < newDays; i++)
+		{
+			/*
+			cout << "---------------- DAY " << i << " ----------------" << std::endl;
+			activity.genEvents();
+        	activity.simDay();
+        	activity.printInstances(i);
+        	activity.clearInstances();
+        	*/
+        	activityEngine activity;
+        	activity.startEngine(1);
+			calcAnomalyCount(activity);
+		}
 		
 		/*
 		//Continue simulation or close program
