@@ -17,6 +17,7 @@
 #include <string>
 #include "activity.h"
 #include "analysis.h"
+#include "alert.h"
 
 using namespace std;
 
@@ -29,6 +30,7 @@ bool checkParams(int, char*[]);
 
 int main(int argc, char * argv[])
 {
+    srand(time(NULL));
 	if(!checkParams(argc, argv))
 		exit(1);
 	
@@ -47,6 +49,7 @@ int main(int argc, char * argv[])
 	
 	//Input first parameter of each file and handle invalid values
 	int numTypeV, numTypeS;
+    string exitChoice = "";
 	if(!(fin >> numTypeV))
 	{
 		std::cerr << "Error: Failed input of first parameter in vehicles file" << std::endl;
@@ -77,6 +80,7 @@ int main(int argc, char * argv[])
 
     activityEngine simulation;
     analysisEngine analysis;
+    alertEngine alert;
     
     //Read vehicles
     if(readVehicles(fin, simulation, numTypeV) == -1)
@@ -95,11 +99,12 @@ int main(int argc, char * argv[])
 	ifs.close();
 	
     simulation.printVehicles();
-    
-    simulation.startEngine(atoi(argv[3]));
-    
-    analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
-    
+        simulation.startEngine(atoi(argv[3]));
+        
+        analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
+        //alert.startEngine(simulation);
+
+
     return 0;
 }
 

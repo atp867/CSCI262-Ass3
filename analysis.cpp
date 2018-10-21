@@ -189,7 +189,7 @@ void analysisEngine::printStatistics(std::vector<Vehicle> vehicles)
     fout << days.size() << " days" << std::endl;
     for(int i = 0; i < totalStats.size();i++)
     {//No annoying : inbetween data :)
-        fout << vehicles[i].name << ' ' << totalStats[i].averageVolume  << ' '
+        fout << vehicles[i].name << ':' << totalStats[i].averageVolume  << ' '
             << totalStats[i].stdDevVolume << ' '
             << totalStats[i].averageSpeed << ' ' 
             << totalStats[i].stdDevSpeed << std::endl;

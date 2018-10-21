@@ -33,10 +33,11 @@ void alertEngine::calcThreshold(std::vector<Vehicle> vehicleSim)
 }
 
 // Reads the analysis file from the analysis engine
-void alertEngine::readAnalysisFile()
+void alertEngine::readAnalysisFile(int numVehicles)
 {
 	ifstream fin;
 	string tmp = "";
+    char name[20];
 	fin.open("analysisLog.txt");
 	
 	// File reading
@@ -49,6 +50,16 @@ void alertEngine::readAnalysisFile()
 	tmp = tmp.at(0);
 	int days = stoi(tmp);
 	
+    stats s;
+    for(int i = 0; i < numVehicles; i++)
+    {
+		fin.getline(name,30,':');
+        s.type = name;
+        cout << name << endl;
+        fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
+		baselineStats.push_back(s);
+    }
+    /*
 	//Read stats
 	stats s;
 	for(int i = 0; i < 2; i++) // Read 'Bus' and 'Motorbike'
@@ -71,6 +82,7 @@ void alertEngine::readAnalysisFile()
 		fin >> s.type >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
 		baselineStats.push_back(s);
 	}
+    */
 	
 	getline(fin, tmp);
 	getline(fin, tmp);
@@ -158,7 +170,7 @@ void alertEngine::readAnalysisFile()
 }
 
 // Reads the file requested by the user
-void alertEngine::readUserFile()
+void alertEngine::readUserFile(activityEngine& activity)
 {
 	// Prompt user for a file containing new statistics and a number of days
 	cout << "Enter a new file name: ";
@@ -187,20 +199,19 @@ void alertEngine::calcAnomalyCount(activityEngine activity)
 }
 
 //Start Alert Engine
-void alertEngine::startEngine()
+void alertEngine::startEngine(activityEngine& simulation)
 {
 	bool flag = true;
 	
 	while(flag == true)
 	{
-		readAnalysisFile();
-		readUserFile();
+		readAnalysisFile(simulation.getVehicles().size());
+		readUserFile(simulation);
 		
 		cout << "Enter a number of days: ";
 		cin >> newDays;
 		
 		
-		srand(time(NULL));
 		for(int i = 0; i < newDays; i++)
 		{
 			/*

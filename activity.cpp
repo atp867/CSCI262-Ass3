@@ -40,12 +40,14 @@ void activityEngine::pushRoad(Road sample)
     road.numParking = sample.numParking;
 }
 
+
 //Returns the road
 Road activityEngine::getRoad()
 {
     return road;
 }
 
+//Returns vector of vehicles
 std::vector<Vehicle> activityEngine::getVehicles()
 {
     return vehicleSim;
@@ -97,7 +99,6 @@ void activityEngine::genEvents()
 //Start the activity engine
 void activityEngine::startEngine(int days)
 {
-    srand(time(NULL));
     std::cout << "---------------- Beginning Activity Engine---------------- " << std::endl;
     for(int i = 0; i < days; i++) //Simulation main driver loop
     {
@@ -120,7 +121,6 @@ void activityEngine::clearInstances()
 //Simulates a day of activity
 void activityEngine::simDay()
 {
-    srand(time(NULL));
     //std::default_random_engine randEng;
     std::random_device rd;
     std::mt19937 randEng(rd()); //Seed Mersenne Twist random engine with random number from hardware (more random than default random engine)

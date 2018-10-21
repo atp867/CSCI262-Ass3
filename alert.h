@@ -8,14 +8,22 @@
 *   <Olivia Followes - of767 - 5395707>
 *************************************/
 
-//#ifndef ALERT_H
-//#define ALERT_H
+#ifndef ALERT_H
+#define ALERT_H
 
 #include "activity.h"
 #include "analysis.h"
 
+/*
+struct alertStats{
+    float numVehicles;
+    float speedAvg;
+};
+*/
+
 struct day{
 	int vehicleTotal;
+    //vector<alertStats> stuff;
 	float busNum;
 	float busSpeedAvg;
 	float motorbikeNum;
@@ -47,11 +55,12 @@ class alertEngine
 		std::vector<day> baselineDays;
 		
 		//Functions
-		void readAnalysisFile();
-		void readUserFile();
+		void readAnalysisFile(int);
+		void readUserFile(activityEngine&);
 		
 	public:
 		void calcThreshold(std::vector<Vehicle> vehicleSim);
 		void calcAnomalyCount(activityEngine activity);
-		void startEngine();	
+		void startEngine(activityEngine&);	
 };
+#endif
