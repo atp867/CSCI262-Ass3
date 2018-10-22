@@ -49,8 +49,6 @@ void alertEngine::readAnalysisFile(int numVehicles)
 	//Get first int of line
 	int days;
 	fin >> days;
-	//Throw away rest of line
-	getline(fin,tmp);
 	
     stats s;
     for(int i = 0; i < numVehicles; i++)
@@ -161,6 +159,8 @@ void alertEngine::readUserFile(activityEngine& activity)
 		cout << "Enter a new file name: ";
 		cin >> newFile;
 		fin.open(newFile);
+		
+		
 	}
 	fin.close();
 }
@@ -273,11 +273,32 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	
 	// Header Printout
 	cout << endl << "-------------------------------------------" << endl;
-	cout << "DAY" << setw(15) << "SPEED STATUS" << setw(15) << "VOLUME STATUS" << setw(10) << "WEIGHT" << endl;
+	cout << "DAY" << setw(18) << "SPEED ANOMALY" << setw(18) << "VOLUME ANOMALY" << setw(18) 
+	<< "SPEED WEIGHT" << setw(18) << "VOLUME WEIGHT"<< endl;
 	cout << "-------------------------------------------" << endl << endl;
 	
-	cout << volAnomCount << endl;
-	cout << speedAnomCount << endl;
+	string volStatus;
+	string speedStatus;
+	
+	if(volAnomCount > volumeThresh)
+	{
+		volStatus = "DETECTED";
+	}
+	else
+	{
+		volStatus = "NOT DETECTED";
+	}
+	if(speedAnomCount > speedThresh)
+	{
+		speedStatus = "DETECTED";
+	}
+	else
+	{
+		speedStatus = "NOT DETECTED";
+	}
+	
+	cout << day << setw(18) << speedStatus << setw(18) << volStatus << setw(18) 
+	<< volAnomCount << setw(18) << speedAnomCount << endl;
 	
 }
 
@@ -285,15 +306,12 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 {
 	float deduction = val - mean;
 	
-	/*
 	bool negative = false;
 	if(deduction < 0)
 	{
 		negative = true;
 		deduction = fabs(deduction);
 	}
-	*/
-	deduction = fabs(deduction);
 	
 	float devDed;
 	
@@ -306,10 +324,10 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 		devDed = (deduction/stdDev);
 	}
 	
-	cout << val << ":" << stdDev << ":" << mean << ":" << weight << endl;
+	//cout << val << ":" << stdDev << ":" << mean << ":" << weight << endl;
 	
-	float sum = ( devDed * weight);
-	cout << sum << endl;
+	float sum = (devDed * weight);
+	//cout << sum << endl;
 	return sum;
 }
 
@@ -339,7 +357,6 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
         	calcAnomaly(activity, i);
 		}
 		
-		/*
 		//Continue simulation or close program
 		cout << "Would You like to continue simulation? [y/n]: " << endl;
 		string input;
@@ -348,8 +365,5 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 		{
 			flag = false;
 		}
-		*/
-		
-		flag = false;
 	}
 }
