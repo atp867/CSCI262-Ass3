@@ -99,10 +99,10 @@ int main(int argc, char * argv[])
 	ifs.close();
 	
     simulation.printVehicles();
-        simulation.startEngine(atoi(argv[3]));
+    simulation.startEngine(atoi(argv[3]));
         
-        analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
-       alert.startEngine(simulation, analysis);
+    analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
+    alert.startEngine(simulation, analysis);
 
 
     return 0;

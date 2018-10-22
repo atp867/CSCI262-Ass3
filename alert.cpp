@@ -120,8 +120,7 @@ void alertEngine::readUserFile(activityEngine& activity)
 	// Prompt user for a file containing new statistics and a number of days
     char tmp[256];
 	cout << "Enter a new file name: ";
-	//cin >> newFile;
-    strcpy(newFile,"Stats.txt");
+	cin >> newFile;
 	ifstream fin;
 	fin.open(newFile);
 	while(!fin) //Checks if file entered is valid and loops until valid file is entered
@@ -291,6 +290,7 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 {
 	bool flag = true;
+    string input;
 	vehicleStats = activity.getVehicles();
 	
     readAnalysisFile(activity.getVehicles().size());
@@ -301,7 +301,6 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 		
 		cout << "Enter number of days: ";
 		cin >> newDays;
-		//newDays = 1;
 		for(int i = 0; i < newDays; i++)
 		{
 			cout << "---------------- DAY " << i << " ----------------" << std::endl;
@@ -315,17 +314,16 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
             
 		}
 		
-		/*
 		//Continue simulation or close program
-		cout << "Would You like to continue simulation? [y/n]: " << endl;
-		string input;
-		cin >> input;
-		if(input == "n")
-		{
-			flag = false;
-		}
-		*/
+        while(input != 'y' || input != 'n')
+        {
+            cout << "Would You like to continue simulation? [y/n]: " << endl;
+            cin >> input;
+            if(input == "n")
+            {
+                flag = false;
+            }
+        }
 		
-		flag = false;
 	}
 }
