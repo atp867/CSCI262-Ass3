@@ -288,22 +288,22 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	vehicleStats[5].volWeight);	
 	
 	// Speed Calcs
-	speedAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[0].speedWeight);
 	
-	speedAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[1].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[2].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[3].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[4].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevVolume, baselineStats[day].averageSpeed, 
+	speedAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
 	vehicleStats[5].speedWeight);	
 	
 	// Header Printout
