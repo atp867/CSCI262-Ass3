@@ -8,6 +8,7 @@
 *   <Olivia Followes - of767 - 5395707>
 *************************************/
 #include "analysis.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -189,15 +190,15 @@ void analysisEngine::printStatistics(std::vector<Vehicle> vehicles)
     fout << days.size() << " days" << std::endl;
     for(int i = 0; i < totalStats.size();i++)
     {//No annoying : inbetween data :)
-        fout << vehicles[i].name << ':' << totalStats[i].averageVolume  << ' '
+        fout << std::setprecision(2)<< vehicles[i].name << ':' << totalStats[i].averageVolume  << ' '
             << totalStats[i].stdDevVolume << ' '
             << totalStats[i].averageSpeed << ' ' 
             << totalStats[i].stdDevSpeed << std::endl;
     }
-    fout << "\nTotal Speed average : " << totalAvgSpeed << std::endl;
-    fout << "Total Speed Standard Deviation : " << totalStdDevSpeed << std::endl;
-    fout << "Total Volume average : " << totalAvgVolume << std::endl;
-    fout << "Total Volume Standard Deviation : " << totalStdDevVolume << std::endl << std::endl;
+    fout << std::setprecision(2) << "\nTotal Speed average : " << totalAvgSpeed << std::endl;
+    fout << std::setprecision(2) << "Total Speed Standard Deviation : " << totalStdDevSpeed << std::endl;
+    fout << std::setprecision(2) << "Total Volume average : " << totalAvgVolume << std::endl;
+    fout << std::setprecision(2) << "Total Volume Standard Deviation : " << totalStdDevVolume << std::endl << std::endl;
     for(int i = 0; i < days.size(); i++)
     {
         fout << "**************Day " << i << "**************" << std::endl;
@@ -205,7 +206,7 @@ void analysisEngine::printStatistics(std::vector<Vehicle> vehicles)
         for(int x = 0; x < days[i].vehicleStats.size(); x++)
         {
             fout << "------Type " << vehicles[x].name << "------" << std::endl;
-            fout << "Total vehicles : " << days[i].vehicleStats[x].instances.size() << " " << days[i].speedMean[x] << std::endl;
+            fout << std::setprecision(2) << "Total vehicles : " << days[i].vehicleStats[x].instances.size() << " " << days[i].speedMean[x] << std::endl;
         }
         fout << std::endl;
     }

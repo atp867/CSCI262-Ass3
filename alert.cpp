@@ -231,14 +231,14 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	// Volume Calcs
     for(int i = 0; i < vehicleStats.size(); i ++)
     {
-        volAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
+        volAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[i].stdDevVolume, baselineStats[i].averageVolume, 
         vehicleStats[i].volWeight);
     }
 	
 	// Speed Calcs
     for(int i = 0; i < vehicleStats.size(); i ++)
     {
-        speedAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
+        speedAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[i].stdDevSpeed, baselineStats[i].averageSpeed, 
         vehicleStats[i].speedWeight);
     }
 	
@@ -300,8 +300,8 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 		readUserFile(activity);
 		
 		cout << "Enter number of days: ";
-		//cin >> newDays;
-		newDays = 1;
+		cin >> newDays;
+		//newDays = 1;
 		for(int i = 0; i < newDays; i++)
 		{
 			cout << "---------------- DAY " << i << " ----------------" << std::endl;
