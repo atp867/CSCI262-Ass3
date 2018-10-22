@@ -8,33 +8,25 @@
 *   <Olivia Followes - of767 - 5395707>
 *************************************/
 
-#ifndef ALERT_H
-#define ALERT_H
+//#ifndef ALERT_H
+//#define ALERT_H
 
 #include "activity.h"
 #include "analysis.h"
 
-/*
-struct alertStats{
-    float numVehicles;
-    float speedAvg;
-};
-*/
-
 struct day{
 	int vehicleTotal;
-    //vector<alertStats> stuff;
-	float busNum;
+	float busNum = 0;
 	float busSpeedAvg;
-	float motorbikeNum;
+	float motorbikeNum = 0;
 	float motorbikeSpeedAvg;
-	float carNum;
+	float carNum = 0;
 	float carSpeedAvg;
-	float elephantNum;
+	float elephantNum = 0;
 	float elephantSpeedAvg;
-	float taxiNum;
+	float taxiNum = 0;
 	float taxiSpeedAvg;
-	float emergencyNum;
+	float emergencyNum = 0;
 	float emergencySpeedAvg;
 };
 
@@ -53,14 +45,17 @@ class alertEngine
 		
 		std::vector<stats> baselineStats;
 		std::vector<day> baselineDays;
+		std::vector<day> testDays;
+		std::vector<Vehicle> vehicleStats;
 		
 		//Functions
-		void readAnalysisFile(int);
-		void readUserFile(activityEngine&);
+		void readAnalysisFile(int numVehicles);
+		void readUserFile(activityEngine& activity);
 		
 	public:
 		void calcThreshold(std::vector<Vehicle> vehicleSim);
-		void calcAnomalyCount(activityEngine activity);
-		void startEngine(activityEngine&);	
+		void readCurrDays(int days);
+		void startEngine(activityEngine activity, analysisEngine analysis);	
+		void calcAnomaly(activityEngine activity, int day);
+		float formulaCalc(float val, float stdDev, float mean, int weight);
 };
-#endif
