@@ -285,12 +285,15 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 {
 	float deduction = val - mean;
 	
+	/*
 	bool negative = false;
 	if(deduction < 0)
 	{
 		negative = true;
 		deduction = fabs(deduction);
 	}
+	*/
+	deduction = fabs(deduction);
 	
 	float devDed;
 	
