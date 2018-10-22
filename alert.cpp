@@ -55,34 +55,10 @@ void alertEngine::readAnalysisFile(int numVehicles)
     {
 		fin.getline(name,30,':');
         s.type = name;
-        cout << name << endl;
+        //cout << name << endl;
         fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
 		baselineStats.push_back(s);
     }
-    /*
-	//Read stats
-	stats s;
-	for(int i = 0; i < 2; i++) // Read 'Bus' and 'Motorbike'
-	{
-		fin >> s.type >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-		baselineStats.push_back(s);
-	}
-	
-	// Read 'Red Car'
-	fin >> s.type;
-	fin.get();
-	string t;
-	fin >> t;
-	s.type = s.type + t;
-	fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-	baselineStats.push_back(s);
-	
-	for(int i = 0; i < 3; i++) // Read 'Elephant', 'Taxi' and 'Emergency'
-	{
-		fin >> s.type >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-		baselineStats.push_back(s);
-	}
-    */
 	
 	getline(fin, tmp);
 	getline(fin, tmp);
@@ -268,42 +244,30 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	*/
 	
 	// Volume Calcs
-	volAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[0].volWeight);
+	volAnomCount+=formulaCalc(testDays[day].busNum, baseVolStdDev, baseVolAvg, vehicleStats[0].volWeight);
 	
-	volAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[1].volWeight);	
+	volAnomCount+=formulaCalc(testDays[day].motorbikeNum, baseVolStdDev, baseVolAvg, vehicleStats[1].volWeight);	
 	
-	volAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[2].volWeight);	
+	volAnomCount+=formulaCalc(testDays[day].carNum, baseVolStdDev, baseVolAvg, vehicleStats[2].volWeight);	
 	
-	volAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[3].volWeight);	
+	volAnomCount+=formulaCalc(testDays[day].elephantNum, baseVolStdDev, baseVolAvg, vehicleStats[3].volWeight);	
 	
-	volAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[4].volWeight);	
+	volAnomCount+=formulaCalc(testDays[day].taxiNum, baseVolStdDev, baseVolAvg, vehicleStats[4].volWeight);	
 	
-	volAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[5].volWeight);	
+	volAnomCount+=formulaCalc(testDays[day].emergencyNum, baseVolStdDev, baseVolAvg, vehicleStats[5].volWeight);	
 	
 	// Speed Calcs
-	speedAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[0].speedWeight);
+	speedAnomCount+=formulaCalc(testDays[day].busNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[0].speedWeight);
 	
-	speedAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[1].speedWeight);	
+	speedAnomCount+=formulaCalc(testDays[day].motorbikeNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[1].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[2].speedWeight);	
+	speedAnomCount+=formulaCalc(testDays[day].carNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[2].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[3].speedWeight);	
+	speedAnomCount+=formulaCalc(testDays[day].elephantNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[3].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[4].speedWeight);	
+	speedAnomCount+=formulaCalc(testDays[day].taxiNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[4].speedWeight);	
 	
-	speedAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[5].speedWeight);	
+	speedAnomCount+=formulaCalc(testDays[day].emergencyNum, baseSpeedStdDev, baseSpeedAvg, vehicleStats[5].speedWeight);	
 	
 	// Header Printout
 	cout << endl << "-------------------------------------------" << endl;
