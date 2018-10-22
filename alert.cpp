@@ -49,6 +49,8 @@ void alertEngine::readAnalysisFile(int numVehicles)
 	//Get first int of line
 	int days;
 	fin >> days;
+	//Throw away rest of line
+	getline(fin,tmp);
 	
     stats s;
     for(int i = 0; i < numVehicles; i++)
