@@ -57,6 +57,7 @@ void alertEngine::readAnalysisFile(int numVehicles)
         s.type = name;
         cout << name << endl;
         fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
+        cout << s.averageVolume <<' '<< s.stdDevVolume << ' '<<s.averageSpeed << ' '<<s.stdDevSpeed << endl;
 		baselineStats.push_back(s);
     }
 	
@@ -103,6 +104,7 @@ void alertEngine::readAnalysisFile(int numVehicles)
             getline(fin, tmp,':');
             tmp.substr(tmp.find(":") + 2);
             fin >> d.alertStats[x].totalVehicles >> d.alertStats[x].speedAvg;
+            cout << d.alertStats[x].totalVehicles << ' '<<d.alertStats[x].speedAvg << endl;
         }
 		
 		baselineDays.push_back(d);
@@ -118,7 +120,8 @@ void alertEngine::readUserFile(activityEngine& activity)
 	// Prompt user for a file containing new statistics and a number of days
     char tmp[256];
 	cout << "Enter a new file name: ";
-	cin >> newFile;
+	//cin >> newFile;
+    strcpy(newFile,"Stats.txt");
 	ifstream fin;
 	fin.open(newFile);
 	while(!fin) //Checks if file entered is valid and loops until valid file is entered
@@ -129,23 +132,27 @@ void alertEngine::readUserFile(activityEngine& activity)
 		fin.open(newFile);
 	}
     fin.getline(tmp,256,'\n');
-
-/*
+    cout << tmp << endl;
     for(int i = 0; i < vehicleStats.size(); i++)
     {
+        Stats temp;
         fin.getline(tmp, 25, ':');
-        activity.vehicleStats[i].name = tmp;
+        cout << tmp <<endl;
+        //don't need name
+        fin >> temp.avg;
+        cout <<  temp.avg << std::endl;
         fin.ignore(3,':');
-        fin >> activity.vehicleStats[i].avg;
+        fin >> temp.stdDev;
+        cout << temp.stdDev<< endl;
         fin.ignore(3,':');
-        fin >> activity.vehicleStats[i].stdDev;
+        fin >> temp.speedAvg;
         fin.ignore(3,':');
-        fin >> activity.vehicleStats[i].speedAvg;
-        fin.ignore(3,':');
-        fin >> activity.vehicleStats[i].speedStdDev;
+        fin >> temp.speedStdDev;
+        cout << temp.speedStdDev << endl;
+
+        activity.setStats(i,temp);
         fin.ignore(256, '\n'); //Chops off everything after last required value
     }
-    */
     fin.close();
 }
 
@@ -242,6 +249,12 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	
 	cout << volAnomCount << endl;
 	cout << speedAnomCount << endl;
+    if(volAnomCount > volumeThresh)
+        std::cout << "Volume Anomaly Found" << std::endl;
+    if(speedAnomCount > speedThresh)
+        std::cout << "Speed Anomaly Found" << std::endl;
+    if( volAnomCount < volumeThresh && speedAnomCount < speedThresh)
+        std::cout<< " No Anomaly Found" <<std::endl;
 	
 }
 
@@ -278,17 +291,17 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 {
 	bool flag = true;
-	srand(time(NULL));
 	vehicleStats = activity.getVehicles();
 	
+    readAnalysisFile(activity.getVehicles().size());
+    calcThreshold(activity.getVehicles());
 	while(flag == true)
 	{
-		readAnalysisFile(activity.getVehicles().size());
 		readUserFile(activity);
 		
 		cout << "Enter number of days: ";
-		cin >> newDays;
-		
+		//cin >> newDays;
+		newDays = 1;
 		for(int i = 0; i < newDays; i++)
 		{
 			cout << "---------------- DAY " << i << " ----------------" << std::endl;
@@ -298,6 +311,8 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
         	activity.clearInstances();
         	readCurrDays(i, vehicleStats.size());
         	calcAnomaly(activity, i);
+            calcThreshold(activity.getVehicles());
+            
 		}
 		
 		/*

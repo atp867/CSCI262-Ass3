@@ -99,6 +99,7 @@ void activityEngine::genEvents()
 //Start the activity engine
 void activityEngine::startEngine(int days)
 {
+    srand(time(NULL));
     std::cout << "---------------- Beginning Activity Engine---------------- " << std::endl;
     for(int i = 0; i < days; i++) //Simulation main driver loop
     {
@@ -268,7 +269,7 @@ void activityEngine::printInstances(int days)
     strcpy(file,(oss.str()).c_str());
 
     std::ofstream fout;
-    fout.open(file);
+    fout.open(file,std::ofstream::trunc);
     std::cout << "Day " << days << " Simulation complete " << std::endl;
     std::cout << "Day " << days << " Complete logging data to " << file << std::endl;
 

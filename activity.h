@@ -84,6 +84,12 @@ class activityEngine{
         void startEngine(int);
         void clearInstances();
         void simDay();
+        void setStats(int index,Stats changes){
+            vehicleStats[index].avg = changes.avg;
+            vehicleStats[index].stdDev = changes.stdDev;
+            vehicleStats[index].speedAvg = changes.speedAvg;
+            vehicleStats[index].speedStdDev = changes.speedStdDev;
+        };
         Road getRoad();
         std::vector<Vehicle> getVehicles();
         void printVehicles();
