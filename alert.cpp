@@ -59,30 +59,6 @@ void alertEngine::readAnalysisFile(int numVehicles)
         fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
 		baselineStats.push_back(s);
     }
-    /*
-	//Read stats
-	stats s;
-	for(int i = 0; i < 2; i++) // Read 'Bus' and 'Motorbike'
-	{
-		fin >> s.type >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-		baselineStats.push_back(s);
-	}
-	
-	// Read 'Red Car'
-	fin >> s.type;
-	fin.get();
-	string t;
-	fin >> t;
-	s.type = s.type + t;
-	fin >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-	baselineStats.push_back(s);
-	
-	for(int i = 0; i < 3; i++) // Read 'Elephant', 'Taxi' and 'Emergency'
-	{
-		fin >> s.type >> s.averageVolume >> s.stdDevVolume >> s.averageSpeed >> s.stdDevSpeed;
-		baselineStats.push_back(s);
-	}
-    */
 	
 	getline(fin, tmp);
 	getline(fin, tmp);
@@ -105,6 +81,7 @@ void alertEngine::readAnalysisFile(int numVehicles)
 	
 	//Reading each day of data
 	day d;
+    d.alertStats.resize(numVehicles);
 	
 	for(int i = 0; i < days; i++)
 	{
@@ -119,48 +96,14 @@ void alertEngine::readAnalysisFile(int numVehicles)
 		tmp.substr(tmp.find(":") + 2);
 		fin >> d.vehicleTotal;
 		//cout << d.vehicleTotal << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.busNum >> d.busSpeedAvg;
-		//cout << d.busNum << " " << d.busSpeedAvg << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.motorbikeNum >> d.motorbikeSpeedAvg;
-		//cout << d.motorbikeNum << " " << d.motorbikeSpeedAvg << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.carNum >> d.carSpeedAvg;
-		//cout << d.carNum << " " << d.carSpeedAvg << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.elephantNum >> d.elephantSpeedAvg;
-		//cout << d.elephantNum << " " << d.elephantSpeedAvg << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.taxiNum >> d.taxiSpeedAvg;
-		//cout << d.taxiNum << " " << d.taxiSpeedAvg << endl;
-		
-		getline(fin, tmp);//blank line
-		
-		getline(fin, tmp,':');
-		tmp.substr(tmp.find(":") + 2);
-		fin >> d.emergencyNum >> d.emergencySpeedAvg;
-		//cout << d.emergencyNum << " " << d.emergencySpeedAvg << endl;
+		for(int x =0; x < numVehicles; x++)
+        {
+            getline(fin, tmp);//blank line
+            
+            getline(fin, tmp,':');
+            tmp.substr(tmp.find(":") + 2);
+            fin >> d.alertStats[x].totalVehicles >> d.alertStats[x].speedAvg;
+        }
 		
 		baselineDays.push_back(d);
 	}
@@ -173,6 +116,7 @@ void alertEngine::readAnalysisFile(int numVehicles)
 void alertEngine::readUserFile(activityEngine& activity)
 {
 	// Prompt user for a file containing new statistics and a number of days
+    char tmp[256];
 	cout << "Enter a new file name: ";
 	cin >> newFile;
 	ifstream fin;
@@ -184,15 +128,34 @@ void alertEngine::readUserFile(activityEngine& activity)
 		cin >> newFile;
 		fin.open(newFile);
 	}
-	fin.close();
+    fin.getline(tmp,256,'\n');
+
+/*
+    for(int i = 0; i < vehicleStats.size(); i++)
+    {
+        fin.getline(tmp, 25, ':');
+        activity.vehicleStats[i].name = tmp;
+        fin.ignore(3,':');
+        fin >> activity.vehicleStats[i].avg;
+        fin.ignore(3,':');
+        fin >> activity.vehicleStats[i].stdDev;
+        fin.ignore(3,':');
+        fin >> activity.vehicleStats[i].speedAvg;
+        fin.ignore(3,':');
+        fin >> activity.vehicleStats[i].speedStdDev;
+        fin.ignore(256, '\n'); //Chops off everything after last required value
+    }
+    */
+    fin.close();
 }
 
 // Caluclates the anomaly thingos idk
-void alertEngine::readCurrDays(int i)
+void alertEngine::readCurrDays(int i, int numVehicles)
 {
 	int type;
 	
 	day d;
+    d.alertStats.resize(numVehicles);
 		
 		stringstream ss;
 		ss << i;
@@ -224,16 +187,7 @@ void alertEngine::readCurrDays(int i)
 			getline(fin, temp); //End
 			getline(fin, temp); //Blank (check for eof)
 			
-			switch(type)
-			{
-				case 0	: d.busNum++; 			break;
-				case 1	: d.motorbikeNum++; 	break;
-				case 2	: d.carNum++; 			break;
-				case 3	: d.elephantNum++; 		break;
-				case 4	: d.taxiNum++;			break;
-				case 5	: d.emergencyNum++; 	break;
-				default	: cout << "error: vehicle type switch" << endl;
-			}
+            d.alertStats[type].totalVehicles++;
 			
 			if(!temp.size())
 			{
@@ -268,42 +222,18 @@ void alertEngine::calcAnomaly(activityEngine activity, int day)
 	*/
 	
 	// Volume Calcs
-	volAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[0].volWeight);
-	
-	volAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[1].volWeight);	
-	
-	volAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[2].volWeight);	
-	
-	volAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[3].volWeight);	
-	
-	volAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[4].volWeight);	
-	
-	volAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
-	vehicleStats[5].volWeight);	
+    for(int i = 0; i < vehicleStats.size(); i ++)
+    {
+        volAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[day].stdDevVolume, baselineStats[day].averageVolume, 
+        vehicleStats[i].volWeight);
+    }
 	
 	// Speed Calcs
-	speedAnomCount+=formulaCalc(testDays[day].busNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[0].speedWeight);
-	
-	speedAnomCount+=formulaCalc(testDays[day].motorbikeNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[1].speedWeight);	
-	
-	speedAnomCount+=formulaCalc(testDays[day].carNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[2].speedWeight);	
-	
-	speedAnomCount+=formulaCalc(testDays[day].elephantNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[3].speedWeight);	
-	
-	speedAnomCount+=formulaCalc(testDays[day].taxiNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[4].speedWeight);	
-	
-	speedAnomCount+=formulaCalc(testDays[day].emergencyNum, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
-	vehicleStats[5].speedWeight);	
+    for(int i = 0; i < vehicleStats.size(); i ++)
+    {
+        speedAnomCount+=formulaCalc(testDays[day].alertStats[i].totalVehicles, baselineStats[day].stdDevSpeed, baselineStats[day].averageSpeed, 
+        vehicleStats[i].speedWeight);
+    }
 	
 	// Header Printout
 	cout << endl << "-------------------------------------------" << endl;
@@ -348,7 +278,7 @@ float alertEngine::formulaCalc(float val, float stdDev, float mean, int weight)
 void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
 {
 	bool flag = true;
-	
+	srand(time(NULL));
 	vehicleStats = activity.getVehicles();
 	
 	while(flag == true)
@@ -366,7 +296,7 @@ void alertEngine::startEngine(activityEngine activity, analysisEngine analysis)
         	activity.simDay();
         	activity.printInstances(i);
         	activity.clearInstances();
-        	readCurrDays(i);
+        	readCurrDays(i, vehicleStats.size());
         	calcAnomaly(activity, i);
 		}
 		

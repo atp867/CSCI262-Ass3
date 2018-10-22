@@ -14,20 +14,14 @@
 #include "activity.h"
 #include "analysis.h"
 
+struct AlertStats{
+    float totalVehicles;
+    float speedAvg;
+};
+
 struct day{
 	int vehicleTotal;
-	float busNum = 0;
-	float busSpeedAvg;
-	float motorbikeNum = 0;
-	float motorbikeSpeedAvg;
-	float carNum = 0;
-	float carSpeedAvg;
-	float elephantNum = 0;
-	float elephantSpeedAvg;
-	float taxiNum = 0;
-	float taxiSpeedAvg;
-	float emergencyNum = 0;
-	float emergencySpeedAvg;
+    std::vector<AlertStats> alertStats;
 };
 
 class alertEngine
@@ -47,6 +41,7 @@ class alertEngine
 		std::vector<day> baselineDays;
 		std::vector<day> testDays;
 		std::vector<Vehicle> vehicleStats;
+        std::vector<Stats> helpMe;
 		
 		//Functions
 		void readAnalysisFile(int numVehicles);
@@ -54,7 +49,7 @@ class alertEngine
 		
 	public:
 		void calcThreshold(std::vector<Vehicle> vehicleSim);
-		void readCurrDays(int days);
+		void readCurrDays(int days,int numVehicles);
 		void startEngine(activityEngine activity, analysisEngine analysis);	
 		void calcAnomaly(activityEngine activity, int day);
 		float formulaCalc(float val, float stdDev, float mean, int weight);

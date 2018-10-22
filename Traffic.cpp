@@ -102,7 +102,7 @@ int main(int argc, char * argv[])
         simulation.startEngine(atoi(argv[3]));
         
         analysis.startEngine(atoi(argv[3]),numTypeV,simulation.getRoad(), simulation.getVehicles());
-        //alert.startEngine(simulation);
+       alert.startEngine(simulation, analysis);
 
 
     return 0;
